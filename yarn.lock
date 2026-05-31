@@ -806,6 +806,11 @@ fdir@^6.5.0:
   resolved "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz"
   integrity sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
 
+featurebase-js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/featurebase-js/-/featurebase-js-1.0.3.tgz"
+  integrity sha512-Q52xH6KEy6mYpxBl0ZRDzCaxW8EhoUjUxLbgG5e2GIMeiaS4uhKGHPK44yTRUmD+PTBgJ79/dc1GDFSwzz/sgg==
+
 file-entry-cache@^8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-8.0.0.tgz"
@@ -1142,7 +1147,7 @@ react-i18next@^17.0.8:
     html-parse-stringify "^3.0.1"
     use-sync-external-store "^1.6.0"
 
-"react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^19.2.6, "react@>= 16.8.0", "react@>=18.0.0 || >=19.0.0":
+"react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^19.2.6, "react@>= 16.8.0", react@>=17, "react@>=18.0.0 || >=19.0.0":
   version "19.2.6"
   resolved "https://registry.npmjs.org/react/-/react-19.2.6.tgz"
   integrity sha512-sfWGGfavi0xr8Pg0sVsyHMAOziVYKgPLNrS7ig+ivMNb3wbCBw3KxtflsGBAwD3gYQlE/AEZsTLgToRrSCjb0Q==

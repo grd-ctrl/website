@@ -19,10 +19,22 @@
   "stats": {
     "intro": "// GROUNDCTRL PERFORMANCE",
     "items": [
-      { "number": "150+", "label": "Instalaciones" },
-      { "number": "< 2s", "label": "Tiempo de respuesta" },
-      { "number": "8+", "label": "Integraciones" },
-      { "number": "24/7", "label": "Monitorización" }
+      {
+        "number": "150+",
+        "label": "Instalaciones"
+      },
+      {
+        "number": "< 2s",
+        "label": "Tiempo de respuesta"
+      },
+      {
+        "number": "8+",
+        "label": "Integraciones"
+      },
+      {
+        "number": "24/7",
+        "label": "Monitorización"
+      }
     ]
   },
   "pillars": {
@@ -73,12 +85,30 @@
     "title": "Todo lo que necesita su sala de control.",
     "subtitle": "Diseñado específicamente para profesionales que no pueden permitirse perder tiempo en momentos críticos.",
     "items": [
-      { "title": "Control de Videowall", "description": "Envía layouts, presets y comandos a videowalls Barco vía REST API. Cambia el contenido en menos de un segundo." },
-      { "title": "Escenarios con Un Toque", "description": "Escenarios preconfigurados como Modo Emergencia o Layout Predeterminado — activados al instante desde el panel." },
-      { "title": "Integración de Cámaras", "description": "Conecta Milestone, Verkada, Bosch y otras plataformas VMS para selección automática de cámaras." },
-      { "title": "Multi-Conector", "description": "Se integra con Node-RED, Power Automate, Crestron, Q-SYS y Extron." },
-      { "title": "Diseño Tablet-First", "description": "Construido para iPad y tablets Android. Interfaz optimizada para entornos operativos exigentes." },
-      { "title": "Despliegue Instantáneo", "description": "Despliega por sideload en minutos. Sin aprobación de App Store. Sin demoras." }
+      {
+        "title": "Control de Videowall",
+        "description": "Envía layouts, presets y comandos a videowalls Barco vía REST API. Cambia el contenido en menos de un segundo."
+      },
+      {
+        "title": "Escenarios con Un Toque",
+        "description": "Escenarios preconfigurados como Modo Emergencia o Layout Predeterminado — activados al instante desde el panel."
+      },
+      {
+        "title": "Integración de Cámaras",
+        "description": "Conecta Milestone, Verkada, Bosch y otras plataformas VMS para selección automática de cámaras."
+      },
+      {
+        "title": "Multi-Conector",
+        "description": "Se integra con Node-RED, Power Automate, Crestron, Q-SYS y Extron."
+      },
+      {
+        "title": "Diseño Tablet-First",
+        "description": "Construido para iPad y tablets Android. Interfaz optimizada para entornos operativos exigentes."
+      },
+      {
+        "title": "Despliegue Instantáneo",
+        "description": "Despliega por sideload en minutos. Sin aprobación de App Store. Sin demoras."
+      }
     ]
   },
   "integrations": {
@@ -92,12 +122,30 @@
     "title": "Diseñado para cada entorno crítico.",
     "subtitle": "Donde sea que se monitoree, proteja o controle — GroundCTRL encaja.",
     "items": [
-      { "title": "Centros de Operaciones de Seguridad", "description": "Gestiona videowalls, alarmas y feeds de cámaras desde una sola tablet." },
-      { "title": "Centros de Operaciones de Red", "description": "Muestra dashboards, mapas de red y alertas bajo demanda." },
-      { "title": "Aeropuertos y Puertos", "description": "Coordina operaciones y monitoreo de seguridad en grandes instalaciones." },
-      { "title": "Hospitales", "description": "Controla entornos de salas de procedimientos y pantallas de monitoreo con precisión." },
-      { "title": "Energía e Industria", "description": "Monitoreo de procesos y respuesta a incidentes directamente en planta." },
-      { "title": "Comando y Control", "description": "Ejecuta escenarios multi-sistema desde un panel autorizado." }
+      {
+        "title": "Centros de Operaciones de Seguridad",
+        "description": "Gestiona videowalls, alarmas y feeds de cámaras desde una sola tablet."
+      },
+      {
+        "title": "Centros de Operaciones de Red",
+        "description": "Muestra dashboards, mapas de red y alertas bajo demanda."
+      },
+      {
+        "title": "Aeropuertos y Puertos",
+        "description": "Coordina operaciones y monitoreo de seguridad en grandes instalaciones."
+      },
+      {
+        "title": "Hospitales",
+        "description": "Controla entornos de salas de procedimientos y pantallas de monitoreo con precisión."
+      },
+      {
+        "title": "Energía e Industria",
+        "description": "Monitoreo de procesos y respuesta a incidentes directamente en planta."
+      },
+      {
+        "title": "Comando y Control",
+        "description": "Ejecuta escenarios multi-sistema desde un panel autorizado."
+      }
     ]
   },
   "testimonials": {
@@ -152,5 +200,28 @@
       "contact": "Contacto"
     },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Todos los derechos reservados."
+  },
+  "support": {
+    "label": "SOPORTE",
+    "headline": "No te dejamos",
+    "headline_accent": "colgado.",
+    "sub": "Las operaciones críticas no pueden esperar. GroundCTRL ofrece soporte rápido y efectivo a través de múltiples canales — cuando lo necesites.",
+    "channels": {
+      "chat": {
+        "title": "Chat en vivo",
+        "desc": "Habla directamente con nuestro equipo en tiempo real. Obtén respuestas instantáneas para preguntas urgentes.",
+        "cta": "Abrir chat"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "desc": "¿Prefieres mensajes? Contáctanos en WhatsApp para respuestas rápidas desde cualquier lugar.",
+        "cta": "Enviar mensaje"
+      },
+      "email": {
+        "title": "Correo",
+        "desc": "Envíanos un mensaje detallado y te responderemos con una respuesta completa.",
+        "cta": "Enviar correo"
+      }
+    }
   }
 }

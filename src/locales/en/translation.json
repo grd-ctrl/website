@@ -19,10 +19,22 @@
   "stats": {
     "intro": "// GROUNDCTRL PERFORMANCE",
     "items": [
-      { "number": "150+", "label": "Installations" },
-      { "number": "< 2s", "label": "Response time" },
-      { "number": "8+", "label": "Integrations" },
-      { "number": "24/7", "label": "Monitoring" }
+      {
+        "number": "150+",
+        "label": "Installations"
+      },
+      {
+        "number": "< 2s",
+        "label": "Response time"
+      },
+      {
+        "number": "8+",
+        "label": "Integrations"
+      },
+      {
+        "number": "24/7",
+        "label": "Monitoring"
+      }
     ]
   },
   "pillars": {
@@ -188,5 +200,28 @@
       "contact": "Contact"
     },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. All rights reserved."
+  },
+  "support": {
+    "label": "SUPPORT",
+    "headline": "We don't leave you",
+    "headline_accent": "hanging.",
+    "sub": "Critical operations can't wait. GroundCTRL offers fast, effective support through multiple channels — whenever you need it.",
+    "channels": {
+      "chat": {
+        "title": "Live Chat",
+        "desc": "Talk directly to our team in real time. Get instant answers for urgent questions.",
+        "cta": "Open chat"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "desc": "Prefer messaging? Reach us on WhatsApp for quick replies and support on the go.",
+        "cta": "Message us"
+      },
+      "email": {
+        "title": "Email",
+        "desc": "Send us a detailed message and we'll get back to you with a complete response.",
+        "cta": "Send email"
+      }
+    }
   }
 }

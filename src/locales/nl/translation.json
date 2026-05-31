@@ -19,10 +19,22 @@
   "stats": {
     "intro": "// GROUNDCTRL PERFORMANCE",
     "items": [
-      { "number": "150+", "label": "Installaties" },
-      { "number": "< 2s", "label": "Reactietijd" },
-      { "number": "8+", "label": "Integraties" },
-      { "number": "24/7", "label": "Monitoring" }
+      {
+        "number": "150+",
+        "label": "Installaties"
+      },
+      {
+        "number": "< 2s",
+        "label": "Reactietijd"
+      },
+      {
+        "number": "8+",
+        "label": "Integraties"
+      },
+      {
+        "number": "24/7",
+        "label": "Monitoring"
+      }
     ]
   },
   "pillars": {
@@ -188,5 +200,28 @@
       "contact": "Contact"
     },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Alle rechten voorbehouden."
+  },
+  "support": {
+    "label": "ONDERSTEUNING",
+    "headline": "We laten je niet",
+    "headline_accent": "in de steek.",
+    "sub": "Kritieke operaties kunnen niet wachten. GroundCTRL biedt snelle, effectieve ondersteuning via meerdere kanalen — wanneer u het nodig heeft.",
+    "channels": {
+      "chat": {
+        "title": "Live Chat",
+        "desc": "Spreek direct met ons team in realtime. Krijg directe antwoorden op dringende vragen.",
+        "cta": "Chat openen"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "desc": "Liever berichten sturen? Bereik ons via WhatsApp voor snelle antwoorden onderweg.",
+        "cta": "Stuur bericht"
+      },
+      "email": {
+        "title": "E-mail",
+        "desc": "Stuur ons een gedetailleerd bericht en we reageren met een volledig antwoord.",
+        "cta": "E-mail sturen"
+      }
+    }
   }
 }
