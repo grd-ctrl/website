@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "usecases": "Anwendungen",
+    "demo": "Demo",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "checkout": "Kaufen"
+  },
+  "hero": {
+    "badge": "Kontrollraum-Intelligenz",
+    "headline": "Steuern Sie jeden Raum.",
+    "headline2": "Von einem Dashboard aus.",
+    "sub": "Ein Tablet-first-Bedienfeld für Videowände und Überwachungsumgebungen. Führen Sie Layouts, Szenarien und Automatisierungen mit einem einzigen Tippen aus.",
+    "cta_primary": "Demo Anfordern",
+    "cta_secondary": "Wie es funktioniert"
+  },
+  "problem": {
+    "label": "Das Problem",
+    "title": "Kontrollräume sind fragmentiert.",
+    "description": "Bediener jonglieren mit separaten Apps für Videowände, Kameras, Beleuchtung, Sensoren und Alarme. Jede Aktion erfordert Schulung und wertvolle Sekunden.",
+    "solution_label": "Die Lösung",
+    "solution_title": "Ein Tippen. Jede Aktion.",
+    "solution_description": "GroundCTRL vereint alle Steuerungen in einem einzigen konfigurierbaren Dashboard.",
+    "items": ["Mehrere getrennte Tools", "Komplexe Oberflächen erfordern Schulung", "Kritische Aktionen dauern zu lange"],
+    "solution_items": ["Ein einheitliches Kommandopanel", "Intuitive Kachelbenutzeroberfläche", "Ein Tippen für jedes Szenario"]
+  },
+  "features": {
+    "label": "Funktionen",
+    "title": "Alles, was Ihr Kontrollraum braucht.",
+    "subtitle": "Speziell für Profis entwickelt, die es sich nicht leisten können, Zeit zu verschwenden.",
+    "items": [
+      { "title": "Videowand-Steuerung", "description": "Senden Sie Layouts, Presets und Befehle über die REST-API an Barco-Videowände." },
+      { "title": "Ein-Tipp-Szenarien", "description": "Vorkonfigurierte Szenarien wie Notfallmodus oder Standardlayout, sofort ausgelöst." },
+      { "title": "Kamera-Integration", "description": "Verbinden Sie Milestone, Verkada, Bosch und andere VMS-Plattformen." },
+      { "title": "Multi-Connector", "description": "Integriert mit Node-RED, Power Automate, Crestron, Q-SYS und Extron." },
+      { "title": "Tablet-First-Design", "description": "Für iPad und Android-Tablets entwickelt. Touchoptimierte Benutzeroberfläche." },
+      { "title": "Kein App Store erforderlich", "description": "Sofortige Bereitstellung per Sideload. Keine Genehmigungswartezeit." }
+    ]
+  },
+  "usecases": {
+    "label": "Anwendungen",
+    "title": "Für jede kritische Umgebung entwickelt.",
+    "subtitle": "Überall wo Bediener überwachen, schützen oder steuern — GroundCTRL passt.",
+    "items": [
+      { "title": "Sicherheitsbetriebszentren", "description": "Videowände, Alarme und Kamerafeeds von einem Tablet aus verwalten." },
+      { "title": "Netzwerkbetriebszentren", "description": "Dashboards, Netzwerkkarten und Warnungen auf Abruf anzeigen." },
+      { "title": "Flughäfen & Häfen", "description": "Betrieb und Sicherheitsüberwachung auf großen Anlagen koordinieren." },
+      { "title": "Krankenhäuser", "description": "OP-Umgebungen und Überwachungsanzeigen steuern." },
+      { "title": "Energie & Industrie", "description": "Prozessüberwachung und Incident-Response vor Ort." },
+      { "title": "Kommando & Kontrolle", "description": "Multi-System-Szenarien von einem autorisierten Panel aus ausführen." }
+    ]
+  },
+  "demo": {
+    "label": "In Aktion sehen",
+    "title": "Für den Bediener entwickelt, nicht für den Techniker.",
+    "subtitle": "Eine klare, dunkle Oberfläche, die aus der Ferne lesbar und sicher bedienbar ist.",
+    "cta": "Möchten Sie eine Live-Demo?"
+  },
+  "pricing": {
+    "label": "Preise",
+    "title": "Enterprise-Preise, zugeschnitten auf Ihre Bereitstellung.",
+    "subtitle": "GroundCTRL wird pro Installation lizenziert. Kontaktieren Sie uns für ein Angebot.",
+    "cta": "Angebot Anfordern",
+    "note": "Zahlung per internationaler Überweisung. USD und EUR akzeptiert.",
+    "checkout_link": "Zahlungsanweisungen anzeigen"
+  },
+  "checkout": {
+    "title": "Zahlungsanweisungen",
+    "subtitle": "Internationale Überweisung",
+    "currency_label": "Währung auswählen",
+    "warning": "Das Empfängerfeld muss genau den unten angezeigten Firmennamen enthalten. Die Verwendung des Namens des Inhabers kann zu Verzögerungen oder Stornierungen führen.",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "fields": {
+      "bank": "Bank", "bank_address": "Bankadresse", "bank_country": "Bankland",
+      "swift": "SWIFT / BIC", "iban": "IBAN / Kontonummer", "branch": "Filialcode",
+      "account_type": "Kontotyp", "beneficiary": "Name des Begünstigten",
+      "beneficiary_address": "Adresse des Begünstigten", "intermediary_swift": "Intermediäre SWIFT / BIC",
+      "intermediary_bank": "Intermediäre Bank", "intermediary_country": "Intermediäres Land",
+      "intermediary_account": "Intermediäres Konto"
+    },
+    "after_transfer": "Senden Sie nach der Überweisung den Zahlungsnachweis per WhatsApp.",
+    "contact_cta": "Nachweis per WhatsApp senden"
+  },
+  "footer": {
+    "tagline": "Steuern Sie jeden Raum. Von einem Dashboard aus.",
+    "links": { "features": "Funktionen", "usecases": "Anwendungen", "checkout": "Zahlung", "contact": "Kontakt" },
+    "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Alle Rechte vorbehalten."
+  }
+}

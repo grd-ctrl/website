@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "features": "Funciones",
+    "usecases": "Casos de uso",
+    "demo": "Demo",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "checkout": "Comprar"
+  },
+  "hero": {
+    "badge": "Inteligencia para Salas de Control",
+    "headline": "Controla cada sala.",
+    "headline2": "Desde un solo panel.",
+    "sub": "Un panel de control tablet-first para videowalls y entornos de monitoreo. Ejecuta layouts, escenarios y automatizaciones con un solo toque.",
+    "cta_primary": "Solicitar Demo",
+    "cta_secondary": "Cómo funciona"
+  },
+  "problem": {
+    "label": "El Problema",
+    "title": "Las salas de control están fragmentadas.",
+    "description": "Los operadores manejan apps separadas para videowalls, cámaras, iluminación, sensores y alarmas. Cada acción requiere entrenamiento y segundos críticos.",
+    "solution_label": "La Solución",
+    "solution_title": "Un toque. Cualquier acción.",
+    "solution_description": "GroundCTRL unifica todos los controles en un panel configurable. Toca una vez para cambiar un layout, activar un escenario de emergencia o mostrar cámaras.",
+    "items": ["Múltiples herramientas desconectadas", "Interfaces complejas requieren entrenamiento", "Las acciones críticas llevan demasiado tiempo"],
+    "solution_items": ["Un panel de comando unificado", "Interfaz intuitiva de mosaicos", "Un toque para cualquier escenario"]
+  },
+  "features": {
+    "label": "Funciones",
+    "title": "Todo lo que necesita su sala de control.",
+    "subtitle": "Diseñado específicamente para profesionales que no pueden permitirse perder tiempo.",
+    "items": [
+      { "title": "Control de Videowall", "description": "Envía layouts, presets y comandos a videowalls Barco vía REST API." },
+      { "title": "Escenarios con Un Toque", "description": "Escenarios preconfigurados como Modo Emergencia o Layout Predeterminado, activados al instante." },
+      { "title": "Integración de Cámaras", "description": "Conecta Milestone, Verkada, Bosch y otras plataformas VMS." },
+      { "title": "Multi-Conector", "description": "Se integra con Node-RED, Power Automate, Crestron, Q-SYS y Extron." },
+      { "title": "Diseño Tablet-First", "description": "Construido para iPad y tablets Android. Interfaz optimizada para táctil." },
+      { "title": "Sin App Store", "description": "Despliega al instante por sideload. Sin esperar aprobaciones." }
+    ]
+  },
+  "usecases": {
+    "label": "Casos de Uso",
+    "title": "Diseñado para cada entorno crítico.",
+    "subtitle": "Donde sea que se monitoree, proteja o controle — GroundCTRL encaja.",
+    "items": [
+      { "title": "Centros de Operaciones de Seguridad", "description": "Gestiona videowalls, alarmas y feeds de cámaras desde una sola tablet." },
+      { "title": "Centros de Operaciones de Red", "description": "Muestra dashboards, mapas de red y alertas bajo demanda." },
+      { "title": "Aeropuertos y Puertos", "description": "Coordina operaciones y monitoreo de seguridad en grandes instalaciones." },
+      { "title": "Hospitales", "description": "Controla entornos de salas de procedimientos y pantallas de monitoreo." },
+      { "title": "Energía e Industria", "description": "Monitoreo de procesos y respuesta a incidentes en planta." },
+      { "title": "Comando y Control", "description": "Ejecuta escenarios multi-sistema desde un panel autorizado." }
+    ]
+  },
+  "demo": {
+    "label": "Véalo en Acción",
+    "title": "Diseñado para el operador, no para el técnico.",
+    "subtitle": "Una interfaz oscura y clara, diseñada para leerse a distancia y tocarse con confianza.",
+    "cta": "¿Quiere una demo en vivo?"
+  },
+  "pricing": {
+    "label": "Precios",
+    "title": "Precios enterprise, adaptados a su despliegue.",
+    "subtitle": "GroundCTRL se licencia por instalación. Contáctenos para una propuesta.",
+    "cta": "Solicitar Cotización",
+    "note": "Pago por transferencia bancaria internacional. Se aceptan USD y EUR.",
+    "checkout_link": "Ver instrucciones de pago"
+  },
+  "checkout": {
+    "title": "Instrucciones de Pago",
+    "subtitle": "Transferencia Bancaria Internacional",
+    "currency_label": "Seleccionar moneda",
+    "warning": "El campo Beneficiario debe contener exactamente el nombre de la empresa que se muestra a continuación. Usar el nombre del propietario puede causar retrasos o cancelación.",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "fields": {
+      "bank": "Banco", "bank_address": "Dirección del Banco", "bank_country": "País del Banco",
+      "swift": "SWIFT / BIC", "iban": "IBAN / Número de Cuenta", "branch": "Código de Sucursal",
+      "account_type": "Tipo de Cuenta", "beneficiary": "Nombre del Beneficiario",
+      "beneficiary_address": "Dirección del Beneficiario", "intermediary_swift": "SWIFT / BIC Intermediario",
+      "intermediary_bank": "Banco Intermediario", "intermediary_country": "País Intermediario",
+      "intermediary_account": "Cuenta Intermediaria"
+    },
+    "after_transfer": "Tras la transferencia, envía el comprobante de pago por WhatsApp.",
+    "contact_cta": "Enviar Comprobante por WhatsApp"
+  },
+  "footer": {
+    "tagline": "Controla cada sala. Desde un solo panel.",
+    "links": { "features": "Funciones", "usecases": "Casos de uso", "checkout": "Pago", "contact": "Contacto" },
+    "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Todos los derechos reservados."
+  }
+}

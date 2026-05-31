@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "features": "Features",
+    "usecases": "Use Cases",
+    "demo": "Demo",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "checkout": "Buy"
+  },
+  "hero": {
+    "badge": "Control Room Intelligence",
+    "headline": "Command Every Room.",
+    "headline2": "From One Dashboard.",
+    "sub": "A tablet-first control panel for video walls and monitoring environments. Execute layouts, scenarios and automations with a single tap.",
+    "cta_primary": "Request a Demo",
+    "cta_secondary": "See How It Works"
+  },
+  "problem": {
+    "label": "The Problem",
+    "title": "Control rooms are fragmented.",
+    "description": "Operators juggle separate apps for video walls, cameras, lighting, sensors and alarms. Every action requires training, multiple tools and precious seconds.",
+    "solution_label": "The Solution",
+    "solution_title": "One tap. Any action.",
+    "solution_description": "GroundCTRL unifies all controls into a single configurable dashboard. Tap once to switch a video wall layout, trigger an emergency scenario or show incident cameras.",
+    "items": [
+      "Multiple disconnected tools",
+      "Complex interfaces require training",
+      "Critical actions take too long"
+    ],
+    "solution_items": [
+      "One unified command panel",
+      "Intuitive tile-based interface",
+      "Single tap for any scenario"
+    ]
+  },
+  "features": {
+    "label": "Features",
+    "title": "Everything your control room needs.",
+    "subtitle": "Purpose-built for professionals who can't afford to waste time.",
+    "items": [
+      {
+        "title": "Video Wall Control",
+        "description": "Send layouts, presets and commands to Barco video walls via REST API. Switch content in under a second."
+      },
+      {
+        "title": "One-Tap Scenarios",
+        "description": "Pre-configured scenarios like Emergency Mode, Default Layout or Incident Map — triggered instantly."
+      },
+      {
+        "title": "Camera Integration",
+        "description": "Connect Milestone, Verkada, Bosch and other VMS platforms. Show the right cameras automatically."
+      },
+      {
+        "title": "Multi-Connector",
+        "description": "Integrates with Node-RED, Power Automate, Crestron, Q-SYS and Extron for full environment control."
+      },
+      {
+        "title": "Tablet-First Design",
+        "description": "Built for iPad and Android tablets. Touch-optimized interface designed for demanding environments."
+      },
+      {
+        "title": "No App Store Required",
+        "description": "Deploy instantly via sideload. No App Store approval wait. No delays when your client needs it now."
+      }
+    ]
+  },
+  "usecases": {
+    "label": "Use Cases",
+    "title": "Built for every critical environment.",
+    "subtitle": "Wherever operators monitor, protect or control — GroundCTRL fits.",
+    "items": [
+      { "title": "Security Operations Centers", "description": "Manage video walls, alarms and camera feeds from a single tablet." },
+      { "title": "Network Operations Centers", "description": "Display dashboards, network maps and alerts on demand." },
+      { "title": "Airports & Ports", "description": "Coordinate operations and security monitoring across large facilities." },
+      { "title": "Hospitals", "description": "Control procedure room environments and monitoring displays." },
+      { "title": "Energy & Industry", "description": "Manage process monitoring and incident response on the floor." },
+      { "title": "Command & Control", "description": "Execute multi-system scenarios from a single authorized panel." }
+    ]
+  },
+  "demo": {
+    "label": "See It In Action",
+    "title": "Designed for the operator, not the technician.",
+    "subtitle": "A clean, dark interface built to be read at a distance and touched with confidence.",
+    "cta": "Want a live demo?"
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Enterprise pricing, tailored to your deployment.",
+    "subtitle": "GroundCTRL is licensed per installation. Contact us for a proposal.",
+    "cta": "Get a Quote",
+    "note": "Payment via international wire transfer. USD and EUR accepted.",
+    "checkout_link": "View payment instructions"
+  },
+  "checkout": {
+    "title": "Payment Instructions",
+    "subtitle": "International Wire Transfer",
+    "currency_label": "Select currency",
+    "warning": "The Beneficiary field must contain exactly the company name shown below. Using the owner's name may cause delays or cancellation.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "fields": {
+      "bank": "Bank",
+      "bank_address": "Bank Address",
+      "bank_country": "Bank Country",
+      "swift": "SWIFT / BIC",
+      "iban": "IBAN / Account Number",
+      "branch": "Branch Code",
+      "account_type": "Account Type",
+      "beneficiary": "Beneficiary Name",
+      "beneficiary_address": "Beneficiary Address",
+      "intermediary_swift": "Intermediary SWIFT / BIC",
+      "intermediary_bank": "Intermediary Bank",
+      "intermediary_country": "Intermediary Country",
+      "intermediary_account": "Intermediary Account"
+    },
+    "after_transfer": "After completing the transfer, send proof of payment via WhatsApp.",
+    "contact_cta": "Send Proof via WhatsApp"
+  },
+  "footer": {
+    "tagline": "Command Every Room. From One Dashboard.",
+    "links": {
+      "features": "Features",
+      "usecases": "Use Cases",
+      "checkout": "Payment",
+      "contact": "Contact"
+    },
+    "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. All rights reserved."
+  }
+}
