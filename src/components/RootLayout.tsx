@@ -3,21 +3,13 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu, X, LayoutGrid } from 'lucide-react'
 
-const LANGUAGES = [
-  { code: 'en', label: 'EN' },
-  { code: 'nl', label: 'NL' },
-  { code: 'de', label: 'DE' },
-  { code: 'es', label: 'ES' },
-  { code: 'it', label: 'IT' },
-]
-
 const TD = '#1C3F41'
 const TM = '#6B8A8C'
 const GR = '#78B832'
 const BD = '#D4DCEC'
 
 export function RootLayout() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -55,16 +47,6 @@ export function RootLayout() {
           </nav>
 
           <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ display: 'flex', gap: '2px' }}>
-              {LANGUAGES.map((lang) => {
-                const active = i18n.language.startsWith(lang.code)
-                return (
-                  <button key={lang.code} onClick={() => i18n.changeLanguage(lang.code)}
-                    style={{ background: active ? '#EEF8E0' : 'transparent', color: active ? GR : TM, border: 'none', cursor: 'pointer', padding: '4px 7px', borderRadius: '6px', fontSize: '12px', fontWeight: active ? 700 : 400 }}
-                  >{lang.label}</button>
-                )
-              })}
-            </div>
             <a href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
               target="_blank" rel="noopener noreferrer"
               style={{ background: GR, color: TD, padding: '8px 20px', borderRadius: '999px', fontWeight: 700, fontSize: '14px', textDecoration: 'none', transition: 'background .15s' }}
@@ -85,16 +67,6 @@ export function RootLayout() {
               <a key={key} href={`#${key}`} style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t(`nav.${key}`)}</a>
             ))}
             <Link to="/checkout" style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t('nav.checkout')}</Link>
-            <div style={{ paddingTop: '8px', borderTop: `1px solid ${BD}`, display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-              {LANGUAGES.map((lang) => {
-                const active = i18n.language.startsWith(lang.code)
-                return (
-                  <button key={lang.code} onClick={() => { i18n.changeLanguage(lang.code); setMenuOpen(false) }}
-                    style={{ background: active ? '#EEF8E0' : 'transparent', color: active ? GR : TM, border: `1px solid ${active ? '#B8E08A' : BD}`, borderRadius: '6px', padding: '5px 10px', fontSize: '12px', fontWeight: active ? 700 : 400, cursor: 'pointer' }}
-                  >{lang.label}</button>
-                )
-              })}
-            </div>
             <a href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
               target="_blank" rel="noopener noreferrer"
               style={{ background: GR, color: TD, padding: '12px 24px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', textAlign: 'center' }}
