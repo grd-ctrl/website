@@ -167,12 +167,41 @@
     "checkout_link": "View payment instructions"
   },
   "checkout": {
-    "title": "Payment Instructions",
-    "subtitle": "International Wire Transfer",
+    "step_account": "Account",
+    "step_licenses": "Licenses",
+    "step_payment": "Payment",
+    "account_title": "Create your account",
+    "licenses_title": "Configure your plan",
+    "payment_title": "Payment details",
+    "email": "Email address",
+    "full_name": "Full name",
+    "company": "Company",
+    "country": "Country",
+    "continue": "Continue",
+    "back": "Back",
+    "license_count": "Number of licenses",
+    "billing_cycle": "Billing cycle",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "annual_badge": "2 months free",
     "currency_label": "Select currency",
-    "warning": "The Beneficiary field must contain exactly the company name shown below. Using the owner's name may cause delays or rejection of the transfer.",
+    "unit_price": "Price per license",
+    "subtotal": "Subtotal",
+    "discount": "Annual discount (20%)",
+    "total": "Total",
+    "per_month": "/mo",
+    "per_year": "/yr",
+    "transfer_amount": "Transfer amount",
+    "beneficiary_warning": "The Beneficiary field must contain exactly the company name shown below.",
+    "completed_transfer": "I've completed the transfer",
+    "after_transfer": "After completing the transfer, send your proof of payment via WhatsApp to confirm your order.",
+    "custom_pricing": "25+ licenses requires a custom quote.",
+    "contact_sales": "Contact Sales",
     "copy": "Copy",
     "copied": "Copied!",
+    "title": "Payment Instructions",
+    "subtitle": "International Wire Transfer",
+    "warning": "The Beneficiary field must contain exactly the company name shown below. Using the owner's name may cause delays or rejection of the transfer.",
     "fields": {
       "bank": "Bank",
       "bank_address": "Bank Address",
@@ -188,7 +217,6 @@
       "intermediary_country": "Intermediary Country",
       "intermediary_account": "Intermediary Account"
     },
-    "after_transfer": "After completing the transfer, send your proof of payment via WhatsApp to confirm your order.",
     "contact_cta": "Send Proof via WhatsApp"
   },
   "footer": {
@@ -223,5 +251,13 @@
         "cta": "Send email"
       }
     }
+  },
+  "impact": {
+    "label": "TAKE CONTROL",
+    "headline": "See the big picture.",
+    "headline2": "Act on the details.",
+    "sub": "Your operators deserve a tool that works as fast as they think. GroundCTRL puts the entire control room in the palm of their hand.",
+    "cta_primary": "Get started",
+    "cta_secondary": "Request a demo"
   }
 }

@@ -167,12 +167,41 @@
     "checkout_link": "Betalingsinstructies bekijken"
   },
   "checkout": {
-    "title": "Betalingsinstructies",
-    "subtitle": "Internationale Bankoverschrijving",
-    "currency_label": "Valuta selecteren",
-    "warning": "Het veld Begunstigde moet exact de bedrijfsnaam bevatten zoals hieronder weergegeven. Het gebruik van de naam van de eigenaar kan leiden tot vertragingen of afwijzing.",
+    "step_account": "Account",
+    "step_licenses": "Licenties",
+    "step_payment": "Betaling",
+    "account_title": "Maak je account aan",
+    "licenses_title": "Configureer je plan",
+    "payment_title": "Betalingsgegevens",
+    "email": "E-mailadres",
+    "full_name": "Volledige naam",
+    "company": "Bedrijf",
+    "country": "Land",
+    "continue": "Doorgaan",
+    "back": "Terug",
+    "license_count": "Aantal licenties",
+    "billing_cycle": "Factureringscyclus",
+    "monthly": "Maandelijks",
+    "annual": "Jaarlijks",
+    "annual_badge": "2 maanden gratis",
+    "currency_label": "Selecteer valuta",
+    "unit_price": "Prijs per licentie",
+    "subtotal": "Subtotaal",
+    "discount": "Jaarlijkse korting (20%)",
+    "total": "Totaal",
+    "per_month": "/mnd",
+    "per_year": "/jr",
+    "transfer_amount": "Over te maken bedrag",
+    "beneficiary_warning": "Het veld Begunstigde moet exact de onderstaande bedrijfsnaam bevatten.",
+    "completed_transfer": "Ik heb de overschrijving voltooid",
+    "after_transfer": "Na het voltooien van de overschrijving, stuur je betaalbewijs via WhatsApp om je bestelling te bevestigen.",
+    "custom_pricing": "25+ licenties vereisen een offerte op maat.",
+    "contact_sales": "Neem contact op met Sales",
     "copy": "Kopiëren",
     "copied": "Gekopieerd!",
+    "title": "Betalingsinstructies",
+    "subtitle": "Internationale bankoverschrijving",
+    "warning": "Het veld Begunstigde moet exact de onderstaande bedrijfsnaam bevatten. Het gebruik van de naam van de eigenaar kan vertraging of afwijzing van de overschrijving veroorzaken.",
     "fields": {
       "bank": "Bank",
       "bank_address": "Bankadres",
@@ -181,15 +210,14 @@
       "iban": "IBAN / Rekeningnummer",
       "branch": "Filiaalcode",
       "account_type": "Rekeningtype",
-      "beneficiary": "Naam Begunstigde",
-      "beneficiary_address": "Adres Begunstigde",
-      "intermediary_swift": "Tussenbank SWIFT / BIC",
+      "beneficiary": "Naam begunstigde",
+      "beneficiary_address": "Adres begunstigde",
+      "intermediary_swift": "SWIFT / BIC tussenbank",
       "intermediary_bank": "Tussenbank",
-      "intermediary_country": "Tussenbank Land",
-      "intermediary_account": "Tussenbank Rekening"
+      "intermediary_country": "Land tussenbank",
+      "intermediary_account": "Rekening tussenbank"
     },
-    "after_transfer": "Stuur na de overschrijving uw betalingsbewijs via WhatsApp om uw bestelling te bevestigen.",
-    "contact_cta": "Bewijs Sturen via WhatsApp"
+    "contact_cta": "Stuur betaalbewijs via WhatsApp"
   },
   "footer": {
     "tagline": "Zie het grote geheel. Handel de details.",
@@ -223,5 +251,13 @@
         "cta": "E-mail sturen"
       }
     }
+  },
+  "impact": {
+    "label": "NEEM DE CONTROLE",
+    "headline": "Zie het grote geheel.",
+    "headline2": "Handel op de details.",
+    "sub": "Je operators verdienen een tool die zo snel werkt als zij denken. GroundCTRL zet de volledige control room in de palm van hun hand.",
+    "cta_primary": "Ga aan de slag",
+    "cta_secondary": "Vraag een demo aan"
   }
 }

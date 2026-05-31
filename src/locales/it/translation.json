@@ -167,29 +167,57 @@
     "checkout_link": "Visualizza le istruzioni di pagamento"
   },
   "checkout": {
-    "title": "Istruzioni di Pagamento",
-    "subtitle": "Bonifico Bancario Internazionale",
+    "step_account": "Account",
+    "step_licenses": "Licenze",
+    "step_payment": "Pagamento",
+    "account_title": "Crea il tuo account",
+    "licenses_title": "Configura il tuo piano",
+    "payment_title": "Dettagli di pagamento",
+    "email": "Indirizzo email",
+    "full_name": "Nome completo",
+    "company": "Azienda",
+    "country": "Paese",
+    "continue": "Continua",
+    "back": "Indietro",
+    "license_count": "Numero di licenze",
+    "billing_cycle": "Ciclo di fatturazione",
+    "monthly": "Mensile",
+    "annual": "Annuale",
+    "annual_badge": "2 mesi gratis",
     "currency_label": "Seleziona valuta",
-    "warning": "Il campo Beneficiario deve contenere esattamente il nome dell'azienda mostrato di seguito. L'uso del nome del proprietario può causare ritardi o il rifiuto del bonifico.",
+    "unit_price": "Prezzo per licenza",
+    "subtotal": "Subtotale",
+    "discount": "Sconto annuale (20%)",
+    "total": "Totale",
+    "per_month": "/mese",
+    "per_year": "/anno",
+    "transfer_amount": "Importo del bonifico",
+    "beneficiary_warning": "Il campo Beneficiario deve contenere esattamente il nome dell'azienda indicato qui sotto.",
+    "completed_transfer": "Ho completato il bonifico",
+    "after_transfer": "Dopo aver completato il bonifico, invia la prova di pagamento via WhatsApp per confermare il tuo ordine.",
+    "custom_pricing": "25+ licenze richiedono un preventivo personalizzato.",
+    "contact_sales": "Contatta le vendite",
     "copy": "Copia",
     "copied": "Copiato!",
+    "title": "Istruzioni di pagamento",
+    "subtitle": "Bonifico bancario internazionale",
+    "warning": "Il campo Beneficiario deve contenere esattamente il nome dell'azienda mostrato qui sotto. L'uso del nome del titolare può causare ritardi o il rifiuto del bonifico.",
     "fields": {
       "bank": "Banca",
-      "bank_address": "Indirizzo Banca",
-      "bank_country": "Paese Banca",
+      "bank_address": "Indirizzo banca",
+      "bank_country": "Paese della banca",
       "swift": "SWIFT / BIC",
-      "iban": "IBAN / Numero di Conto",
-      "branch": "Codice Filiale",
-      "account_type": "Tipo di Conto",
-      "beneficiary": "Nome del Beneficiario",
-      "beneficiary_address": "Indirizzo del Beneficiario",
-      "intermediary_swift": "SWIFT / BIC Intermediario",
-      "intermediary_bank": "Banca Intermediaria",
-      "intermediary_country": "Paese Intermediario",
-      "intermediary_account": "Conto Intermediario"
+      "iban": "IBAN / Numero di conto",
+      "branch": "Codice filiale",
+      "account_type": "Tipo di conto",
+      "beneficiary": "Nome del beneficiario",
+      "beneficiary_address": "Indirizzo del beneficiario",
+      "intermediary_swift": "SWIFT / BIC intermediario",
+      "intermediary_bank": "Banca intermediaria",
+      "intermediary_country": "Paese dell'intermediario",
+      "intermediary_account": "Conto intermediario"
     },
-    "after_transfer": "Dopo il bonifico, invia la prova di pagamento via WhatsApp per confermare il tuo ordine.",
-    "contact_cta": "Invia Prova via WhatsApp"
+    "contact_cta": "Invia prova via WhatsApp"
   },
   "footer": {
     "tagline": "Vedi il quadro generale. Agisci sui dettagli.",
@@ -223,5 +251,13 @@
         "cta": "Invia email"
       }
     }
+  },
+  "impact": {
+    "label": "PRENDI IL CONTROLLO",
+    "headline": "Vedi il quadro generale.",
+    "headline2": "Agisci sui dettagli.",
+    "sub": "I tuoi operatori meritano uno strumento che lavori veloce quanto loro pensano. GroundCTRL mette l'intera control room nel palmo della loro mano.",
+    "cta_primary": "Inizia ora",
+    "cta_secondary": "Richiedi una demo"
   }
 }

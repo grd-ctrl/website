@@ -8,6 +8,7 @@ import { UseCasesSection } from '../components/sections/UseCasesSection'
 import { TestimonialsSection } from '../components/sections/TestimonialsSection'
 import { DemoSection } from '../components/sections/DemoSection'
 import { PricingSection } from '../components/sections/PricingSection'
+import { ImpactSection } from '../components/sections/ImpactSection'
 import { SupportSection } from '../components/sections/SupportSection'
 import { Footer } from '../components/sections/Footer'
 
@@ -24,6 +25,7 @@ export function HomePage() {
       <TestimonialsSection />
       <DemoSection />
       <PricingSection />
+      <ImpactSection />
       <SupportSection />
       <Footer />
     </>

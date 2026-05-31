@@ -167,29 +167,57 @@
     "checkout_link": "Ver instrucciones de pago"
   },
   "checkout": {
-    "title": "Instrucciones de Pago",
-    "subtitle": "Transferencia Bancaria Internacional",
+    "step_account": "Cuenta",
+    "step_licenses": "Licencias",
+    "step_payment": "Pago",
+    "account_title": "Crea tu cuenta",
+    "licenses_title": "Configura tu plan",
+    "payment_title": "Datos de pago",
+    "email": "Correo electrónico",
+    "full_name": "Nombre completo",
+    "company": "Empresa",
+    "country": "País",
+    "continue": "Continuar",
+    "back": "Atrás",
+    "license_count": "Número de licencias",
+    "billing_cycle": "Ciclo de facturación",
+    "monthly": "Mensual",
+    "annual": "Anual",
+    "annual_badge": "2 meses gratis",
     "currency_label": "Seleccionar moneda",
-    "warning": "El campo Beneficiario debe contener exactamente el nombre de la empresa que se muestra a continuación. Usar el nombre del propietario puede causar retrasos o cancelación de la transferencia.",
+    "unit_price": "Precio por licencia",
+    "subtotal": "Subtotal",
+    "discount": "Descuento anual (20%)",
+    "total": "Total",
+    "per_month": "/mes",
+    "per_year": "/año",
+    "transfer_amount": "Monto a transferir",
+    "beneficiary_warning": "El campo Beneficiario debe contener exactamente el nombre de la empresa que aparece abajo.",
+    "completed_transfer": "Ya completé la transferencia",
+    "after_transfer": "Después de completar la transferencia, envía tu comprobante de pago por WhatsApp para confirmar tu pedido.",
+    "custom_pricing": "25+ licencias requieren una cotización personalizada.",
+    "contact_sales": "Contactar a ventas",
     "copy": "Copiar",
     "copied": "¡Copiado!",
+    "title": "Instrucciones de pago",
+    "subtitle": "Transferencia bancaria internacional",
+    "warning": "El campo Beneficiario debe contener exactamente el nombre de la empresa que se muestra abajo. Usar el nombre del propietario puede causar retrasos o el rechazo de la transferencia.",
     "fields": {
       "bank": "Banco",
-      "bank_address": "Dirección del Banco",
-      "bank_country": "País del Banco",
+      "bank_address": "Dirección del banco",
+      "bank_country": "País del banco",
       "swift": "SWIFT / BIC",
-      "iban": "IBAN / Número de Cuenta",
-      "branch": "Código de Sucursal",
-      "account_type": "Tipo de Cuenta",
-      "beneficiary": "Nombre del Beneficiario",
-      "beneficiary_address": "Dirección del Beneficiario",
-      "intermediary_swift": "SWIFT / BIC Intermediario",
-      "intermediary_bank": "Banco Intermediario",
-      "intermediary_country": "País Intermediario",
-      "intermediary_account": "Cuenta Intermediaria"
+      "iban": "IBAN / Número de cuenta",
+      "branch": "Código de sucursal",
+      "account_type": "Tipo de cuenta",
+      "beneficiary": "Nombre del beneficiario",
+      "beneficiary_address": "Dirección del beneficiario",
+      "intermediary_swift": "SWIFT / BIC intermediario",
+      "intermediary_bank": "Banco intermediario",
+      "intermediary_country": "País del intermediario",
+      "intermediary_account": "Cuenta intermediaria"
     },
-    "after_transfer": "Tras la transferencia, envíe su comprobante de pago por WhatsApp para confirmar su pedido.",
-    "contact_cta": "Enviar Comprobante por WhatsApp"
+    "contact_cta": "Enviar comprobante por WhatsApp"
   },
   "footer": {
     "tagline": "Vea el panorama completo. Actúe sobre los detalles.",
@@ -223,5 +251,13 @@
         "cta": "Enviar correo"
       }
     }
+  },
+  "impact": {
+    "label": "TOMA EL CONTROL",
+    "headline": "Ve el panorama completo.",
+    "headline2": "Actúa sobre los detalles.",
+    "sub": "Tus operadores merecen una herramienta que funcione tan rápido como piensan. GroundCTRL pone toda la sala de control en la palma de su mano.",
+    "cta_primary": "Comenzar",
+    "cta_secondary": "Solicitar una demo"
   }
 }

@@ -167,12 +167,41 @@
     "checkout_link": "Zahlungsanweisungen anzeigen"
   },
   "checkout": {
-    "title": "Zahlungsanweisungen",
-    "subtitle": "Internationale Überweisung",
+    "step_account": "Konto",
+    "step_licenses": "Lizenzen",
+    "step_payment": "Zahlung",
+    "account_title": "Erstellen Sie Ihr Konto",
+    "licenses_title": "Konfigurieren Sie Ihren Plan",
+    "payment_title": "Zahlungsdetails",
+    "email": "E-Mail-Adresse",
+    "full_name": "Vollständiger Name",
+    "company": "Unternehmen",
+    "country": "Land",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "license_count": "Anzahl der Lizenzen",
+    "billing_cycle": "Abrechnungszyklus",
+    "monthly": "Monatlich",
+    "annual": "Jährlich",
+    "annual_badge": "2 Monate gratis",
     "currency_label": "Währung auswählen",
-    "warning": "Das Empfängerfeld muss genau den unten angezeigten Firmennamen enthalten. Die Verwendung des Namens des Inhabers kann zu Verzögerungen oder Stornierungen führen.",
+    "unit_price": "Preis pro Lizenz",
+    "subtotal": "Zwischensumme",
+    "discount": "Jährlicher Rabatt (20%)",
+    "total": "Gesamt",
+    "per_month": "/Mon.",
+    "per_year": "/Jahr",
+    "transfer_amount": "Überweisungsbetrag",
+    "beneficiary_warning": "Das Feld Begünstigter muss exakt den unten angegebenen Firmennamen enthalten.",
+    "completed_transfer": "Ich habe die Überweisung abgeschlossen",
+    "after_transfer": "Senden Sie nach Abschluss der Überweisung Ihren Zahlungsnachweis per WhatsApp, um Ihre Bestellung zu bestätigen.",
+    "custom_pricing": "Für 25+ Lizenzen ist ein individuelles Angebot erforderlich.",
+    "contact_sales": "Vertrieb kontaktieren",
     "copy": "Kopieren",
     "copied": "Kopiert!",
+    "title": "Zahlungsanweisungen",
+    "subtitle": "Internationale Überweisung",
+    "warning": "Das Feld Begünstigter muss exakt den unten angezeigten Firmennamen enthalten. Die Verwendung des Namens des Inhabers kann zu Verzögerungen oder zur Ablehnung der Überweisung führen.",
     "fields": {
       "bank": "Bank",
       "bank_address": "Bankadresse",
@@ -185,10 +214,9 @@
       "beneficiary_address": "Adresse des Begünstigten",
       "intermediary_swift": "Intermediäre SWIFT / BIC",
       "intermediary_bank": "Intermediäre Bank",
-      "intermediary_country": "Intermediäres Land",
-      "intermediary_account": "Intermediäres Konto"
+      "intermediary_country": "Land der Zwischenbank",
+      "intermediary_account": "Zwischenkonto"
     },
-    "after_transfer": "Senden Sie nach der Überweisung den Zahlungsnachweis per WhatsApp, um Ihre Bestellung zu bestätigen.",
     "contact_cta": "Nachweis per WhatsApp senden"
   },
   "footer": {
@@ -223,5 +251,13 @@
         "cta": "E-Mail senden"
       }
     }
+  },
+  "impact": {
+    "label": "KONTROLLE ÜBERNEHMEN",
+    "headline": "Das große Ganze sehen.",
+    "headline2": "Im Detail handeln.",
+    "sub": "Ihre Operatoren verdienen ein Tool, das so schnell arbeitet, wie sie denken. GroundCTRL bringt den gesamten Kontrollraum in ihre Handfläche.",
+    "cta_primary": "Loslegen",
+    "cta_secondary": "Demo anfordern"
   }
 }
