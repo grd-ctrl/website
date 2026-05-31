@@ -6,6 +6,10 @@ import { Footer } from '../components/sections/Footer'
 
 const WA_LINK = 'https://wa.me/+5585998614541?text=Hi%2C+here+is+my+proof+of+payment+for+GroundCTRL'
 
+const TD = '#1C3F41'
+const TM = '#6B8A8C'
+const BD = '#D4DCEC'
+
 const SHARED = {
   bank: 'Banco Topazio S/A',
   bank_address: 'Rua 18 de Novembro, 273 - Porto Alegre - RS, 90240-040',
@@ -33,7 +37,7 @@ const INTERMEDIARY = {
   },
 }
 
-function CopyRow({ label, value }: { label: string; value: string }) {
+function CopyRow({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
   const [copied, setCopied] = useState(false)
   const { t } = useTranslation()
 
@@ -44,23 +48,18 @@ function CopyRow({ label, value }: { label: string; value: string }) {
   }
 
   return (
-    <div
-      className="flex items-center justify-between gap-4 py-3 px-4 rounded-xl"
-      style={{ background: '#0d1421', border: '1px solid #1e2d45' }}
-    >
-      <div className="min-w-0 flex-1">
-        <p className="text-xs mb-0.5" style={{ color: '#6b7a99' }}>{label}</p>
-        <p className="text-sm font-mono font-medium truncate" style={{ color: '#e8edf5' }}>{value}</p>
+    <div style={{
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px',
+      padding: '12px 16px', borderRadius: '10px',
+      background: highlight ? '#EEF8E0' : '#F4F7FA',
+      border: `1px solid ${highlight ? '#B8E08A' : BD}`,
+    }}>
+      <div style={{ minWidth: 0, flex: 1 }}>
+        <p style={{ margin: '0 0 2px 0', fontSize: '11px', fontWeight: highlight ? 700 : 500, color: highlight ? '#4E8A1E' : TM, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{label}</p>
+        <p style={{ margin: 0, fontSize: '14px', fontFamily: 'monospace', fontWeight: highlight ? 700 : 500, color: highlight ? TD : '#244C4E', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{value}</p>
       </div>
-      <button
-        onClick={handleCopy}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium flex-shrink-0 transition-all"
-        style={{
-          background: copied ? 'rgba(16,185,129,0.15)' : 'rgba(0,212,255,0.08)',
-          border: `1px solid ${copied ? 'rgba(16,185,129,0.3)' : 'rgba(0,212,255,0.2)'}`,
-          color: copied ? '#10b981' : '#00d4ff',
-          cursor: 'pointer',
-        }}
+      <button onClick={handleCopy}
+        style={{ display: 'flex', alignItems: 'center', gap: '5px', padding: '6px 12px', borderRadius: '999px', fontSize: '12px', fontWeight: 600, flexShrink: 0, cursor: 'pointer', transition: 'all .15s', background: copied ? '#EEF8E0' : '#fff', border: `1px solid ${copied ? '#B8E08A' : BD}`, color: copied ? '#4E8A1E' : TM }}
       >
         {copied ? <Check size={12} /> : <Copy size={12} />}
         {copied ? t('checkout.copied') : t('checkout.copy')}
@@ -77,99 +76,73 @@ export function CheckoutPage() {
 
   return (
     <>
-      <div className="min-h-screen py-16 px-6" style={{ background: '#0a0f1a' }}>
-        <div className="max-w-2xl mx-auto">
+      <div style={{ minHeight: 'calc(100vh - 64px)', padding: '48px 24px', background: '#F4F7FA' }}>
+        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
+
           {/* Back */}
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm mb-8 no-underline transition-colors"
-            style={{ color: '#6b7a99' }}
-            onMouseEnter={e => (e.currentTarget.style.color = '#00d4ff')}
-            onMouseLeave={e => (e.currentTarget.style.color = '#6b7a99')}
+          <Link to="/"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', color: TM, textDecoration: 'none', marginBottom: '32px', fontWeight: 500, transition: 'color .15s' }}
+            onMouseEnter={e => (e.currentTarget.style.color = TD)}
+            onMouseLeave={e => (e.currentTarget.style.color = TM)}
           >
-            <ArrowLeft size={16} />
+            <ArrowLeft size={15} />
             GroundCTRL
           </Link>
 
           {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-3xl font-extrabold mb-2" style={{ color: '#e8edf5' }}>
+          <div style={{ marginBottom: '32px' }}>
+            <h1 style={{ margin: '0 0 8px 0', fontSize: '32px', fontWeight: 900, color: TD, letterSpacing: '-0.02em' }}>
               {t('checkout.title')}
             </h1>
-            <p style={{ color: '#6b7a99' }}>{t('checkout.subtitle')}</p>
+            <p style={{ margin: 0, color: TM, fontSize: '15px' }}>{t('checkout.subtitle')}</p>
           </div>
 
           {/* Warning */}
-          <div
-            className="flex gap-3 p-4 rounded-xl mb-8"
-            style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.25)' }}
-          >
-            <AlertTriangle size={18} style={{ color: '#f59e0b', flexShrink: 0, marginTop: 2 }} />
-            <p className="text-sm leading-relaxed" style={{ color: '#d97706' }}>
+          <div style={{ display: 'flex', gap: '12px', padding: '16px', borderRadius: '12px', marginBottom: '32px', background: '#FFFBEB', border: '1px solid #FDE68A' }}>
+            <AlertTriangle size={18} style={{ color: '#D97706', flexShrink: 0, marginTop: 2 }} />
+            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.55, color: '#92400E' }}>
               {t('checkout.warning')}
             </p>
           </div>
 
           {/* Currency toggle */}
-          <div className="mb-8">
-            <p className="text-sm mb-3" style={{ color: '#6b7a99' }}>{t('checkout.currency_label')}</p>
-            <div
-              className="inline-flex rounded-xl overflow-hidden"
-              style={{ border: '1px solid #1e2d45' }}
-            >
+          <div style={{ marginBottom: '32px' }}>
+            <p style={{ margin: '0 0 10px 0', fontSize: '13px', fontWeight: 600, color: TM, textTransform: 'uppercase', letterSpacing: '0.07em' }}>{t('checkout.currency_label')}</p>
+            <div style={{ display: 'inline-flex', background: '#fff', border: `1px solid ${BD}`, borderRadius: '999px', padding: '3px' }}>
               {(['USD', 'EUR'] as const).map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setCurrency(c)}
-                  className="px-6 py-2.5 text-sm font-semibold transition-all"
-                  style={{
-                    background: currency === c ? 'rgba(0,212,255,0.12)' : 'transparent',
-                    color: currency === c ? '#00d4ff' : '#6b7a99',
-                    border: 'none',
-                    cursor: 'pointer',
-                    borderRight: c === 'USD' ? '1px solid #1e2d45' : 'none',
-                  }}
+                <button key={c} onClick={() => setCurrency(c)}
+                  style={{ padding: '8px 24px', borderRadius: '999px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', border: 'none', transition: 'all .15s', background: currency === c ? TD : 'transparent', color: currency === c ? '#fff' : TM }}
                 >
-                  {c === 'USD' ? '🇺🇸 USD' : '🇪🇺 EUR'}
+                  {c === 'USD' ? 'USD' : 'EUR'}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Bank details */}
-          <div className="flex flex-col gap-3 mb-8">
-            <CopyRow label={fields.bank} value={SHARED.bank} />
-            <CopyRow label={fields.bank_address} value={SHARED.bank_address} />
-            <CopyRow label={fields.bank_country} value={SHARED.bank_country} />
-            <CopyRow label={fields.swift} value={SHARED.swift} />
-            <CopyRow label={fields.iban} value={SHARED.iban} />
-            <CopyRow label={fields.branch} value={SHARED.branch} />
-            <CopyRow label={fields.account_type} value={SHARED.account_type} />
-
-            {/* Beneficiary highlighted */}
-            <div
-              className="flex items-center justify-between gap-4 py-3 px-4 rounded-xl"
-              style={{ background: 'rgba(0,212,255,0.05)', border: '1px solid rgba(0,212,255,0.2)' }}
-            >
-              <div className="min-w-0 flex-1">
-                <p className="text-xs mb-0.5 font-semibold" style={{ color: '#00d4ff' }}>{fields.beneficiary}</p>
-                <p className="text-sm font-mono font-bold" style={{ color: '#e8edf5' }}>{SHARED.beneficiary}</p>
-              </div>
-              <BeneficiaryCopy value={SHARED.beneficiary} t={t} />
+          {/* Card */}
+          <div style={{ background: '#fff', border: `1px solid ${BD}`, borderRadius: '16px', padding: '28px', marginBottom: '20px', boxShadow: '0 2px 8px rgba(36,76,78,0.06)' }}>
+            <p style={{ margin: '0 0 16px 0', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: TM }}>
+              Beneficiary Bank
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <CopyRow label={fields.bank} value={SHARED.bank} />
+              <CopyRow label={fields.bank_address} value={SHARED.bank_address} />
+              <CopyRow label={fields.bank_country} value={SHARED.bank_country} />
+              <CopyRow label={fields.swift} value={SHARED.swift} />
+              <CopyRow label={fields.iban} value={SHARED.iban} />
+              <CopyRow label={fields.branch} value={SHARED.branch} />
+              <CopyRow label={fields.account_type} value={SHARED.account_type} />
+              <CopyRow label={fields.beneficiary} value={SHARED.beneficiary} highlight />
+              <CopyRow label={fields.beneficiary_address} value={SHARED.beneficiary_address} />
             </div>
-
-            <CopyRow label={fields.beneficiary_address} value={SHARED.beneficiary_address} />
           </div>
 
-          {/* Intermediary bank */}
-          <div
-            className="rounded-xl p-4 mb-8"
-            style={{ background: '#0d1421', border: '1px solid #1e2d45' }}
-          >
-            <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#6b7a99' }}>
-              {currency === 'USD' ? '🇺🇸' : '🇪🇺'} Intermediary Bank ({currency})
+          {/* Intermediary */}
+          <div style={{ background: '#fff', border: `1px solid ${BD}`, borderRadius: '16px', padding: '28px', marginBottom: '28px', boxShadow: '0 2px 8px rgba(36,76,78,0.06)' }}>
+            <p style={{ margin: '0 0 16px 0', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: TM }}>
+              Intermediary Bank ({currency})
             </p>
-            <div className="flex flex-col gap-3">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <CopyRow label={fields.intermediary_swift} value={inter.intermediary_swift} />
               <CopyRow label={fields.intermediary_bank} value={inter.intermediary_bank} />
               <CopyRow label={fields.intermediary_country} value={inter.intermediary_country} />
@@ -178,56 +151,23 @@ export function CheckoutPage() {
           </div>
 
           {/* After transfer */}
-          <div
-            className="rounded-xl p-6 text-center"
-            style={{ background: '#111827', border: '1px solid #1e2d45' }}
-          >
-            <p className="text-sm mb-4" style={{ color: '#6b7a99' }}>
+          <div style={{ background: '#fff', border: `1px solid ${BD}`, borderRadius: '16px', padding: '28px', textAlign: 'center', boxShadow: '0 2px 8px rgba(36,76,78,0.06)' }}>
+            <p style={{ margin: '0 0 16px 0', fontSize: '14px', color: TM, lineHeight: 1.6 }}>
               {t('checkout.after_transfer')}
             </p>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold no-underline transition-all"
-              style={{
-                background: 'linear-gradient(135deg, #25d366, #1ab757)',
-                color: '#fff',
-              }}
-              onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = '0.85'}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#25D366', color: '#fff', padding: '12px 28px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', transition: 'opacity .15s' }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+              onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={17} />
               {t('checkout.contact_cta')}
             </a>
           </div>
+
         </div>
       </div>
       <Footer />
     </>
-  )
-}
-
-function BeneficiaryCopy({ value, t }: { value: string; t: (k: string) => string }) {
-  const [copied, setCopied] = useState(false)
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(value)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-  return (
-    <button
-      onClick={handleCopy}
-      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium flex-shrink-0 transition-all"
-      style={{
-        background: copied ? 'rgba(16,185,129,0.15)' : 'rgba(0,212,255,0.12)',
-        border: `1px solid ${copied ? 'rgba(16,185,129,0.3)' : 'rgba(0,212,255,0.3)'}`,
-        color: copied ? '#10b981' : '#00d4ff',
-        cursor: 'pointer',
-      }}
-    >
-      {copied ? <Check size={12} /> : <Copy size={12} />}
-      {copied ? t('checkout.copied') : t('checkout.copy')}
-    </button>
   )
 }

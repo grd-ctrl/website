@@ -4,38 +4,66 @@
     "usecases": "Casos de uso",
     "demo": "Demo",
     "pricing": "Precios",
-    "contact": "Contacto",
-    "checkout": "Comprar"
+    "contact": "Solicitar Demo",
+    "checkout": "Pago"
   },
   "hero": {
     "badge": "Inteligencia para Salas de Control",
-    "headline": "Controla cada sala.",
-    "headline2": "Desde un solo panel.",
-    "sub": "Un panel de control tablet-first para videowalls y entornos de monitoreo. Ejecuta layouts, escenarios y automatizaciones con un solo toque.",
+    "headline": "Vea el panorama completo.",
+    "headline2": "Actúe sobre los detalles.",
+    "sub": "Cualquiera que sea la instalación crítica que monitoree, las decisiones críticas requieren acción inmediata y segura. GroundCTRL ofrece a sus operadores un panel unificado en tablet para ejecutar layouts, escenarios y comandos con un solo toque.",
     "cta_primary": "Solicitar Demo",
-    "cta_secondary": "Cómo funciona"
+    "cta_secondary": "Cómo funciona",
+    "compat": "Compatible con ecosistemas Barco CTRL"
+  },
+  "pillars": {
+    "label": "Nuestros Pilares",
+    "title": "Los mismos principios que impulsan las salas de control enterprise.",
+    "items": [
+      {
+        "title": "Simplicidad",
+        "description": "Operaciones complejas reducidas a un solo toque. Sin formación requerida — cualquier operador puede actuar de inmediato."
+      },
+      {
+        "title": "Escalabilidad",
+        "description": "Desde una sola sala de control hasta una red global de centros de monitoreo. Añada salas e integraciones sin fricción."
+      },
+      {
+        "title": "Seguridad",
+        "description": "Control de acceso por roles, registros de auditoría completos y ningún dato sensible almacenado en el dispositivo."
+      }
+    ]
   },
   "problem": {
-    "label": "El Problema",
-    "title": "Las salas de control están fragmentadas.",
-    "description": "Los operadores manejan apps separadas para videowalls, cámaras, iluminación, sensores y alarmas. Cada acción requiere entrenamiento y segundos críticos.",
+    "label": "El Desafío",
+    "title": "Las salas de control son cada vez más complejas.",
+    "description": "Cualquiera que sea la instalación que monitoree, tomar decisiones críticas se ha vuelto más complejo. Los operadores gestionan herramientas separadas para videowalls, cámaras y alarmas — cada acción cuesta segundos valiosos.",
+    "section_title": "Antes de GroundCTRL",
     "solution_label": "La Solución",
-    "solution_title": "Un toque. Cualquier acción.",
-    "solution_description": "GroundCTRL unifica todos los controles en un panel configurable. Toca una vez para cambiar un layout, activar un escenario de emergencia o mostrar cámaras.",
-    "items": ["Múltiples herramientas desconectadas", "Interfaces complejas requieren entrenamiento", "Las acciones críticas llevan demasiado tiempo"],
-    "solution_items": ["Un panel de comando unificado", "Interfaz intuitiva de mosaicos", "Un toque para cualquier escenario"]
+    "solution_title": "Después de GroundCTRL",
+    "solution_description": "GroundCTRL unifica todos los controles en un único panel configurable en tablet.",
+    "items": [
+      "Múltiples herramientas e interfaces desconectadas",
+      "Flujos de trabajo complejos requieren formación especializada",
+      "Las acciones críticas llevan demasiado tiempo bajo presión"
+    ],
+    "solution_items": [
+      "Un panel de comando unificado en tablet",
+      "Interfaz intuitiva de mosaicos, sin formación",
+      "Un toque para cualquier escenario o layout"
+    ]
   },
   "features": {
     "label": "Funciones",
     "title": "Todo lo que necesita su sala de control.",
-    "subtitle": "Diseñado específicamente para profesionales que no pueden permitirse perder tiempo.",
+    "subtitle": "Diseñado específicamente para profesionales que no pueden permitirse perder tiempo en momentos críticos.",
     "items": [
-      { "title": "Control de Videowall", "description": "Envía layouts, presets y comandos a videowalls Barco vía REST API." },
-      { "title": "Escenarios con Un Toque", "description": "Escenarios preconfigurados como Modo Emergencia o Layout Predeterminado, activados al instante." },
-      { "title": "Integración de Cámaras", "description": "Conecta Milestone, Verkada, Bosch y otras plataformas VMS." },
+      { "title": "Control de Videowall", "description": "Envía layouts, presets y comandos a videowalls Barco vía REST API. Cambia el contenido en menos de un segundo." },
+      { "title": "Escenarios con Un Toque", "description": "Escenarios preconfigurados como Modo Emergencia o Layout Predeterminado — activados al instante desde el panel." },
+      { "title": "Integración de Cámaras", "description": "Conecta Milestone, Verkada, Bosch y otras plataformas VMS para selección automática de cámaras." },
       { "title": "Multi-Conector", "description": "Se integra con Node-RED, Power Automate, Crestron, Q-SYS y Extron." },
-      { "title": "Diseño Tablet-First", "description": "Construido para iPad y tablets Android. Interfaz optimizada para táctil." },
-      { "title": "Sin App Store", "description": "Despliega al instante por sideload. Sin esperar aprobaciones." }
+      { "title": "Diseño Tablet-First", "description": "Construido para iPad y tablets Android. Interfaz optimizada para entornos operativos exigentes." },
+      { "title": "Despliegue Instantáneo", "description": "Despliega por sideload en minutos. Sin aprobación de App Store. Sin demoras." }
     ]
   },
   "usecases": {
@@ -46,20 +74,20 @@
       { "title": "Centros de Operaciones de Seguridad", "description": "Gestiona videowalls, alarmas y feeds de cámaras desde una sola tablet." },
       { "title": "Centros de Operaciones de Red", "description": "Muestra dashboards, mapas de red y alertas bajo demanda." },
       { "title": "Aeropuertos y Puertos", "description": "Coordina operaciones y monitoreo de seguridad en grandes instalaciones." },
-      { "title": "Hospitales", "description": "Controla entornos de salas de procedimientos y pantallas de monitoreo." },
-      { "title": "Energía e Industria", "description": "Monitoreo de procesos y respuesta a incidentes en planta." },
+      { "title": "Hospitales", "description": "Controla entornos de salas de procedimientos y pantallas de monitoreo con precisión." },
+      { "title": "Energía e Industria", "description": "Monitoreo de procesos y respuesta a incidentes directamente en planta." },
       { "title": "Comando y Control", "description": "Ejecuta escenarios multi-sistema desde un panel autorizado." }
     ]
   },
   "demo": {
     "label": "Véalo en Acción",
     "title": "Diseñado para el operador, no para el técnico.",
-    "subtitle": "Una interfaz oscura y clara, diseñada para leerse a distancia y tocarse con confianza.",
-    "cta": "¿Quiere una demo en vivo?"
+    "subtitle": "Una interfaz clara y táctil diseñada para entenderse de inmediato y operarse con confianza, incluso bajo alta presión.",
+    "cta": "Solicitar una Demo en Vivo"
   },
   "pricing": {
     "label": "Precios",
-    "title": "Precios enterprise, adaptados a su despliegue.",
+    "title": "Licencias enterprise, adaptadas a su despliegue.",
     "subtitle": "GroundCTRL se licencia por instalación. Contáctenos para una propuesta.",
     "cta": "Solicitar Cotización",
     "note": "Pago por transferencia bancaria internacional. Se aceptan USD y EUR.",
@@ -69,7 +97,7 @@
     "title": "Instrucciones de Pago",
     "subtitle": "Transferencia Bancaria Internacional",
     "currency_label": "Seleccionar moneda",
-    "warning": "El campo Beneficiario debe contener exactamente el nombre de la empresa que se muestra a continuación. Usar el nombre del propietario puede causar retrasos o cancelación.",
+    "warning": "El campo Beneficiario debe contener exactamente el nombre de la empresa que se muestra a continuación. Usar el nombre del propietario puede causar retrasos o cancelación de la transferencia.",
     "copy": "Copiar",
     "copied": "¡Copiado!",
     "fields": {
@@ -80,11 +108,11 @@
       "intermediary_bank": "Banco Intermediario", "intermediary_country": "País Intermediario",
       "intermediary_account": "Cuenta Intermediaria"
     },
-    "after_transfer": "Tras la transferencia, envía el comprobante de pago por WhatsApp.",
+    "after_transfer": "Tras la transferencia, envíe su comprobante de pago por WhatsApp para confirmar su pedido.",
     "contact_cta": "Enviar Comprobante por WhatsApp"
   },
   "footer": {
-    "tagline": "Controla cada sala. Desde un solo panel.",
+    "tagline": "Vea el panorama completo. Actúe sobre los detalles.",
     "links": { "features": "Funciones", "usecases": "Casos de uso", "checkout": "Pago", "contact": "Contacto" },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Todos los derechos reservados."
   }

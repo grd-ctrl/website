@@ -4,39 +4,59 @@
     "usecases": "Use Cases",
     "demo": "Demo",
     "pricing": "Pricing",
-    "contact": "Contact",
-    "checkout": "Buy"
+    "contact": "Request Demo",
+    "checkout": "Payment"
   },
   "hero": {
     "badge": "Control Room Intelligence",
-    "headline": "Command Every Room.",
-    "headline2": "From One Dashboard.",
-    "sub": "A tablet-first control panel for video walls and monitoring environments. Execute layouts, scenarios and automations with a single tap.",
+    "headline": "See the big picture.",
+    "headline2": "Act on the details.",
+    "sub": "Whatever vital facility you're monitoring, critical decisions require immediate, confident action. GroundCTRL gives your operators a unified tablet panel to execute layouts, scenarios and commands in a single tap.",
     "cta_primary": "Request a Demo",
-    "cta_secondary": "See How It Works"
+    "cta_secondary": "See How It Works",
+    "compat": "Compatible with Barco CTRL ecosystems"
+  },
+  "pillars": {
+    "label": "Our Foundation",
+    "title": "The same principles that power enterprise control rooms.",
+    "items": [
+      {
+        "title": "Simplicity",
+        "description": "Complex operations reduced to a single tap. No training required — any operator can act immediately on what matters most."
+      },
+      {
+        "title": "Scalability",
+        "description": "From a single control room to a global network of monitoring centers. Add rooms, users and integrations without friction."
+      },
+      {
+        "title": "Security",
+        "description": "Role-based access control, full audit logs and zero sensitive data stored on device. Your infrastructure stays yours."
+      }
+    ]
   },
   "problem": {
-    "label": "The Problem",
-    "title": "Control rooms are fragmented.",
-    "description": "Operators juggle separate apps for video walls, cameras, lighting, sensors and alarms. Every action requires training, multiple tools and precious seconds.",
+    "label": "The Challenge",
+    "title": "Control rooms are getting more complex.",
+    "description": "Whatever vital facility or process you are monitoring, making critical decisions has become more complex. Operators juggle separate tools for video walls, cameras, alarms and scenarios — every action requires training and precious seconds.",
+    "section_title": "Before GroundCTRL",
     "solution_label": "The Solution",
-    "solution_title": "One tap. Any action.",
-    "solution_description": "GroundCTRL unifies all controls into a single configurable dashboard. Tap once to switch a video wall layout, trigger an emergency scenario or show incident cameras.",
+    "solution_title": "After GroundCTRL",
+    "solution_description": "GroundCTRL unifies all controls into a single configurable tablet panel. Tap once to switch a video wall layout, trigger an emergency scenario or show incident cameras.",
     "items": [
-      "Multiple disconnected tools",
-      "Complex interfaces require training",
-      "Critical actions take too long"
+      "Multiple disconnected tools and interfaces",
+      "Complex workflows require specialist training",
+      "Critical actions take too long under pressure"
     ],
     "solution_items": [
-      "One unified command panel",
-      "Intuitive tile-based interface",
-      "Single tap for any scenario"
+      "One unified command panel on a tablet",
+      "Intuitive tile-based interface, zero training",
+      "Single tap for any scenario or layout"
     ]
   },
   "features": {
     "label": "Features",
     "title": "Everything your control room needs.",
-    "subtitle": "Purpose-built for professionals who can't afford to waste time.",
+    "subtitle": "Purpose-built for professionals who cannot afford to waste time in critical moments.",
     "items": [
       {
         "title": "Video Wall Control",
@@ -44,11 +64,11 @@
       },
       {
         "title": "One-Tap Scenarios",
-        "description": "Pre-configured scenarios like Emergency Mode, Default Layout or Incident Map — triggered instantly."
+        "description": "Pre-configured scenarios like Emergency Mode, Default Layout or Incident Map — triggered instantly from the panel."
       },
       {
         "title": "Camera Integration",
-        "description": "Connect Milestone, Verkada, Bosch and other VMS platforms. Show the right cameras automatically."
+        "description": "Connect Milestone, Verkada, Bosch and other VMS platforms. Show the right cameras automatically on any alarm."
       },
       {
         "title": "Multi-Connector",
@@ -56,11 +76,11 @@
       },
       {
         "title": "Tablet-First Design",
-        "description": "Built for iPad and Android tablets. Touch-optimized interface designed for demanding environments."
+        "description": "Built for iPad and Android tablets. Touch-optimized interface designed for demanding operational environments."
       },
       {
-        "title": "No App Store Required",
-        "description": "Deploy instantly via sideload. No App Store approval wait. No delays when your client needs it now."
+        "title": "Instant Deployment",
+        "description": "Deploy via sideload in minutes. No App Store approval. No delays when your client needs it now."
       }
     ]
   },
@@ -69,23 +89,41 @@
     "title": "Built for every critical environment.",
     "subtitle": "Wherever operators monitor, protect or control — GroundCTRL fits.",
     "items": [
-      { "title": "Security Operations Centers", "description": "Manage video walls, alarms and camera feeds from a single tablet." },
-      { "title": "Network Operations Centers", "description": "Display dashboards, network maps and alerts on demand." },
-      { "title": "Airports & Ports", "description": "Coordinate operations and security monitoring across large facilities." },
-      { "title": "Hospitals", "description": "Control procedure room environments and monitoring displays." },
-      { "title": "Energy & Industry", "description": "Manage process monitoring and incident response on the floor." },
-      { "title": "Command & Control", "description": "Execute multi-system scenarios from a single authorized panel." }
+      {
+        "title": "Security Operations Centers",
+        "description": "Manage video walls, alarms and camera feeds from a single tablet panel."
+      },
+      {
+        "title": "Network Operations Centers",
+        "description": "Display dashboards, network maps and alerts on demand with one tap."
+      },
+      {
+        "title": "Airports & Ports",
+        "description": "Coordinate operations and security monitoring across large distributed facilities."
+      },
+      {
+        "title": "Hospitals",
+        "description": "Control procedure room environments and monitoring displays with precision."
+      },
+      {
+        "title": "Energy & Industry",
+        "description": "Manage process monitoring and incident response directly on the operations floor."
+      },
+      {
+        "title": "Command & Control Centers",
+        "description": "Execute multi-system scenarios from a single authorized tablet panel."
+      }
     ]
   },
   "demo": {
     "label": "See It In Action",
     "title": "Designed for the operator, not the technician.",
-    "subtitle": "A clean, dark interface built to be read at a distance and touched with confidence.",
-    "cta": "Want a live demo?"
+    "subtitle": "A clean, touch-first interface built to be understood immediately and operated with confidence, even in high-pressure environments.",
+    "cta": "Request a Live Demo"
   },
   "pricing": {
     "label": "Pricing",
-    "title": "Enterprise pricing, tailored to your deployment.",
+    "title": "Enterprise licensing, tailored to your deployment.",
     "subtitle": "GroundCTRL is licensed per installation. Contact us for a proposal.",
     "cta": "Get a Quote",
     "note": "Payment via international wire transfer. USD and EUR accepted.",
@@ -95,7 +133,7 @@
     "title": "Payment Instructions",
     "subtitle": "International Wire Transfer",
     "currency_label": "Select currency",
-    "warning": "The Beneficiary field must contain exactly the company name shown below. Using the owner's name may cause delays or cancellation.",
+    "warning": "The Beneficiary field must contain exactly the company name shown below. Using the owner's name may cause delays or rejection of the transfer.",
     "copy": "Copy",
     "copied": "Copied!",
     "fields": {
@@ -113,11 +151,11 @@
       "intermediary_country": "Intermediary Country",
       "intermediary_account": "Intermediary Account"
     },
-    "after_transfer": "After completing the transfer, send proof of payment via WhatsApp.",
+    "after_transfer": "After completing the transfer, send your proof of payment via WhatsApp to confirm your order.",
     "contact_cta": "Send Proof via WhatsApp"
   },
   "footer": {
-    "tagline": "Command Every Room. From One Dashboard.",
+    "tagline": "See the big picture. Act on the details.",
     "links": {
       "features": "Features",
       "usecases": "Use Cases",

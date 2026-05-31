@@ -1,7 +1,7 @@
 import { Outlet, Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, LayoutGrid } from 'lucide-react'
 
 const LANGUAGES = [
   { code: 'en', label: 'EN' },
@@ -11,141 +11,99 @@ const LANGUAGES = [
   { code: 'it', label: 'IT' },
 ]
 
+const TD = '#1C3F41'
+const TM = '#6B8A8C'
+const GR = '#78B832'
+const BD = '#D4DCEC'
+
 export function RootLayout() {
   const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen" style={{ background: '#0a0f1a', color: '#e8edf5' }}>
-      <header
-        className="fixed top-0 left-0 right-0 z-50"
-        style={{
-          background: 'rgba(10,15,26,0.85)',
-          backdropFilter: 'blur(12px)',
-          borderBottom: '1px solid #1e2d45',
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 no-underline">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm"
-              style={{ background: 'linear-gradient(135deg, #00d4ff, #a855f7)', color: '#0a0f1a' }}
-            >
-              G
+    <div style={{ minHeight: '100vh', background: '#fff', color: '#244C4E' }}>
+      <header style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+        background: 'rgba(255,255,255,0.96)',
+        backdropFilter: 'blur(8px)',
+        borderBottom: `1px solid ${BD}`,
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+            <div style={{ width: '30px', height: '30px', borderRadius: '7px', background: TD, display: 'flex', alignItems: 'center', justifyContent: 'center', color: GR, flexShrink: 0 }}>
+              <LayoutGrid size={15} />
             </div>
-            <span className="font-bold text-lg tracking-tight" style={{ color: '#e8edf5' }}>
-              Ground<span style={{ color: '#00d4ff' }}>CTRL</span>
+            <span style={{ fontWeight: 800, fontSize: '17px', letterSpacing: '-0.02em', color: TD }}>
+              Ground<span style={{ color: GR }}>CTRL</span>
             </span>
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
             {(['features', 'usecases', 'demo', 'pricing'] as const).map((key) => (
-              <a
-                key={key}
-                href={`#${key}`}
-                className="text-sm transition-colors no-underline"
-                style={{ color: '#6b7a99' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#e8edf5')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#6b7a99')}
-              >
-                {t(`nav.${key}`)}
-              </a>
+              <a key={key} href={`#${key}`}
+                style={{ fontSize: '14px', color: TM, textDecoration: 'none', fontWeight: 500, transition: 'color .15s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = TD)}
+                onMouseLeave={e => (e.currentTarget.style.color = TM)}
+              >{t(`nav.${key}`)}</a>
             ))}
-            <Link
-              to="/checkout"
-              className="text-sm no-underline"
-              style={{ color: '#6b7a99' }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#e8edf5')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#6b7a99')}
-            >
-              {t('nav.checkout')}
-            </Link>
+            <Link to="/checkout"
+              style={{ fontSize: '14px', color: TM, textDecoration: 'none', fontWeight: 500 }}
+              onMouseEnter={e => (e.currentTarget.style.color = TD)}
+              onMouseLeave={e => (e.currentTarget.style.color = TM)}
+            >{t('nav.checkout')}</Link>
           </nav>
 
-          {/* Right side: lang + CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            {/* Language switcher */}
-            <div className="flex items-center gap-1">
-              {LANGUAGES.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => i18n.changeLanguage(lang.code)}
-                  className="text-xs px-2 py-1 rounded transition-colors"
-                  style={{
-                    background: i18n.language.startsWith(lang.code) ? 'rgba(0,212,255,0.12)' : 'transparent',
-                    color: i18n.language.startsWith(lang.code) ? '#00d4ff' : '#6b7a99',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {lang.label}
-                </button>
-              ))}
+          <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '2px' }}>
+              {LANGUAGES.map((lang) => {
+                const active = i18n.language.startsWith(lang.code)
+                return (
+                  <button key={lang.code} onClick={() => i18n.changeLanguage(lang.code)}
+                    style={{ background: active ? '#EEF8E0' : 'transparent', color: active ? GR : TM, border: 'none', cursor: 'pointer', padding: '4px 7px', borderRadius: '6px', fontSize: '12px', fontWeight: active ? 700 : 400 }}
+                  >{lang.label}</button>
+                )
+              })}
             </div>
-            <a
-              href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold px-4 py-2 rounded-lg no-underline transition-opacity"
-              style={{ background: 'linear-gradient(135deg, #00d4ff, #0099bb)', color: '#0a0f1a' }}
-              onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-              onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
-            >
-              {t('nav.contact')}
-            </a>
+            <a href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
+              target="_blank" rel="noopener noreferrer"
+              style={{ background: GR, color: TD, padding: '8px 20px', borderRadius: '999px', fontWeight: 700, fontSize: '14px', textDecoration: 'none', transition: 'background .15s' }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#5E9A2C')}
+              onMouseLeave={e => (e.currentTarget.style.background = GR)}
+            >{t('nav.contact')}</a>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2"
-            style={{ background: 'none', border: 'none', color: '#e8edf5', cursor: 'pointer' }}
+          <button className="md:hidden"
+            style={{ background: 'none', border: 'none', color: TD, cursor: 'pointer', padding: '8px' }}
             onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          >{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
 
-        {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-4" style={{ borderTop: '1px solid #1e2d45' }}>
+          <div style={{ borderTop: `1px solid ${BD}`, padding: '16px 24px 24px', display: 'flex', flexDirection: 'column', gap: '16px', background: '#fff' }}>
             {(['features', 'usecases', 'demo', 'pricing'] as const).map((key) => (
-              <a
-                key={key}
-                href={`#${key}`}
-                className="text-sm no-underline"
-                style={{ color: '#6b7a99' }}
-                onClick={() => setMenuOpen(false)}
-              >
-                {t(`nav.${key}`)}
-              </a>
+              <a key={key} href={`#${key}`} style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t(`nav.${key}`)}</a>
             ))}
-            <Link to="/checkout" className="text-sm no-underline" style={{ color: '#6b7a99' }} onClick={() => setMenuOpen(false)}>
-              {t('nav.checkout')}
-            </Link>
-            <div className="flex items-center gap-1 pt-2" style={{ borderTop: '1px solid #1e2d45' }}>
-              {LANGUAGES.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => { i18n.changeLanguage(lang.code); setMenuOpen(false) }}
-                  className="text-xs px-2 py-1 rounded"
-                  style={{
-                    background: i18n.language.startsWith(lang.code) ? 'rgba(0,212,255,0.12)' : 'transparent',
-                    color: i18n.language.startsWith(lang.code) ? '#00d4ff' : '#6b7a99',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {lang.label}
-                </button>
-              ))}
+            <Link to="/checkout" style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t('nav.checkout')}</Link>
+            <div style={{ paddingTop: '8px', borderTop: `1px solid ${BD}`, display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              {LANGUAGES.map((lang) => {
+                const active = i18n.language.startsWith(lang.code)
+                return (
+                  <button key={lang.code} onClick={() => { i18n.changeLanguage(lang.code); setMenuOpen(false) }}
+                    style={{ background: active ? '#EEF8E0' : 'transparent', color: active ? GR : TM, border: `1px solid ${active ? '#B8E08A' : BD}`, borderRadius: '6px', padding: '5px 10px', fontSize: '12px', fontWeight: active ? 700 : 400, cursor: 'pointer' }}
+                  >{lang.label}</button>
+                )
+              })}
             </div>
+            <a href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
+              target="_blank" rel="noopener noreferrer"
+              style={{ background: GR, color: TD, padding: '12px 24px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', textAlign: 'center' }}
+            >{t('nav.contact')}</a>
           </div>
         )}
       </header>
 
-      <main className="pt-16">
+      <main style={{ paddingTop: '64px' }}>
         <Outlet />
       </main>
     </div>

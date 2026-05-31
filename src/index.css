@@ -1,45 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #00d4ff;
-  --color-brand-dim: #0099bb;
-  --color-surface: #0a0f1a;
-  --color-surface-2: #111827;
-  --color-surface-3: #1a2235;
-  --color-border: #1e2d45;
-  --color-text: #e8edf5;
-  --color-muted: #6b7a99;
-
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
 body {
-  background-color: #0a0f1a;
-  color: #e8edf5;
+  background-color: #ffffff;
+  color: #244C4E;
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-.grid-pattern {
+.blueprint-grid {
+  background-color: #F4F7FA;
   background-image:
-    linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(#DDE5F0 1px, transparent 1px),
+    linear-gradient(90deg, #DDE5F0 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.blueprint-grid-white {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(#E6EDF8 1px, transparent 1px),
+    linear-gradient(90deg, #E6EDF8 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
-.glow-brand { box-shadow: 0 0 40px rgba(0,212,255,0.15); }
+.hatch-strip {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 3px,
+    #D4DCEC 3px,
+    #D4DCEC 4px
+  );
+}
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0f1a; }
-::-webkit-scrollbar-thumb { background: #1e2d45; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #F4F7FA; }
+::-webkit-scrollbar-thumb { background: #C8D4E4; border-radius: 3px; }

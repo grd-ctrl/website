@@ -1,114 +1,94 @@
 import { useTranslation } from 'react-i18next'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, AlertTriangle, LayoutGrid, Camera, MapPin, Monitor, RefreshCw, Moon, Radio } from 'lucide-react'
 
 const WA_LINK = 'https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+a+GroundCTRL+demo'
 
+const TD = '#1C3F41'
+const T  = '#244C4E'
+const TM = '#6B8A8C'
+const GR = '#78B832'
+const BD = '#D4DCEC'
+
 const DEMO_TILES = [
-  { label: 'Emergency Mode', color: '#ef4444', icon: '🚨', active: true },
-  { label: 'Ext. Cameras', color: '#00d4ff', icon: '📷', active: false },
-  { label: 'Incident Map', color: '#f59e0b', icon: '🗺️', active: false },
-  { label: 'Default Layout', color: '#10b981', icon: '📺', active: false },
-  { label: 'SOC Dashboard', color: '#a855f7', icon: '🖥️', active: false },
-  { label: 'Night Mode', color: '#3b82f6', icon: '🌙', active: false },
-  { label: 'Restore', color: '#6b7a99', icon: '↺', active: false },
-  { label: 'Broadcast', color: '#f97316', icon: '📡', active: false },
+  { label: 'Emergency',     color: '#DC2626', Icon: AlertTriangle, active: true  },
+  { label: 'Ext. Cameras',  color: GR,        Icon: Camera,       active: false },
+  { label: 'Incident Map',  color: '#D97706', Icon: MapPin,       active: false },
+  { label: 'Default Layout',color: T,         Icon: LayoutGrid,   active: false },
+  { label: 'SOC Dashboard', color: T,         Icon: Monitor,      active: false },
+  { label: 'Night Mode',    color: '#4F46E5', Icon: Moon,         active: false },
+  { label: 'Restore',       color: TM,        Icon: RefreshCw,    active: false },
+  { label: 'Broadcast',     color: '#3D6466', Icon: Radio,        active: false },
+  { label: 'Cameras 2',     color: GR,        Icon: Camera,       active: false },
 ]
 
 export function DemoSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="demo" className="py-24 px-6 overflow-hidden" style={{ background: '#0a0f1a' }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Text */}
-          <div>
-            <div
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6"
-              style={{ background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.2)', color: '#00d4ff' }}
-            >
-              {t('demo.label')}
-            </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight" style={{ color: '#e8edf5' }}>
-              {t('demo.title')}
-            </h2>
-            <p className="text-lg leading-relaxed mb-8" style={{ color: '#6b7a99' }}>
-              {t('demo.subtitle')}
-            </p>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold no-underline transition-all"
-              style={{
-                background: 'rgba(0,212,255,0.1)',
-                border: '1px solid rgba(0,212,255,0.25)',
-                color: '#00d4ff',
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(0,212,255,0.18)'
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(0,212,255,0.1)'
-              }}
-            >
-              <MessageCircle size={18} />
-              {t('demo.cta')}
-            </a>
-          </div>
+    <section id="demo" className="blueprint-grid" style={{ padding: '96px 24px', overflow: 'hidden' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '80px', alignItems: 'center' }}>
 
-          {/* Tablet mockup */}
-          <div className="flex justify-center lg:justify-end">
-            <div
-              className="rounded-3xl overflow-hidden"
-              style={{
-                width: '340px',
-                background: '#0d1421',
-                border: '2px solid #1e2d45',
-                boxShadow: '0 32px 80px rgba(0,0,0,0.7), 0 0 60px rgba(0,212,255,0.08)',
-                padding: '12px',
-              }}
-            >
-              {/* Status bar */}
-              <div className="flex justify-between items-center px-2 pb-3 text-xs" style={{ color: '#6b7a99' }}>
-                <span>09:41</span>
-                <span style={{ color: '#00d4ff', fontWeight: 600 }}>● LIVE</span>
-                <span>🔋 94%</span>
+        {/* Text */}
+        <div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', background: '#EEF8E0', color: '#4E8A1E', borderRadius: '999px', padding: '5px 14px', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', marginBottom: '20px' }}>
+            {t('demo.label')}
+          </div>
+          <h2 style={{ margin: '0 0 20px 0', fontSize: 'clamp(28px, 3.5vw, 42px)', fontWeight: 900, color: TD, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+            {t('demo.title')}
+          </h2>
+          <p style={{ margin: '0 0 32px 0', fontSize: '16px', lineHeight: 1.65, color: TM }}>
+            {t('demo.subtitle')}
+          </p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: GR, color: TD, padding: '13px 28px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', transition: 'background .15s' }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#5E9A2C')}
+            onMouseLeave={e => (e.currentTarget.style.background = GR)}
+          >
+            <MessageCircle size={16} />
+            {t('demo.cta')}
+          </a>
+        </div>
+
+        {/* Portrait tablet mockup */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ background: TD, borderRadius: '30px', padding: '14px 12px 20px', boxShadow: '0 32px 80px rgba(28,63,65,0.25)', width: '260px', position: 'relative' }}>
+            {/* Camera */}
+            <div style={{ width: '8px', height: '8px', background: '#2D5254', borderRadius: '50%', margin: '0 auto 10px' }} />
+
+            {/* Screen */}
+            <div style={{ borderRadius: '14px', overflow: 'hidden', backgroundImage: 'linear-gradient(#E6EDF8 1px, transparent 1px), linear-gradient(90deg, #E6EDF8 1px, transparent 1px)', backgroundSize: '36px 36px', backgroundColor: '#F8FAFD' }}>
+              {/* Header */}
+              <div style={{ padding: '10px 12px', background: '#fff', borderBottom: `1px solid ${BD}`, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: '11px', color: TD }}>GroundCTRL</div>
+                  <div style={{ fontSize: '9px', color: TM }}>Control Room A</div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <div style={{ width: '5px', height: '5px', background: '#DC2626', borderRadius: '50%' }} />
+                  <span style={{ fontSize: '9px', color: '#DC2626', fontWeight: 700 }}>ALERT</span>
+                </div>
               </div>
-              {/* Room label */}
-              <div className="px-2 pb-4">
-                <p className="text-xs mb-1" style={{ color: '#6b7a99' }}>Control Room A</p>
-                <p className="font-bold" style={{ color: '#e8edf5' }}>GroundCTRL</p>
-              </div>
-              {/* Tile grid */}
-              <div className="grid grid-cols-4 gap-2">
+
+              {/* Tiles 3-col */}
+              <div style={{ padding: '10px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
                 {DEMO_TILES.map((tile, i) => (
-                  <div
-                    key={i}
-                    className="aspect-square rounded-xl flex flex-col items-center justify-center gap-1"
-                    style={{
-                      background: tile.active ? `${tile.color}22` : '#111827',
-                      border: `1px solid ${tile.active ? tile.color + '50' : '#1e2d45'}`,
-                    }}
-                  >
-                    <span className="text-lg">{tile.icon}</span>
-                    <span className="text-[9px] font-medium text-center leading-tight px-1" style={{ color: tile.active ? tile.color : '#6b7a99' }}>
+                  <div key={i} style={{ background: tile.active ? `${tile.color}14` : '#fff', border: `1px solid ${tile.active ? tile.color + '55' : BD}`, borderRadius: '8px', padding: '9px 4px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', boxShadow: tile.active ? `0 0 0 1.5px ${tile.color}30` : 'none' }}>
+                    <div style={{ width: '26px', height: '26px', borderRadius: '6px', background: `${tile.color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: tile.color }}>
+                      <tile.Icon size={12} />
+                    </div>
+                    <span style={{ fontSize: '8px', fontWeight: 600, color: tile.active ? tile.color : T, textAlign: 'center', lineHeight: 1.2 }}>
                       {tile.label}
                     </span>
                   </div>
                 ))}
               </div>
-              {/* Bottom nav */}
-              <div className="flex justify-around pt-4 pb-1 px-2">
-                {['🏠', '⚙️', '👤'].map((icon, i) => (
-                  <button key={i} className="text-lg p-2 rounded-lg" style={{ background: 'none', border: 'none', cursor: 'pointer', opacity: i === 0 ? 1 : 0.4 }}>
-                    {icon}
-                  </button>
-                ))}
-              </div>
             </div>
+
+            {/* Home indicator */}
+            <div style={{ width: '40px', height: '4px', background: '#2D5254', borderRadius: '2px', margin: '10px auto 0' }} />
           </div>
         </div>
+
       </div>
     </section>
   )

@@ -4,88 +4,164 @@
     "usecases": "Toepassingen",
     "demo": "Demo",
     "pricing": "Prijzen",
-    "contact": "Contact",
-    "checkout": "Kopen"
+    "contact": "Demo Aanvragen",
+    "checkout": "Betaling"
   },
   "hero": {
     "badge": "Controleruimte Intelligentie",
-    "headline": "Beheer Elke Ruimte.",
-    "headline2": "Vanuit Één Dashboard.",
-    "sub": "Een tablet-first bedieningspaneel voor videoschermen en bewakingsomgevingen. Voer lay-outs, scenario's en automatiseringen uit met één tik.",
+    "headline": "Zie het grote geheel.",
+    "headline2": "Handel de details.",
+    "sub": "Welke vitale faciliteit u ook bewaakt, kritieke beslissingen vereisen onmiddellijke actie. GroundCTRL geeft uw operators één tablet-paneel om lay-outs, scenario's en commando's met één tik uit te voeren.",
     "cta_primary": "Demo Aanvragen",
-    "cta_secondary": "Hoe Het Werkt"
+    "cta_secondary": "Hoe Het Werkt",
+    "compat": "Compatibel met Barco CTRL-omgevingen"
+  },
+  "pillars": {
+    "label": "Onze Basis",
+    "title": "Dezelfde principes die enterprise controleruimtes aandrijven.",
+    "items": [
+      {
+        "title": "Eenvoud",
+        "description": "Complexe operaties teruggebracht tot één tik. Geen training nodig — elke operator kan onmiddellijk handelen."
+      },
+      {
+        "title": "Schaalbaarheid",
+        "description": "Van één controleruimte tot een wereldwijd netwerk van bewakingscentra. Voeg ruimtes en integraties toe zonder wrijving."
+      },
+      {
+        "title": "Beveiliging",
+        "description": "Rolgebaseerde toegangscontrole, volledige auditlogs en geen gevoelige data opgeslagen op het apparaat."
+      }
+    ]
   },
   "problem": {
-    "label": "Het Probleem",
-    "title": "Controleruimtes zijn gefragmenteerd.",
-    "description": "Operators jongleren met afzonderlijke apps voor videoschermen, camera's, verlichting, sensoren en alarmen. Elke actie vereist training en kostbare seconden.",
+    "label": "De Uitdaging",
+    "title": "Controleruimtes worden steeds complexer.",
+    "description": "Welke vitale faciliteit u ook bewaakt, kritieke beslissingen nemen is complexer geworden. Operators werken met losse tools voor videoschermen, camera's en alarmen — elke actie kost kostbare seconden.",
+    "section_title": "Vóór GroundCTRL",
     "solution_label": "De Oplossing",
-    "solution_title": "Één tik. Elke actie.",
-    "solution_description": "GroundCTRL bundelt alle bedieningselementen in één configureerbaar dashboard. Tik eenmaal om een videoscherm-layout te wisselen, een noodscenario te starten of incidentcamera's te tonen.",
-    "items": ["Meerdere losgekoppelde tools", "Complexe interfaces vereisen training", "Kritieke acties duren te lang"],
-    "solution_items": ["Één verenigd commandopaneel", "Intuïtieve tegelinterface", "Één tik voor elk scenario"]
+    "solution_title": "Na GroundCTRL",
+    "solution_description": "GroundCTRL bundelt alle bediening in één configureerbaar tablet-paneel.",
+    "items": [
+      "Meerdere losse tools en interfaces",
+      "Complexe workflows vereisen gespecialiseerde training",
+      "Kritieke acties duren te lang onder druk"
+    ],
+    "solution_items": [
+      "Één unified command panel op tablet",
+      "Intuïtieve tegelinterface, geen training",
+      "Één tik voor elk scenario of lay-out"
+    ]
   },
   "features": {
     "label": "Functies",
     "title": "Alles wat uw controleruimte nodig heeft.",
-    "subtitle": "Speciaal gebouwd voor professionals die het zich niet kunnen veroorloven tijd te verspillen.",
+    "subtitle": "Gebouwd voor professionals die zich geen tijdverlies kunnen veroorloven.",
     "items": [
-      { "title": "Videoscherm Besturing", "description": "Stuur lay-outs, presets en opdrachten naar Barco videoschermen via REST API." },
-      { "title": "Scenario's met Één Tik", "description": "Vooraf geconfigureerde scenario's zoals Noodmodus of Standaardindeling, direct geactiveerd." },
-      { "title": "Camera-integratie", "description": "Verbind Milestone, Verkada, Bosch en andere VMS-platforms. Toon automatisch de juiste camera's." },
-      { "title": "Multi-connector", "description": "Integreert met Node-RED, Power Automate, Crestron, Q-SYS en Extron." },
-      { "title": "Tablet-first Ontwerp", "description": "Gebouwd voor iPad en Android tablets. Aanraakvriendelijke interface." },
-      { "title": "Geen App Store Vereist", "description": "Implementeer direct via sideload. Geen goedkeuringswachttijd." }
+      {
+        "title": "Videoscherm Bediening",
+        "description": "Stuur lay-outs, presets en commando's naar Barco videoschermen via REST API."
+      },
+      {
+        "title": "Één-Tik Scenario's",
+        "description": "Vooraf geconfigureerde scenario's zoals Noodmodus of Standaard Lay-out — direct geactiveerd."
+      },
+      {
+        "title": "Camera-integratie",
+        "description": "Verbind Milestone, Verkada, Bosch en andere VMS-platformen voor automatische cameraselectie."
+      },
+      {
+        "title": "Multi-Connector",
+        "description": "Integreert met Node-RED, Power Automate, Crestron, Q-SYS en Extron."
+      },
+      {
+        "title": "Tablet-First Design",
+        "description": "Gebouwd voor iPad en Android tablets. Touch-geoptimaliseerde interface voor veeleisende omgevingen."
+      },
+      {
+        "title": "Directe Implementatie",
+        "description": "Implementeer via sideload in minuten. Geen App Store-goedkeuring nodig."
+      }
     ]
   },
   "usecases": {
     "label": "Toepassingen",
     "title": "Gebouwd voor elke kritieke omgeving.",
-    "subtitle": "Overal waar operators bewaken, beveiligen of controleren — GroundCTRL past.",
+    "subtitle": "Overal waar operators bewaken, beschermen of controleren — GroundCTRL past.",
     "items": [
-      { "title": "Beveiligingsoperatiecentra", "description": "Beheer videoschermen, alarmen en camerafeeds vanaf één tablet." },
-      { "title": "Netwerkoperatiecentra", "description": "Toon dashboards, netwerkkaarten en waarschuwingen op aanvraag." },
-      { "title": "Luchthavens & Havens", "description": "Coördineer operaties en beveiligingsmonitoring op grote locaties." },
-      { "title": "Ziekenhuizen", "description": "Beheer operatiekameromgevingen en bewakingsdisplays." },
-      { "title": "Energie & Industrie", "description": "Procesmonitoring en incidentrespons op de werkvloer." },
-      { "title": "Commando & Controle", "description": "Voer multi-systeemscenario's uit vanuit één geautoriseerd paneel." }
+      {
+        "title": "Security Operations Centers",
+        "description": "Beheer videoschermen, alarmen en camerafeeds vanaf één tablet."
+      },
+      {
+        "title": "Network Operations Centers",
+        "description": "Toon dashboards, netwerkkaarten en alerts op aanvraag."
+      },
+      {
+        "title": "Luchthavens & Havens",
+        "description": "Coördineer operaties en beveiligingsbewaking over grote faciliteiten."
+      },
+      {
+        "title": "Ziekenhuizen",
+        "description": "Beheer omgevingen van behandelruimtes en bewakingsschermen."
+      },
+      {
+        "title": "Energie & Industrie",
+        "description": "Beheer procesbewaking en incidentrespons op de werkvloer."
+      },
+      {
+        "title": "Commando & Controle",
+        "description": "Voer multi-systeem scenario's uit vanuit één geautoriseerd paneel."
+      }
     ]
   },
   "demo": {
     "label": "Zie Het In Actie",
     "title": "Ontworpen voor de operator, niet de technicus.",
-    "subtitle": "Een helder, donker interface gebouwd om op afstand te lezen en met vertrouwen aan te raken.",
-    "cta": "Wilt u een live demo?"
+    "subtitle": "Een heldere, touch-first interface gebouwd om direct begrepen te worden, ook in situaties met hoge druk.",
+    "cta": "Live Demo Aanvragen"
   },
   "pricing": {
     "label": "Prijzen",
-    "title": "Enterprise-prijzen, afgestemd op uw implementatie.",
-    "subtitle": "GroundCTRL wordt per installatie gelicenseerd. Neem contact op voor een offerte.",
+    "title": "Enterprise licenties, afgestemd op uw implementatie.",
+    "subtitle": "GroundCTRL wordt per installatie gelicentieerd. Neem contact op voor een voorstel.",
     "cta": "Offerte Aanvragen",
-    "note": "Betaling via internationale bankoverschrijving. USD en EUR geaccepteerd.",
+    "note": "Betaling via internationale bankoverschrijving. USD en EUR worden geaccepteerd.",
     "checkout_link": "Betalingsinstructies bekijken"
   },
   "checkout": {
     "title": "Betalingsinstructies",
     "subtitle": "Internationale Bankoverschrijving",
-    "currency_label": "Selecteer valuta",
-    "warning": "Het veld Begunstigde moet exact de hieronder weergegeven bedrijfsnaam bevatten. Het gebruik van de naam van de eigenaar kan vertragingen of annulering veroorzaken.",
+    "currency_label": "Valuta selecteren",
+    "warning": "Het veld Begunstigde moet exact de bedrijfsnaam bevatten zoals hieronder weergegeven. Het gebruik van de naam van de eigenaar kan leiden tot vertragingen of afwijzing.",
     "copy": "Kopiëren",
     "copied": "Gekopieerd!",
     "fields": {
-      "bank": "Bank", "bank_address": "Bankadres", "bank_country": "Bankland",
-      "swift": "SWIFT / BIC", "iban": "IBAN / Rekeningnummer", "branch": "Filiaalcode",
-      "account_type": "Rekeningtype", "beneficiary": "Naam Begunstigde",
-      "beneficiary_address": "Adres Begunstigde", "intermediary_swift": "Intermediaire SWIFT / BIC",
-      "intermediary_bank": "Intermediaire Bank", "intermediary_country": "Intermediair Land",
-      "intermediary_account": "Intermediaire Rekening"
+      "bank": "Bank",
+      "bank_address": "Bankadres",
+      "bank_country": "Bankland",
+      "swift": "SWIFT / BIC",
+      "iban": "IBAN / Rekeningnummer",
+      "branch": "Filiaalcode",
+      "account_type": "Rekeningtype",
+      "beneficiary": "Naam Begunstigde",
+      "beneficiary_address": "Adres Begunstigde",
+      "intermediary_swift": "Tussenbank SWIFT / BIC",
+      "intermediary_bank": "Tussenbank",
+      "intermediary_country": "Tussenbank Land",
+      "intermediary_account": "Tussenbank Rekening"
     },
-    "after_transfer": "Na de overschrijving, stuur het betalingsbewijs via WhatsApp.",
+    "after_transfer": "Stuur na de overschrijving uw betalingsbewijs via WhatsApp om uw bestelling te bevestigen.",
     "contact_cta": "Bewijs Sturen via WhatsApp"
   },
   "footer": {
-    "tagline": "Beheer Elke Ruimte. Vanuit Één Dashboard.",
-    "links": { "features": "Functies", "usecases": "Toepassingen", "checkout": "Betaling", "contact": "Contact" },
+    "tagline": "Zie het grote geheel. Handel de details.",
+    "links": {
+      "features": "Functies",
+      "usecases": "Toepassingen",
+      "checkout": "Betaling",
+      "contact": "Contact"
+    },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Alle rechten voorbehouden."
   }
 }
