@@ -14,6 +14,7 @@ import {
   Settings2,
   SlidersHorizontal,
 } from 'lucide-react'
+import { WalkieTalkieIcon } from '../WalkieTalkieIcon'
 
 const WA_LINK = 'https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL'
 
@@ -323,7 +324,7 @@ export function HeroSection() {
                       color: COLORS.green,
                     }}
                   >
-                    <LayoutGrid size={18} />
+                    <WalkieTalkieIcon size={15} color="#78B832" />
                   </div>
                   <div>
                     <div style={{ color: COLORS.tealDark, fontWeight: 800, fontSize: '15px' }}>GroundCTRL</div>

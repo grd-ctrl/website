@@ -1,7 +1,8 @@
 import { Outlet, Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Menu, X, LayoutGrid } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import { WalkieTalkieIcon } from './WalkieTalkieIcon'
 
 const TD = '#1C3F41'
 const TM = '#6B8A8C'
@@ -24,7 +25,7 @@ export function RootLayout() {
 
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
             <div style={{ width: '30px', height: '30px', borderRadius: '7px', background: TD, display: 'flex', alignItems: 'center', justifyContent: 'center', color: GR, flexShrink: 0 }}>
-              <LayoutGrid size={15} />
+              <WalkieTalkieIcon size={15} color="#78B832" />
             </div>
             <span style={{ fontWeight: 800, fontSize: '17px', letterSpacing: '-0.02em', color: TD }}>
               Ground<span style={{ color: GR }}>CTRL</span>

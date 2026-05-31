@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from '@tanstack/react-router'
-import { LayoutGrid } from 'lucide-react'
+import { WalkieTalkieIcon } from '../WalkieTalkieIcon'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -23,7 +23,7 @@ export function Footer() {
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
-                <LayoutGrid size={20} />
+                <WalkieTalkieIcon size={15} color="#78B832" />
               </div>
               <div style={{ color: '#ffffff', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.03em' }}>
                 Ground<span style={{ color: '#78B832' }}>CTRL</span>
