@@ -2,67 +2,130 @@ import { useTranslation } from 'react-i18next'
 import { Link } from '@tanstack/react-router'
 import { LayoutGrid } from 'lucide-react'
 
-const TD = '#1C3F41'
-const TM_LIGHT = '#A8C0C2'
-const GR = '#78B832'
-
 export function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer style={{ background: TD, padding: '64px 24px 40px', borderTop: `4px solid ${GR}` }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          {/* Top row */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-
-            {/* Brand */}
-            <div style={{ maxWidth: '320px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                <div style={{ width: '30px', height: '30px', borderRadius: '7px', background: GR, display: 'flex', alignItems: 'center', justifyContent: 'center', color: TD }}>
-                  <LayoutGrid size={15} />
-                </div>
-                <span style={{ fontWeight: 800, fontSize: '17px', letterSpacing: '-0.02em', color: '#fff' }}>
-                  Ground<span style={{ color: GR }}>CTRL</span>
-                </span>
+    <footer className="blueprint-grid-dark" style={{ padding: '72px 24px 34px', position: 'relative', overflow: 'hidden' }}>
+      <div className="section-shell">
+        <div className="footer-grid">
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
+              <div
+                style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '14px',
+                  background: '#244C4E',
+                  display: 'grid',
+                  placeItems: 'center',
+                  color: '#78B832',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                <LayoutGrid size={20} />
               </div>
-              <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6, color: TM_LIGHT }}>
-                {t('footer.tagline')}
-              </p>
+              <div style={{ color: '#ffffff', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.03em' }}>
+                Ground<span style={{ color: '#78B832' }}>CTRL</span>
+              </div>
             </div>
 
-            {/* Nav */}
-            <nav style={{ display: 'flex', flexWrap: 'wrap', gap: '12px 32px' }}>
-              {(['features', 'usecases', 'checkout', 'contact'] as const).map((key) =>
-                key === 'checkout' ? (
-                  <Link key={key} to="/checkout"
-                    style={{ fontSize: '14px', textDecoration: 'none', color: TM_LIGHT, fontWeight: 500, transition: 'color .15s' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                    onMouseLeave={e => (e.currentTarget.style.color = TM_LIGHT)}
-                  >{t(`footer.links.${key}`)}</Link>
-                ) : (
-                  <a key={key}
-                    href={key === 'contact' ? 'https://wa.me/+5585998614541' : `#${key}`}
-                    style={{ fontSize: '14px', textDecoration: 'none', color: TM_LIGHT, fontWeight: 500, transition: 'color .15s' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                    onMouseLeave={e => (e.currentTarget.style.color = TM_LIGHT)}
-                  >{t(`footer.links.${key}`)}</a>
-                )
-              )}
-            </nav>
-
+            <div
+              style={{
+                maxWidth: '620px',
+                marginBottom: '30px',
+                color: 'rgba(255,255,255,0.6)',
+                fontSize: 'clamp(28px, 4vw, 36px)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.03em',
+                fontFamily: 'var(--font-display)',
+              }}
+            >
+              {t('footer.tagline')}
+            </div>
           </div>
 
-          {/* Divider */}
-          <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)' }} />
-
-          {/* Bottom */}
-          <p style={{ margin: 0, fontSize: '12px', color: TM_LIGHT }}>
-            {t('footer.copyright')}
-          </p>
+          <div className="footer-links-grid">
+            <div>
+              <div
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '11px',
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(120,184,50,0.72)',
+                  marginBottom: '16px',
+                }}
+              >
+                Navigation
+              </div>
+              <div style={{ display: 'grid', gap: '12px' }}>
+                <a href="#features" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>{t('footer.links.features')}</a>
+                <a href="#usecases" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>{t('footer.links.usecases')}</a>
+                <a href="#pricing" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>{t('nav.pricing')}</a>
+              </div>
+            </div>
+            <div>
+              <div
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '11px',
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(120,184,50,0.72)',
+                  marginBottom: '16px',
+                }}
+              >
+                Action
+              </div>
+              <div style={{ display: 'grid', gap: '12px' }}>
+                <Link to="/checkout" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>
+                  {t('footer.links.checkout')}
+                </Link>
+                <a href="https://wa.me/+5585998614541" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>
+                  {t('footer.links.contact')}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '30px 0 16px' }} />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: '16px',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+          }}
+        >
+          <div
+            style={{
+              color: 'rgba(255,255,255,0.5)',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '11px',
+              letterSpacing: '0.08em',
+            }}
+          >
+            {t('footer.copyright')}
+          </div>
+
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: 'rgba(255,255,255,0.58)',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '11px',
+              letterSpacing: '0.12em',
+            }}
+          >
+            <span className="pulse-green" style={{ width: '10px', height: '10px', borderRadius: '999px', background: '#78B832' }} />
+            ONLINE
+          </div>
+        </div>
       </div>
     </footer>
   )

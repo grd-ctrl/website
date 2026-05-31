@@ -16,6 +16,15 @@
     "cta_secondary": "See How It Works",
     "compat": "Compatible with Barco CTRL ecosystems"
   },
+  "stats": {
+    "intro": "// GROUNDCTRL PERFORMANCE",
+    "items": [
+      { "number": "150+", "label": "Installations" },
+      { "number": "< 2s", "label": "Response time" },
+      { "number": "8+", "label": "Integrations" },
+      { "number": "24/7", "label": "Monitoring" }
+    ]
+  },
   "pillars": {
     "label": "Our Foundation",
     "title": "The same principles that power enterprise control rooms.",
@@ -42,15 +51,21 @@
     "solution_label": "The Solution",
     "solution_title": "After GroundCTRL",
     "solution_description": "GroundCTRL unifies all controls into a single configurable tablet panel. Tap once to switch a video wall layout, trigger an emergency scenario or show incident cameras.",
+    "before_label": "// BEFORE GROUNDCTRL",
+    "before_title": "The old way.",
+    "after_label": "// WITH GROUNDCTRL",
+    "after_title": "The GroundCTRL way.",
     "items": [
       "Multiple disconnected tools and interfaces",
       "Complex workflows require specialist training",
-      "Critical actions take too long under pressure"
+      "Critical actions take too long under pressure",
+      "Errors under stress, no undo"
     ],
     "solution_items": [
       "One unified command panel on a tablet",
-      "Intuitive tile-based interface, zero training",
-      "Single tap for any scenario or layout"
+      "Touch-optimized interface, zero training",
+      "Single tap for any scenario or layout",
+      "Full audit log of every action taken"
     ]
   },
   "features": {
@@ -84,6 +99,12 @@
       }
     ]
   },
+  "integrations": {
+    "label": "INTEGRATIONS",
+    "title": "Connects to your entire control room ecosystem.",
+    "subtitle": "GroundCTRL speaks the language of every system already in your control room.",
+    "api_note": "REST API · Webhooks · Real-time events"
+  },
   "usecases": {
     "label": "Use Cases",
     "title": "Built for every critical environment.",
@@ -115,11 +136,15 @@
       }
     ]
   },
+  "testimonials": {
+    "label": "// WHAT PROFESSIONALS SAY",
+    "title": "Trusted by the teams running the world's most critical facilities."
+  },
   "demo": {
-    "label": "See It In Action",
-    "title": "Designed for the operator, not the technician.",
-    "subtitle": "A clean, touch-first interface built to be understood immediately and operated with confidence, even in high-pressure environments.",
-    "cta": "Request a Live Demo"
+    "label": "Final CTA",
+    "title": "Ready to take command?",
+    "subtitle": "GroundCTRL gives your team a single command surface for video walls, feeds and response scenarios — live in minutes, ready when the room goes critical.",
+    "cta": "Talk to us on WhatsApp"
   },
   "pricing": {
     "label": "Pricing",

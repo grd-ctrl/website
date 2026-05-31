@@ -1,154 +1,482 @@
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, MessageCircle, CheckCircle, AlertTriangle, LayoutGrid, Camera, MapPin, Monitor, RefreshCw, Moon, Radio } from 'lucide-react'
+import {
+  AlertTriangle,
+  Bell,
+  Camera,
+  CheckCircle,
+  LayoutGrid,
+  MapPin,
+  MessageCircle,
+  Monitor,
+  Moon,
+  Radio,
+  RefreshCw,
+  Settings2,
+  SlidersHorizontal,
+} from 'lucide-react'
 
 const WA_LINK = 'https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL'
 
-const TD = '#1C3F41'
-const T  = '#244C4E'
-const TM = '#6B8A8C'
-const GR = '#78B832'
-const BD = '#D4DCEC'
+const COLORS = {
+  white: '#ffffff',
+  alt: '#F4F7FA',
+  tealDark: '#1C3F41',
+  teal: '#244C4E',
+  tealMid: '#3D6466',
+  tealMuted: '#6B8A8C',
+  green: '#78B832',
+  greenDark: '#5E9A2C',
+  greenBg: '#EEF8E0',
+  border: '#D4DCEC',
+}
 
-const HERO_TILES = [
-  { label: 'Emergency',     color: '#DC2626', Icon: AlertTriangle, active: false },
-  { label: 'Default Layout',color: T,         Icon: LayoutGrid,   active: true  },
-  { label: 'Ext. Cameras',  color: GR,        Icon: Camera,       active: false },
-  { label: 'Incident Map',  color: '#D97706', Icon: MapPin,       active: false },
-  { label: 'SOC View',      color: T,         Icon: Monitor,      active: false },
-  { label: 'Restore Config',color: TM,        Icon: RefreshCw,    active: false },
-  { label: 'Night Mode',    color: '#4F46E5', Icon: Moon,         active: false },
-  { label: 'Broadcast',     color: '#3D6466', Icon: Radio,        active: false },
+const tiles = [
+  {
+    title: 'Emergency',
+    subtitle: 'Active route',
+    Icon: AlertTriangle,
+    background: 'linear-gradient(180deg, rgba(220,38,38,0.28), rgba(127,29,29,0.92))',
+    border: '1px solid rgba(248, 113, 113, 0.7)',
+    accent: '#F87171',
+    glow: '0 0 0 1px rgba(248,113,113,0.55), 0 0 24px rgba(220,38,38,0.35)',
+    active: true,
+  },
+  {
+    title: 'Ext. Cameras',
+    subtitle: '12 feeds',
+    Icon: Camera,
+    background: 'linear-gradient(180deg, rgba(120,184,50,0.18), rgba(18,39,31,0.95))',
+    border: '1px solid rgba(120, 184, 50, 0.38)',
+    accent: '#78B832',
+  },
+  {
+    title: 'Incident Map',
+    subtitle: 'Zone B-12',
+    Icon: MapPin,
+    background: 'linear-gradient(180deg, rgba(217,119,6,0.2), rgba(36,25,11,0.94))',
+    border: '1px solid rgba(245, 158, 11, 0.38)',
+    accent: '#F59E0B',
+  },
+  {
+    title: 'Default Layout',
+    subtitle: 'Restore wall',
+    Icon: LayoutGrid,
+    background: 'linear-gradient(180deg, rgba(61,100,102,0.18), rgba(14,31,33,0.95))',
+    border: '1px solid rgba(107, 138, 140, 0.34)',
+    accent: '#8CB8BA',
+  },
+  {
+    title: 'SOC Dashboard',
+    subtitle: 'KPIs live',
+    Icon: Monitor,
+    background: 'linear-gradient(180deg, rgba(59,130,246,0.16), rgba(12,25,42,0.94))',
+    border: '1px solid rgba(96, 165, 250, 0.34)',
+    accent: '#60A5FA',
+  },
+  {
+    title: 'Night Mode',
+    subtitle: 'Low glare',
+    Icon: Moon,
+    background: 'linear-gradient(180deg, rgba(139,92,246,0.18), rgba(28,17,50,0.94))',
+    border: '1px solid rgba(167, 139, 250, 0.34)',
+    accent: '#A78BFA',
+  },
+  {
+    title: 'Restore Config',
+    subtitle: 'Snapshot 04',
+    Icon: RefreshCw,
+    background: 'linear-gradient(180deg, rgba(148,163,184,0.16), rgba(29,37,46,0.94))',
+    border: '1px solid rgba(148, 163, 184, 0.28)',
+    accent: '#CBD5E1',
+  },
+  {
+    title: 'Broadcast',
+    subtitle: 'Wall + desks',
+    Icon: Radio,
+    background: 'linear-gradient(180deg, rgba(61,100,102,0.22), rgba(10,24,25,0.98))',
+    border: '1px solid rgba(61, 100, 102, 0.45)',
+    accent: '#6EC5C7',
+  },
 ]
 
 export function HeroSection() {
   const { t } = useTranslation()
 
   return (
-    <section style={{ minHeight: 'calc(100vh - 64px)', background: '#fff', display: 'flex', alignItems: 'center', overflow: 'hidden', position: 'relative' }}>
-      {/* Blueprint grid — right panel */}
-      <div style={{
-        position: 'absolute', right: 0, top: 0, bottom: 0, width: '46%',
-        backgroundImage: 'linear-gradient(#DDE5F0 1px, transparent 1px), linear-gradient(90deg, #DDE5F0 1px, transparent 1px)',
-        backgroundSize: '80px 80px', backgroundColor: '#F4F7FA',
-        pointerEvents: 'none',
-      }}>
-        {/* Technical label in the corner */}
-        <div style={{ position: 'absolute', bottom: '16px', right: '16px', fontFamily: 'monospace', fontSize: '10px', color: '#B8C8DC', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-          CTRL-ROOM-A / REV.1
-        </div>
-        {/* Corner cross markers */}
-        {[{ t: '79px', l: '79px' }, { t: '79px', r: '79px' }, { b: '79px', l: '79px' }, { b: '79px', r: '79px' }].map((pos, i) => (
-          <div key={i} style={{ position: 'absolute', ...pos as any, width: '12px', height: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ position: 'absolute', width: '1px', height: '12px', background: '#C4D0E4' }} />
-            <div style={{ position: 'absolute', height: '1px', width: '12px', background: '#C4D0E4' }} />
-          </div>
-        ))}
-      </div>
-
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px', display: 'grid', gridTemplateColumns: '55fr 45fr', gap: '64px', alignItems: 'center', width: '100%', position: 'relative', zIndex: 1 }}>
-
-        {/* LEFT — Text */}
-        <div>
-          {/* Badge */}
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', background: '#EEF8E0', color: '#4E8A1E', borderRadius: '999px', padding: '5px 14px', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', marginBottom: '28px' }}>
-            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: GR, display: 'inline-block', animation: 'pulse 2s infinite' }} />
+    <section
+      className="blueprint-grid-white"
+      style={{ minHeight: '100vh', padding: '32px 24px 40px', position: 'relative', overflow: 'hidden' }}
+    >
+      <div className="section-shell hero-layout" style={{ minHeight: 'calc(100vh - 72px)' }}>
+        <div style={{ padding: '28px 0', position: 'relative' }}>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              background: COLORS.greenBg,
+              color: '#4E8A1E',
+              borderRadius: '999px',
+              padding: '10px 18px',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '12px',
+              fontWeight: 700,
+              letterSpacing: '0.08em',
+              marginBottom: '28px',
+            }}
+          >
+            <span style={{ fontSize: '14px' }}>●</span>
             {t('hero.badge')}
           </div>
 
-          {/* Headline */}
-          <h1 style={{ margin: '0 0 24px 0', padding: 0, lineHeight: 1.05 }}>
-            <span style={{ display: 'block', fontSize: 'clamp(40px, 5vw, 68px)', fontWeight: 900, color: TD, letterSpacing: '-0.025em' }}>
-              {t('hero.headline')}
-            </span>
-            <span style={{ display: 'block', fontSize: 'clamp(40px, 5vw, 68px)', fontWeight: 900, color: GR, letterSpacing: '-0.025em' }}>
-              {t('hero.headline2')}
-            </span>
+          <h1
+            style={{
+              margin: '0 0 24px',
+              color: COLORS.tealDark,
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(52px, 6vw, 84px)',
+              fontWeight: 900,
+              lineHeight: 1,
+              letterSpacing: '-0.03em',
+              maxWidth: '640px',
+            }}
+          >
+            <span style={{ display: 'block' }}>{t('hero.headline')}</span>
+            <span style={{ display: 'block', color: COLORS.green }}>{t('hero.headline2')}</span>
           </h1>
 
-          {/* Sub */}
-          <p style={{ margin: '0 0 40px 0', fontSize: '17px', lineHeight: 1.65, color: TM, maxWidth: '460px' }}>
+          <p
+            style={{
+              margin: '0 0 36px',
+              maxWidth: '480px',
+              color: COLORS.tealMuted,
+              fontSize: '18px',
+              lineHeight: 1.7,
+            }}
+          >
             {t('hero.sub')}
           </p>
 
-          {/* CTAs */}
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '32px' }}>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: GR, color: TD, padding: '13px 28px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', transition: 'background .15s' }}
-              onMouseEnter={e => (e.currentTarget.style.background = '#5E9A2C')}
-              onMouseLeave={e => (e.currentTarget.style.background = GR)}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '28px' }}>
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                background: COLORS.green,
+                color: COLORS.tealDark,
+                textDecoration: 'none',
+                fontWeight: 800,
+                padding: '16px 24px',
+                borderRadius: '999px',
+                boxShadow: '0 18px 40px rgba(120, 184, 50, 0.28)',
+              }}
             >
-              <MessageCircle size={16} />
+              <MessageCircle size={18} />
               {t('hero.cta_primary')}
             </a>
-            <a href="#features"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', border: `2px solid ${T}`, color: T, padding: '11px 28px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', transition: 'all .15s' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = T; (e.currentTarget as HTMLAnchorElement).style.color = '#fff' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'; (e.currentTarget as HTMLAnchorElement).style.color = T }}
+            <a
+              href="#features"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: `1.5px solid ${COLORS.teal}`,
+                color: COLORS.teal,
+                textDecoration: 'none',
+                fontWeight: 700,
+                padding: '16px 24px',
+                borderRadius: '999px',
+                background: 'rgba(255,255,255,0.78)',
+              }}
             >
               {t('hero.cta_secondary')}
-              <ArrowRight size={16} />
             </a>
           </div>
 
-          {/* Barco compat */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '13px', color: TM }}>
-            <CheckCircle size={14} style={{ color: GR, flexShrink: 0 }} />
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              color: COLORS.tealMuted,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '12px',
+              letterSpacing: '0.08em',
+            }}
+          >
+            <CheckCircle size={16} style={{ color: COLORS.green }} />
             {t('hero.compat')}
           </div>
         </div>
 
-        {/* RIGHT — Tablet Mockup */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ background: TD, borderRadius: '22px', padding: '13px', boxShadow: '0 32px 80px rgba(28,63,65,0.28), 0 8px 24px rgba(28,63,65,0.14)', width: '100%', maxWidth: '460px', position: 'relative' }}>
-            {/* Camera notch */}
-            <div style={{ position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', width: '8px', height: '8px', background: '#2D5254', borderRadius: '50%' }} />
+        <div style={{ position: 'relative', padding: '36px 0' }}>
+          <span
+            className="blueprint-cross"
+            style={{ top: '8px', left: '14px', color: 'rgba(28, 63, 65, 0.18)' }}
+          />
+          <span
+            className="blueprint-cross"
+            style={{ top: '8px', right: '14px', color: 'rgba(28, 63, 65, 0.18)' }}
+          />
+          <span
+            className="blueprint-cross"
+            style={{ bottom: '8px', left: '14px', color: 'rgba(28, 63, 65, 0.18)' }}
+          />
+          <span
+            className="blueprint-cross"
+            style={{ bottom: '8px', right: '14px', color: 'rgba(28, 63, 65, 0.18)' }}
+          />
 
-            {/* Screen */}
-            <div style={{ borderRadius: '11px', overflow: 'hidden', backgroundImage: 'linear-gradient(#E6EDF8 1px, transparent 1px), linear-gradient(90deg, #E6EDF8 1px, transparent 1px)', backgroundSize: '40px 40px', backgroundColor: '#F8FAFD' }}>
+          <div
+            style={{
+              position: 'absolute',
+              top: '0',
+              right: '0',
+              transform: 'translate(12%, -10%)',
+              background: '#B91C1C',
+              color: COLORS.white,
+              borderRadius: '999px',
+              padding: '10px 16px',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '11px',
+              letterSpacing: '0.12em',
+              boxShadow: '0 18px 40px rgba(185, 28, 28, 0.28)',
+            }}
+            className="pulse-red"
+          >
+            ALERT ACTIVE
+          </div>
 
-              {/* App header */}
-              <div style={{ padding: '10px 14px', background: '#fff', borderBottom: `1px solid ${BD}`, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '6px', background: TD, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <LayoutGrid size={12} style={{ color: GR }} />
+          <div
+            style={{
+              position: 'absolute',
+              left: '-12px',
+              bottom: '18px',
+              background: COLORS.tealDark,
+              color: COLORS.green,
+              border: '1px solid rgba(120, 184, 50, 0.28)',
+              borderRadius: '999px',
+              padding: '12px 16px',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '11px',
+              letterSpacing: '0.12em',
+              boxShadow: '0 18px 40px rgba(28, 63, 65, 0.2)',
+            }}
+          >
+            12 FEEDS LIVE
+          </div>
+
+          <div
+            style={{
+              background: COLORS.tealDark,
+              borderRadius: '24px',
+              padding: '14px',
+              maxWidth: '560px',
+              margin: '0 auto',
+              position: 'relative',
+              boxShadow:
+                '0 48px 120px rgba(28,63,65,0.35), 0 16px 40px rgba(28,63,65,0.2)',
+            }}
+          >
+            <div
+              style={{
+                width: '86px',
+                height: '8px',
+                background: '#2D5254',
+                borderRadius: '999px',
+                margin: '0 auto 12px',
+              }}
+            />
+
+            <div
+              style={{
+                borderRadius: '18px',
+                overflow: 'hidden',
+                background:
+                  'radial-gradient(circle at top right, rgba(120,184,50,0.14), transparent 24%), linear-gradient(180deg, #102628 0%, #132B2E 100%)',
+                border: '1px solid rgba(255,255,255,0.06)',
+              }}
+            >
+              <div
+                style={{
+                  background: COLORS.white,
+                  padding: '16px 18px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  borderBottom: `1px solid ${COLORS.border}`,
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div
+                    style={{
+                      width: '34px',
+                      height: '34px',
+                      borderRadius: '10px',
+                      background: COLORS.tealDark,
+                      display: 'grid',
+                      placeItems: 'center',
+                      color: COLORS.green,
+                    }}
+                  >
+                    <LayoutGrid size={18} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: 800, fontSize: '12px', color: TD }}>GroundCTRL</div>
-                    <div style={{ fontSize: '10px', color: TM }}>Control Room A</div>
+                    <div style={{ color: COLORS.tealDark, fontWeight: 800, fontSize: '15px' }}>GroundCTRL</div>
+                    <div style={{ color: COLORS.tealMuted, fontSize: '12px' }}>Control Room A</div>
                   </div>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  <div style={{ width: '6px', height: '6px', background: GR, borderRadius: '50%' }} />
-                  <span style={{ fontSize: '10px', color: GR, fontWeight: 700 }}>LIVE</span>
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    color: COLORS.green,
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                  }}
+                >
+                  <span
+                    className="pulse-green"
+                    style={{ width: '9px', height: '9px', borderRadius: '999px', background: COLORS.green }}
+                  />
+                  LIVE
                 </div>
               </div>
 
-              {/* Tiles */}
-              <div style={{ padding: '12px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '7px' }}>
-                {HERO_TILES.map((tile, i) => (
-                  <div key={i} style={{ background: tile.active ? `${tile.color}12` : '#fff', border: `1px solid ${tile.active ? tile.color + '50' : BD}`, borderRadius: '8px', padding: '10px 6px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', boxShadow: tile.active ? `0 0 0 2px ${tile.color}25` : 'none' }}>
-                    <div style={{ width: '28px', height: '28px', borderRadius: '7px', background: `${tile.color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: tile.color }}>
-                      <tile.Icon size={13} />
+              <div
+                style={{
+                  padding: '14px 18px',
+                  background: '#153638',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: '16px',
+                  borderBottom: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
+                  <span style={{ color: '#9AC8C9', fontFamily: 'var(--font-mono)', fontSize: '11px' }}>
+                    CTRL-ROOM-A
+                  </span>
+                  <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '12px' }}>
+                    Scenario: Emergency evacuation flow
+                  </span>
+                </div>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  {[Bell, SlidersHorizontal, Settings2].map((Icon, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        width: '34px',
+                        height: '34px',
+                        borderRadius: '10px',
+                        background: 'rgba(255,255,255,0.06)',
+                        border: '1px solid rgba(255,255,255,0.08)',
+                        display: 'grid',
+                        placeItems: 'center',
+                        color: '#BBD0D1',
+                      }}
+                    >
+                      <Icon size={16} />
                     </div>
-                    <span style={{ fontSize: '9px', fontWeight: 600, color: tile.active ? tile.color : T, textAlign: 'center', lineHeight: 1.2 }}>
-                      {tile.label}
-                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ padding: '18px', display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '12px' }}>
+                {tiles.map((tile) => (
+                  <div
+                    key={tile.title}
+                    style={{
+                      minHeight: '126px',
+                      borderRadius: '18px',
+                      padding: '14px',
+                      background: tile.background,
+                      border: tile.border,
+                      boxShadow: tile.active ? tile.glow : 'none',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                      <div
+                        style={{
+                          width: '42px',
+                          height: '42px',
+                          borderRadius: '14px',
+                          background: 'rgba(255,255,255,0.08)',
+                          display: 'grid',
+                          placeItems: 'center',
+                          color: tile.accent,
+                        }}
+                      >
+                        <tile.Icon size={18} />
+                      </div>
+                      {tile.active ? (
+                        <span
+                          className="pulse-red"
+                          style={{ width: '10px', height: '10px', borderRadius: '999px', background: '#F87171' }}
+                        />
+                      ) : (
+                        <span
+                          style={{
+                            width: '8px',
+                            height: '8px',
+                            borderRadius: '999px',
+                            background: 'rgba(255,255,255,0.28)',
+                          }}
+                        />
+                      )}
+                    </div>
+                    <div>
+                      <div style={{ color: COLORS.white, fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>
+                        {tile.title}
+                      </div>
+                      <div style={{ color: 'rgba(255,255,255,0.66)', fontSize: '11px', letterSpacing: '0.04em' }}>
+                        {tile.subtitle}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              {/* Bottom bar */}
-              <div style={{ padding: '8px 14px', background: '#fff', borderTop: `1px solid ${BD}`, display: 'flex', justifyContent: 'space-around' }}>
-                {[LayoutGrid, Monitor, RefreshCw].map((Icon, i) => (
-                  <div key={i} style={{ width: '32px', height: '32px', borderRadius: '8px', background: i === 0 ? `${GR}18` : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center', color: i === 0 ? GR : TM }}>
-                    <Icon size={14} />
+              <div
+                style={{
+                  padding: '14px 18px 18px',
+                  borderTop: '1px solid rgba(255,255,255,0.08)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                }}
+              >
+                {[LayoutGrid, Monitor, Settings2].map((Icon, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      flex: 1,
+                      marginRight: index < 2 ? '10px' : 0,
+                      borderRadius: '14px',
+                      height: '44px',
+                      display: 'grid',
+                      placeItems: 'center',
+                      background: index === 0 ? 'rgba(120,184,50,0.16)' : 'rgba(255,255,255,0.04)',
+                      color: index === 0 ? COLORS.green : '#8AA6A7',
+                      border: index === 0 ? '1px solid rgba(120,184,50,0.34)' : '1px solid rgba(255,255,255,0.06)',
+                    }}
+                  >
+                    <Icon size={18} />
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   )

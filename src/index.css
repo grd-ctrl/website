@@ -1,47 +1,284 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+:root {
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #ffffff;
   color: #244C4E;
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
 }
 
 .blueprint-grid {
   background-color: #F4F7FA;
   background-image:
-    linear-gradient(#DDE5F0 1px, transparent 1px),
-    linear-gradient(90deg, #DDE5F0 1px, transparent 1px);
-  background-size: 80px 80px;
+    linear-gradient(rgba(28, 63, 65, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 63, 65, 0.06) 1px, transparent 1px);
+  background-size: 72px 72px;
 }
 
 .blueprint-grid-white {
   background-color: #ffffff;
   background-image:
-    linear-gradient(#E6EDF8 1px, transparent 1px),
-    linear-gradient(90deg, #E6EDF8 1px, transparent 1px);
-  background-size: 80px 80px;
+    linear-gradient(rgba(28, 63, 65, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 63, 65, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
 }
 
-.hatch-strip {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 3px,
-    #D4DCEC 3px,
-    #D4DCEC 4px
-  );
+.blueprint-grid-dark {
+  background-color: #1C3F41;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #F4F7FA; }
-::-webkit-scrollbar-thumb { background: #C8D4E4; border-radius: 3px; }
+.section-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-layout,
+.problem-panels,
+.stats-grid,
+.pillars-row,
+.testimonials-grid,
+.footer-grid,
+.footer-links-grid,
+.integrations-grid {
+  display: grid;
+}
+
+.hero-layout {
+  grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pillars-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.problem-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.features-bento {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  grid-template-areas:
+    "big small1"
+    "big small2"
+    "med1 med2";
+  gap: 24px;
+}
+
+.usecases-bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-areas:
+    "soc soc soc soc noc noc"
+    "airports airports hospitals hospitals energy energy"
+    "command command command command command command";
+  gap: 20px;
+}
+
+.integrations-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.testimonials-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.footer-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-links-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.blueprint-cross {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.blueprint-cross::before,
+.blueprint-cross::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+
+.blueprint-cross::before {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.blueprint-cross::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(120, 184, 50, 0.45);
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(120, 184, 50, 0);
+    opacity: 0.9;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(120, 184, 50, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.38);
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(220, 38, 38, 0);
+    opacity: 0.8;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    opacity: 1;
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2.4s infinite;
+}
+
+.pulse-red {
+  animation: pulse-red 1.8s infinite;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F7FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8D4E4;
+  border-radius: 999px;
+}
+
+@media (max-width: 1080px) {
+  .hero-layout,
+  .footer-grid,
+  .problem-panels,
+  .testimonials-grid,
+  .pillars-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "big"
+      "small1"
+      "small2"
+      "med1"
+      "med2";
+  }
+
+  .usecases-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "soc soc"
+      "noc noc"
+      "airports hospitals"
+      "energy energy"
+      "command command";
+  }
+}
+
+@media (max-width: 720px) {
+  .stats-grid,
+  .footer-links-grid,
+  .integrations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usecases-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "soc"
+      "noc"
+      "airports"
+      "hospitals"
+      "energy"
+      "command";
+  }
+}

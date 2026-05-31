@@ -16,6 +16,15 @@
     "cta_secondary": "Wie es funktioniert",
     "compat": "Kompatibel mit Barco CTRL-Umgebungen"
   },
+  "stats": {
+    "intro": "// GROUNDCTRL PERFORMANCE",
+    "items": [
+      { "number": "150+", "label": "Installationen" },
+      { "number": "< 2s", "label": "Reaktionszeit" },
+      { "number": "8+", "label": "Integrationen" },
+      { "number": "24/7", "label": "Überwachung" }
+    ]
+  },
   "pillars": {
     "label": "Unser Fundament",
     "title": "Dieselben Prinzipien, die Enterprise-Kontrollräume antreiben.",
@@ -42,15 +51,21 @@
     "solution_label": "Die Lösung",
     "solution_title": "Nach GroundCTRL",
     "solution_description": "GroundCTRL vereint alle Steuerungen in einem einzigen konfigurierbaren Tablet-Panel.",
+    "before_label": "// BEFORE GROUNDCTRL",
+    "before_title": "Der alte Weg.",
+    "after_label": "// WITH GROUNDCTRL",
+    "after_title": "Der GroundCTRL-Weg.",
     "items": [
       "Mehrere getrennte Tools und Oberflächen",
       "Komplexe Workflows erfordern Fachkenntnisse",
-      "Kritische Aktionen dauern unter Druck zu lange"
+      "Kritische Aktionen dauern unter Druck zu lange",
+      "Fehler unter Stress, kein Undo"
     ],
     "solution_items": [
       "Ein einheitliches Kommandopanel auf dem Tablet",
-      "Intuitive Kachel-Oberfläche, keine Schulung",
-      "Ein Tippen für jedes Szenario oder Layout"
+      "Touch-optimierte Benutzeroberfläche, keine Schulung",
+      "Ein Tippen für jedes Szenario oder Layout",
+      "Vollständiges Audit-Log jeder ausgeführten Aktion"
     ]
   },
   "features": {
@@ -66,6 +81,12 @@
       { "title": "Sofortige Bereitstellung", "description": "Bereitstellen per Sideload in Minuten. Keine App-Store-Genehmigung. Keine Verzögerungen." }
     ]
   },
+  "integrations": {
+    "label": "INTEGRATIONEN",
+    "title": "Verbindet sich mit Ihrem gesamten Kontrollraum-Ökosystem.",
+    "subtitle": "GroundCTRL spricht die Sprache jedes Systems, das bereits in Ihrem Kontrollraum vorhanden ist.",
+    "api_note": "REST API · Webhooks · Real-time events"
+  },
   "usecases": {
     "label": "Anwendungen",
     "title": "Für jede kritische Umgebung entwickelt.",
@@ -79,11 +100,15 @@
       { "title": "Kommando & Kontrolle", "description": "Multi-System-Szenarien von einem autorisierten Panel aus ausführen." }
     ]
   },
+  "testimonials": {
+    "label": "// WHAT PROFESSIONALS SAY",
+    "title": "Vertraut von den Teams, die die kritischsten Einrichtungen der Welt betreiben."
+  },
   "demo": {
-    "label": "In Aktion sehen",
-    "title": "Für den Bediener entwickelt, nicht für den Techniker.",
-    "subtitle": "Eine klare, touch-first Benutzeroberfläche, die sofort verstanden und auch in Hochdrucksituationen sicher bedient werden kann.",
-    "cta": "Live-Demo Anfordern"
+    "label": "Final CTA",
+    "title": "Bereit, die Kontrolle zu übernehmen?",
+    "subtitle": "GroundCTRL gibt Ihrem Team eine einzige Kommandooberfläche für Videowände, Feeds und Reaktionsszenarien — live in Minuten, bereit wenn der Raum kritisch wird.",
+    "cta": "Sprechen Sie mit uns auf WhatsApp"
   },
   "pricing": {
     "label": "Preise",
@@ -101,11 +126,18 @@
     "copy": "Kopieren",
     "copied": "Kopiert!",
     "fields": {
-      "bank": "Bank", "bank_address": "Bankadresse", "bank_country": "Bankland",
-      "swift": "SWIFT / BIC", "iban": "IBAN / Kontonummer", "branch": "Filialcode",
-      "account_type": "Kontotyp", "beneficiary": "Name des Begünstigten",
-      "beneficiary_address": "Adresse des Begünstigten", "intermediary_swift": "Intermediäre SWIFT / BIC",
-      "intermediary_bank": "Intermediäre Bank", "intermediary_country": "Intermediäres Land",
+      "bank": "Bank",
+      "bank_address": "Bankadresse",
+      "bank_country": "Bankland",
+      "swift": "SWIFT / BIC",
+      "iban": "IBAN / Kontonummer",
+      "branch": "Filialcode",
+      "account_type": "Kontotyp",
+      "beneficiary": "Name des Begünstigten",
+      "beneficiary_address": "Adresse des Begünstigten",
+      "intermediary_swift": "Intermediäre SWIFT / BIC",
+      "intermediary_bank": "Intermediäre Bank",
+      "intermediary_country": "Intermediäres Land",
       "intermediary_account": "Intermediäres Konto"
     },
     "after_transfer": "Senden Sie nach der Überweisung den Zahlungsnachweis per WhatsApp, um Ihre Bestellung zu bestätigen.",
@@ -113,7 +145,12 @@
   },
   "footer": {
     "tagline": "Das große Bild sehen. Die Details beherrschen.",
-    "links": { "features": "Funktionen", "usecases": "Anwendungen", "checkout": "Zahlung", "contact": "Kontakt" },
+    "links": {
+      "features": "Funktionen",
+      "usecases": "Anwendungen",
+      "checkout": "Zahlung",
+      "contact": "Kontakt"
+    },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Alle Rechte vorbehalten."
   }
 }

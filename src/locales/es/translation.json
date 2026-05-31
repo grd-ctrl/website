@@ -16,6 +16,15 @@
     "cta_secondary": "Cómo funciona",
     "compat": "Compatible con ecosistemas Barco CTRL"
   },
+  "stats": {
+    "intro": "// GROUNDCTRL PERFORMANCE",
+    "items": [
+      { "number": "150+", "label": "Instalaciones" },
+      { "number": "< 2s", "label": "Tiempo de respuesta" },
+      { "number": "8+", "label": "Integraciones" },
+      { "number": "24/7", "label": "Monitorización" }
+    ]
+  },
   "pillars": {
     "label": "Nuestros Pilares",
     "title": "Los mismos principios que impulsan las salas de control enterprise.",
@@ -42,15 +51,21 @@
     "solution_label": "La Solución",
     "solution_title": "Después de GroundCTRL",
     "solution_description": "GroundCTRL unifica todos los controles en un único panel configurable en tablet.",
+    "before_label": "// BEFORE GROUNDCTRL",
+    "before_title": "La forma antigua.",
+    "after_label": "// WITH GROUNDCTRL",
+    "after_title": "La forma GroundCTRL.",
     "items": [
       "Múltiples herramientas e interfaces desconectadas",
-      "Flujos de trabajo complejos requieren formación especializada",
-      "Las acciones críticas llevan demasiado tiempo bajo presión"
+      "Los flujos de trabajo complejos requieren formación especializada",
+      "Las acciones críticas tardan demasiado bajo presión",
+      "Errores bajo estrés, sin deshacer"
     ],
     "solution_items": [
       "Un panel de comando unificado en tablet",
-      "Interfaz intuitiva de mosaicos, sin formación",
-      "Un toque para cualquier escenario o layout"
+      "Interfaz optimizada para tacto, sin formación",
+      "Un toque para cualquier escenario o layout",
+      "Registro de auditoría completo de cada acción realizada"
     ]
   },
   "features": {
@@ -66,6 +81,12 @@
       { "title": "Despliegue Instantáneo", "description": "Despliega por sideload en minutos. Sin aprobación de App Store. Sin demoras." }
     ]
   },
+  "integrations": {
+    "label": "INTEGRACIONES",
+    "title": "Se conecta con todo el ecosistema de su sala de control.",
+    "subtitle": "GroundCTRL habla el idioma de cada sistema que ya existe en su sala de control.",
+    "api_note": "REST API · Webhooks · Real-time events"
+  },
   "usecases": {
     "label": "Casos de Uso",
     "title": "Diseñado para cada entorno crítico.",
@@ -79,11 +100,15 @@
       { "title": "Comando y Control", "description": "Ejecuta escenarios multi-sistema desde un panel autorizado." }
     ]
   },
+  "testimonials": {
+    "label": "// WHAT PROFESSIONALS SAY",
+    "title": "Con la confianza de los equipos que operan las instalaciones más críticas del mundo."
+  },
   "demo": {
-    "label": "Véalo en Acción",
-    "title": "Diseñado para el operador, no para el técnico.",
-    "subtitle": "Una interfaz clara y táctil diseñada para entenderse de inmediato y operarse con confianza, incluso bajo alta presión.",
-    "cta": "Solicitar una Demo en Vivo"
+    "label": "Final CTA",
+    "title": "¿Listo para tomar el control?",
+    "subtitle": "GroundCTRL le da a su equipo una superficie única de mando para videowalls, feeds y escenarios de respuesta — en vivo en minutos, lista cuando la sala entra en modo crítico.",
+    "cta": "Hable con nosotros por WhatsApp"
   },
   "pricing": {
     "label": "Precios",
@@ -101,11 +126,18 @@
     "copy": "Copiar",
     "copied": "¡Copiado!",
     "fields": {
-      "bank": "Banco", "bank_address": "Dirección del Banco", "bank_country": "País del Banco",
-      "swift": "SWIFT / BIC", "iban": "IBAN / Número de Cuenta", "branch": "Código de Sucursal",
-      "account_type": "Tipo de Cuenta", "beneficiary": "Nombre del Beneficiario",
-      "beneficiary_address": "Dirección del Beneficiario", "intermediary_swift": "SWIFT / BIC Intermediario",
-      "intermediary_bank": "Banco Intermediario", "intermediary_country": "País Intermediario",
+      "bank": "Banco",
+      "bank_address": "Dirección del Banco",
+      "bank_country": "País del Banco",
+      "swift": "SWIFT / BIC",
+      "iban": "IBAN / Número de Cuenta",
+      "branch": "Código de Sucursal",
+      "account_type": "Tipo de Cuenta",
+      "beneficiary": "Nombre del Beneficiario",
+      "beneficiary_address": "Dirección del Beneficiario",
+      "intermediary_swift": "SWIFT / BIC Intermediario",
+      "intermediary_bank": "Banco Intermediario",
+      "intermediary_country": "País Intermediario",
       "intermediary_account": "Cuenta Intermediaria"
     },
     "after_transfer": "Tras la transferencia, envíe su comprobante de pago por WhatsApp para confirmar su pedido.",
@@ -113,7 +145,12 @@
   },
   "footer": {
     "tagline": "Vea el panorama completo. Actúe sobre los detalles.",
-    "links": { "features": "Funciones", "usecases": "Casos de uso", "checkout": "Pago", "contact": "Contacto" },
+    "links": {
+      "features": "Funciones",
+      "usecases": "Casos de uso",
+      "checkout": "Pago",
+      "contact": "Contacto"
+    },
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Todos los derechos reservados."
   }
 }

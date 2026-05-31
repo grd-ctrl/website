@@ -16,6 +16,15 @@
     "cta_secondary": "Hoe Het Werkt",
     "compat": "Compatibel met Barco CTRL-omgevingen"
   },
+  "stats": {
+    "intro": "// GROUNDCTRL PERFORMANCE",
+    "items": [
+      { "number": "150+", "label": "Installaties" },
+      { "number": "< 2s", "label": "Reactietijd" },
+      { "number": "8+", "label": "Integraties" },
+      { "number": "24/7", "label": "Monitoring" }
+    ]
+  },
   "pillars": {
     "label": "Onze Basis",
     "title": "Dezelfde principes die enterprise controleruimtes aandrijven.",
@@ -42,15 +51,21 @@
     "solution_label": "De Oplossing",
     "solution_title": "Na GroundCTRL",
     "solution_description": "GroundCTRL bundelt alle bediening in één configureerbaar tablet-paneel.",
+    "before_label": "// BEFORE GROUNDCTRL",
+    "before_title": "De oude manier.",
+    "after_label": "// WITH GROUNDCTRL",
+    "after_title": "De GroundCTRL-manier.",
     "items": [
       "Meerdere losse tools en interfaces",
       "Complexe workflows vereisen gespecialiseerde training",
-      "Kritieke acties duren te lang onder druk"
+      "Kritieke acties duren te lang onder druk",
+      "Fouten onder stress, geen undo"
     ],
     "solution_items": [
       "Één unified command panel op tablet",
-      "Intuïtieve tegelinterface, geen training",
-      "Één tik voor elk scenario of lay-out"
+      "Touch-geoptimaliseerde interface, geen training",
+      "Één tik voor elk scenario of lay-out",
+      "Volledige auditlog van elke uitgevoerde actie"
     ]
   },
   "features": {
@@ -84,6 +99,12 @@
       }
     ]
   },
+  "integrations": {
+    "label": "INTEGRATIES",
+    "title": "Verbindt met uw volledige control room-ecosysteem.",
+    "subtitle": "GroundCTRL spreekt de taal van elk systeem dat al in uw control room aanwezig is.",
+    "api_note": "REST API · Webhooks · Real-time events"
+  },
   "usecases": {
     "label": "Toepassingen",
     "title": "Gebouwd voor elke kritieke omgeving.",
@@ -115,11 +136,15 @@
       }
     ]
   },
+  "testimonials": {
+    "label": "// WHAT PROFESSIONALS SAY",
+    "title": "Vertrouwd door de teams die 's werelds meest kritieke faciliteiten draaiende houden."
+  },
   "demo": {
-    "label": "Zie Het In Actie",
-    "title": "Ontworpen voor de operator, niet de technicus.",
-    "subtitle": "Een heldere, touch-first interface gebouwd om direct begrepen te worden, ook in situaties met hoge druk.",
-    "cta": "Live Demo Aanvragen"
+    "label": "Final CTA",
+    "title": "Klaar om de controle te nemen?",
+    "subtitle": "GroundCTRL geeft uw team één commandolaag voor videowalls, feeds en respons-scenario's — live in minuten, klaar zodra de ruimte kritiek wordt.",
+    "cta": "Praat met ons via WhatsApp"
   },
   "pricing": {
     "label": "Prijzen",
