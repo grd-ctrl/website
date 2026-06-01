@@ -250,24 +250,24 @@ export function CheckoutPage() {
       company: { name: companyName.trim() },
     })
 
-    showNewMessage(
-      `New checkout lead: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${billing} billing | ${currency} ${totalAmount}`
-    )
-
-    setStep(3)
+    setStep(2)
   }
 
-  const goToAccount = () => {
+  const goToPayment = () => {
     if (customPricing) {
       window.open(salesWhatsappLink, '_blank', 'noopener,noreferrer')
       return
     }
-    setStep(2)
+
+    showNewMessage(
+      `New checkout lead: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${billing} billing | ${currency} ${totalAmount}`
+    )
+    setStep(3)
   }
 
   const stepItems = [
-    { number: 1 as const, label: t('checkout.step_licenses'), enabled: true },
-    { number: 2 as const, label: t('checkout.step_account'), enabled: true },
+    { number: 1 as const, label: t('checkout.step_account'), enabled: true },
+    { number: 2 as const, label: t('checkout.step_licenses'), enabled: Boolean(accountValid) },
     { number: 3 as const, label: t('checkout.step_payment'), enabled: Boolean(accountValid) && !customPricing },
   ]
 
@@ -501,6 +501,78 @@ export function CheckoutPage() {
               }}
             >
               {step === 1 ? (
+                <form className="checkout-step-panel" onSubmit={handleAccountSubmit}>
+                  <div style={{ marginBottom: '26px' }}>
+                    <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
+                      {t('checkout.step_account')}
+                    </div>
+                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(36px, 4vw, 46px)', lineHeight: 0.98, letterSpacing: '-0.05em' }}>
+                      {t('checkout.account_title')}
+                    </h1>
+                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '560px' }}>
+                      Set up your buyer profile. We will use these details to prepare your enterprise order and follow up after payment.
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'grid', gap: '18px' }}>
+                    {renderInput({ label: t('checkout.email'), value: email, onChange: setEmail, type: 'email' })}
+                    <div className="checkout-two-col">
+                      {renderInput({ label: t('checkout.full_name'), value: fullName, onChange: setFullName })}
+                      {renderInput({ label: t('checkout.company'), value: companyName, onChange: setCompanyName })}
+                    </div>
+                    <label style={{ display: 'grid', gap: '8px' }}>
+                      <span style={{ fontSize: '14px', fontWeight: 700, color: TEXT }}>{t('checkout.country')}</span>
+                      <select
+                        value={country}
+                        onChange={(event) => setCountry(event.target.value)}
+                        style={{
+                          width: '100%',
+                          borderRadius: '8px',
+                          border: `1px solid ${BORDER}`,
+                          padding: '15px 12px',
+                          fontSize: '15px',
+                          lineHeight: 1.4,
+                          color: TEXT,
+                          background: '#ffffff',
+                          outlineColor: TEAL,
+                        }}
+                      >
+                        {COUNTRIES.map((item) => (
+                          <option key={item} value={item}>
+                            {item}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
+
+                  {accountTouched && !accountValid ? (
+                    <div style={{ marginTop: '16px', color: '#b91c1c', fontSize: '14px', fontWeight: 700 }}>
+                      Please fill in every field before continuing.
+                    </div>
+                  ) : null}
+
+                  <button
+                    type="submit"
+                    style={{
+                      marginTop: '26px',
+                      width: '100%',
+                      border: 'none',
+                      borderRadius: '999px',
+                      background: TEAL,
+                      color: '#ffffff',
+                      padding: '16px 24px',
+                      fontSize: '16px',
+                      fontWeight: 800,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {t('checkout.continue')}
+                  </button>
+                </form>
+              ) : null}
+
+              {step === 2 ? (
                 <div className="checkout-step-panel">
                   <div style={{ marginBottom: '26px' }}>
                     <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
@@ -664,7 +736,26 @@ export function CheckoutPage() {
                   <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
                     <button
                       type="button"
-                      onClick={goToAccount}
+                      onClick={() => setStep(1)}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        borderRadius: '999px',
+                        border: `1px solid ${BORDER}`,
+                        background: '#ffffff',
+                        color: TEXT,
+                        padding: '14px 18px',
+                        fontWeight: 800,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <ArrowLeft size={16} />
+                      {t('checkout.back')}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={goToPayment}
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
@@ -685,98 +776,6 @@ export function CheckoutPage() {
                     </button>
                   </div>
                 </div>
-              ) : null}
-
-              {step === 2 ? (
-                <form className="checkout-step-panel" onSubmit={handleAccountSubmit}>
-                  <div style={{ marginBottom: '26px' }}>
-                    <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
-                      {t('checkout.step_account')}
-                    </div>
-                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(36px, 4vw, 46px)', lineHeight: 0.98, letterSpacing: '-0.05em' }}>
-                      {t('checkout.account_title')}
-                    </h1>
-                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '560px' }}>
-                      Set up your buyer profile. We will use these details to prepare your enterprise order and follow up after payment.
-                    </p>
-                  </div>
-
-                  <div style={{ display: 'grid', gap: '18px' }}>
-                    {renderInput({ label: t('checkout.email'), value: email, onChange: setEmail, type: 'email' })}
-                    <div className="checkout-two-col">
-                      {renderInput({ label: t('checkout.full_name'), value: fullName, onChange: setFullName })}
-                      {renderInput({ label: t('checkout.company'), value: companyName, onChange: setCompanyName })}
-                    </div>
-                    <label style={{ display: 'grid', gap: '8px' }}>
-                      <span style={{ fontSize: '14px', fontWeight: 700, color: TEXT }}>{t('checkout.country')}</span>
-                      <select
-                        value={country}
-                        onChange={(event) => setCountry(event.target.value)}
-                        style={{
-                          width: '100%',
-                          borderRadius: '8px',
-                          border: `1px solid ${BORDER}`,
-                          padding: '15px 12px',
-                          fontSize: '15px',
-                          lineHeight: 1.4,
-                          color: TEXT,
-                          background: '#ffffff',
-                          outlineColor: TEAL,
-                        }}
-                      >
-                        {COUNTRIES.map((item) => (
-                          <option key={item} value={item}>
-                            {item}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  </div>
-
-                  {accountTouched && !accountValid ? (
-                    <div style={{ marginTop: '16px', color: '#b91c1c', fontSize: '14px', fontWeight: 700 }}>
-                      Please fill in every field before continuing.
-                    </div>
-                  ) : null}
-
-                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '26px' }}>
-                    <button
-                      type="button"
-                      onClick={() => setStep(1)}
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        borderRadius: '999px',
-                        border: `1px solid ${BORDER}`,
-                        background: '#ffffff',
-                        color: TEXT,
-                        padding: '14px 18px',
-                        fontWeight: 800,
-                        cursor: 'pointer',
-                      }}
-                    >
-                      <ArrowLeft size={16} />
-                      {t('checkout.back')}
-                    </button>
-                    <button
-                      type="submit"
-                      style={{
-                        flex: '1 1 200px',
-                        border: 'none',
-                        borderRadius: '999px',
-                        background: TEAL,
-                        color: '#ffffff',
-                        padding: '16px 24px',
-                        fontSize: '16px',
-                        fontWeight: 800,
-                        cursor: 'pointer',
-                      }}
-                    >
-                      {t('checkout.continue')}
-                    </button>
-                  </div>
-                </form>
               ) : null}
 
               {step === 3 ? (
