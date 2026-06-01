@@ -100,9 +100,8 @@ export function PricingSection() {
               ))}
             </div>
 
-            <button
-              type="button"
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+            <Link
+              to="/checkout"
               style={{
                 display: 'inline-flex',
                 width: '100%',
@@ -111,7 +110,7 @@ export function PricingSection() {
                 gap: '10px',
                 background: '#78B832',
                 color: '#1C3F41',
-                border: 'none',
+                textDecoration: 'none',
                 padding: '16px 24px',
                 borderRadius: '999px',
                 fontWeight: 800,
@@ -122,7 +121,7 @@ export function PricingSection() {
             >
               <Send size={18} />
               {t('pricing.cta')}
-            </button>
+            </Link>
 
             <div
               style={{
