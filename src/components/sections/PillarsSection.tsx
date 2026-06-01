@@ -1,114 +1,143 @@
+import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Layers3, ShieldCheck, Zap } from 'lucide-react'
 
-const colors = {
-  tealDark: '#1C3F41',
-  teal: '#244C4E',
-  tealMuted: '#6B8A8C',
-  green: '#78B832',
-  border: '#D4DCEC',
-}
-
 const pillars = [
-  { Icon: Zap, iconBg: '#EEF8E0', iconColor: '#78B832', accent: '#78B832' },
-  { Icon: Layers3, iconBg: '#E8F2F2', iconColor: '#3D6466', accent: '#3D6466' },
-  { Icon: ShieldCheck, iconBg: '#E5EEF1', iconColor: '#1C3F41', accent: '#1C3F41' },
+  { Icon: Zap, color: '#78B832' },
+  { Icon: Layers3, color: '#3D8C8E' },
+  { Icon: ShieldCheck, color: '#1C3F41' },
 ]
 
 export function PillarsSection() {
   const { t } = useTranslation()
-  const items = t('pillars.items', {
-    returnObjects: true,
-  }) as Array<{ title: string; description: string }>
+  const items = t('pillars.items', { returnObjects: true }) as Array<{
+    title: string
+    description: string
+  }>
+  const rowRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = []
+    rowRefs.current.forEach((el, i) => {
+      if (!el) return
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              el.style.opacity = '1'
+              el.style.transform = 'translateY(0)'
+            }, i * 120)
+            obs.disconnect()
+          }
+        },
+        { threshold: 0.15 }
+      )
+      obs.observe(el)
+      observers.push(obs)
+    })
+    return () => observers.forEach(o => o.disconnect())
+  }, [])
 
   return (
     <section style={{ background: '#ffffff', padding: '96px 24px' }}>
       <div className="section-shell">
-        <div
-          style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '12px',
-            fontWeight: 700,
-            letterSpacing: '0.18em',
-            textTransform: 'uppercase',
-            color: colors.green,
-            marginBottom: '18px',
-          }}
-        >
-          // 01 FOUNDATION
+        {/* Header */}
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px', marginBottom: '64px' }}>
+          <p
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '11px',
+              fontWeight: 700,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#78B832',
+              margin: 0,
+              flexShrink: 0,
+            }}
+          >
+            // {t('pillars.label')}
+          </p>
+          <div style={{ flex: 1, height: '1px', background: '#E8EDEE' }} />
         </div>
-        <h2
-          style={{
-            maxWidth: '820px',
-            margin: '0 0 40px',
-            fontSize: 'clamp(44px, 5vw, 62px)',
-            lineHeight: 1.02,
-            letterSpacing: '-0.03em',
-            color: colors.tealDark,
-          }}
-        >
-          {t('pillars.title')}
-        </h2>
 
-        <div className="pillars-row">
+        {/* Rows */}
+        <div>
           {items.map((item, index) => {
             const pillar = pillars[index] ?? pillars[0]
             return (
               <div
                 key={item.title}
+                ref={el => { rowRefs.current[index] = el }}
                 style={{
-                  position: 'relative',
-                  overflow: 'hidden',
-                  borderLeft: `4px solid ${pillar.accent}`,
-                  borderBottom: `4px solid ${pillar.accent}`,
-                  borderRadius: '22px',
-                  borderTop: `1px solid ${colors.border}`,
-                  borderRight: `1px solid ${colors.border}`,
-                  background: '#fff',
-                  padding: '32px 28px 28px',
-                  boxShadow: '0 18px 34px rgba(28,63,65,0.06)',
+                  display: 'grid',
+                  gridTemplateColumns: '64px 1fr auto',
+                  alignItems: 'start',
+                  gap: '32px',
+                  padding: '40px 0',
+                  borderTop: '1px solid #E8EDEE',
+                  opacity: 0,
+                  transform: 'translateY(24px)',
+                  transition: 'opacity 0.55s cubic-bezier(0.22,1,0.36,1), transform 0.55s cubic-bezier(0.22,1,0.36,1)',
                 }}
               >
-                <div
+                {/* Index */}
+                <span
                   style={{
-                    position: 'absolute',
-                    top: '-8px',
-                    right: '18px',
-                    color: 'rgba(28,63,65,0.08)',
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '80px',
-                    fontWeight: 900,
-                    lineHeight: 1,
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    color: '#B0BEC0',
+                    letterSpacing: '0.08em',
+                    paddingTop: '4px',
                   }}
                 >
                   0{index + 1}
+                </span>
+
+                {/* Content */}
+                <div>
+                  <h3
+                    style={{
+                      margin: '0 0 12px',
+                      fontFamily: 'var(--font-display)',
+                      fontSize: 'clamp(26px, 3vw, 36px)',
+                      fontWeight: 800,
+                      letterSpacing: '-0.025em',
+                      lineHeight: 1.1,
+                      color: '#1C3F41',
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '16px',
+                      lineHeight: 1.75,
+                      color: '#6B8A8C',
+                      maxWidth: '560px',
+                    }}
+                  >
+                    {item.description}
+                  </p>
                 </div>
-                <div
-                  style={{
-                    width: '56px',
-                    height: '56px',
-                    borderRadius: '18px',
-                    background: pillar.iconBg,
-                    color: pillar.iconColor,
-                    display: 'grid',
-                    placeItems: 'center',
-                    marginBottom: '22px',
-                    position: 'relative',
-                  }}
-                >
-                  <pillar.Icon size={24} />
-                </div>
-                <h3 style={{ margin: '0 0 10px', fontSize: '24px', fontWeight: 800, color: colors.tealDark }}>
-                  {item.title}
-                </h3>
-                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.7, color: colors.tealMuted }}>
-                  {item.description}
-                </p>
+
+                {/* Icon — right side, no box */}
+                <pillar.Icon
+                  size={28}
+                  color={pillar.color}
+                  strokeWidth={1.5}
+                  style={{ marginTop: '6px', opacity: 0.7 }}
+                />
               </div>
             )
           })}
+          {/* Bottom border */}
+          <div style={{ borderTop: '1px solid #E8EDEE' }} />
         </div>
       </div>
     </section>
   )
 }
+

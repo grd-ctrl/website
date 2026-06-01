@@ -72,7 +72,7 @@ const SHARED = {
   iban: 'BR7679404000004227169063C1',
   branch: '0001',
   account_type: 'Checkings',
-  beneficiary: 'VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA',
+  beneficiary: 'VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA, GROUND CTRL',
   beneficiary_address: 'H Conj Ceara Ii, 1260 - Conjunto Ceara Ii, Fortaleza - CE, 60533-662',
 } satisfies Record<Exclude<CheckoutFieldKey, 'intermediary_swift' | 'intermediary_bank' | 'intermediary_country' | 'intermediary_account'>, string>
 
