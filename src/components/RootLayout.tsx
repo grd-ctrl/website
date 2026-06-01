@@ -1,5 +1,5 @@
 import { Outlet, Link } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
 import { useFeedbackWidget } from 'featurebase-js/react'
@@ -14,6 +14,23 @@ export function RootLayout() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useFeedbackWidget({ theme: 'light' })
+
+  useEffect(() => {
+    const s = new URLSearchParams(window.location.search).get('s')
+    if (s) {
+      setTimeout(() => document.getElementById(s)?.scrollIntoView({ behavior: 'smooth' }), 100)
+    }
+  }, [])
+
+  const scrollToSection = (key: string) => {
+    window.history.replaceState(null, '', `?s=${key}${window.location.hash}`)
+    const el = document.getElementById(key)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      window.location.href = `?s=${key}#/`
+    }
+  }
 
   return (
     <div style={{ minHeight: '100vh', background: '#fff', color: '#244C4E' }}>
@@ -35,7 +52,7 @@ export function RootLayout() {
             {(['features', 'usecases', 'demo', 'pricing'] as const).map((key) => (
               <a key={key}
                 href="javascript:void(0)"
-                onClick={() => document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => scrollToSection(key)}
                 style={{ fontSize: '14px', color: TM, textDecoration: 'none', fontWeight: 500, cursor: 'pointer', transition: 'color .15s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = TD)}
                 onMouseLeave={e => (e.currentTarget.style.color = TM)}
@@ -68,7 +85,7 @@ export function RootLayout() {
               <a key={key}
                 href="javascript:void(0)"
                 style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500, cursor: 'pointer' }}
-                onClick={() => { document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false) }}
+                onClick={() => { scrollToSection(key); setMenuOpen(false) }}
               >{t(`nav.${key}`)}</a>
             ))}
             <Link to="/checkout" style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t('nav.checkout')}</Link>
