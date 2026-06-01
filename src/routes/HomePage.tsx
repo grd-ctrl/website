@@ -17,7 +17,6 @@ export function HomePage() {
   return (
     <>
       <HeroSection />
-      <PillarsSection />
       <ProductSection />
       <ProblemSection />
       <FeaturesSection />
@@ -27,6 +26,7 @@ export function HomePage() {
       <DemoSection />
       <PricingSection />
       <ImpactSection />
+      <PillarsSection />
       <SupportSection />
       <Footer />
     </>
