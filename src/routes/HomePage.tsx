@@ -1,5 +1,5 @@
 import { HeroSection } from '../components/sections/HeroSection'
-import { StatsSection } from '../components/sections/StatsSection'
+
 import { PillarsSection } from '../components/sections/PillarsSection'
 import { ProductSection } from '../components/sections/ProductSection'
 import { ProblemSection } from '../components/sections/ProblemSection'
@@ -17,7 +17,6 @@ export function HomePage() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
       <PillarsSection />
       <ProductSection />
       <ProblemSection />
