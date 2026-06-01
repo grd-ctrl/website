@@ -306,6 +306,7 @@ export function CheckoutPage() {
   return (
     <>
       <section className="checkout-shell" style={{ background: '#ffffff' }}>
+        {step !== 3 ? (
         <aside className="checkout-aside">
           <div className="checkout-aside-inner">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '28px' }}>
@@ -415,6 +416,7 @@ export function CheckoutPage() {
             </div>
           </div>
         </aside>
+        ) : null}
 
         <div className="checkout-main">
           <div className="checkout-form-card">
