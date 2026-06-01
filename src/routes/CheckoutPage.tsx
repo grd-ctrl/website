@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowLeft, Check, ChevronRight, Copy, Monitor, Shield, Users, Zap } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
 import { useFeaturebase } from 'featurebase-js/react'
+import { postToSheet } from '../lib/config'
 
 type Currency = 'EUR' | 'USD'
 type BillingCycle = 'monthly' | 'annual'
@@ -186,16 +187,6 @@ export function CheckoutPage() {
   const { t } = useTranslation()
   const { update, showNewMessage } = useFeaturebase()
   const fields = t('checkout.fields', { returnObjects: true }) as CheckoutFields
-
-  const SHEETS_URL = ''
-  const postToSheet = (sheet: string, row: Record<string, string>) => {
-    if (!SHEETS_URL) return
-    fetch(SHEETS_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ sheet, row }),
-    }).catch(() => {})
-  }
 
   const [step, setStep] = useState<CheckoutStep>(1)
   const [email, setEmail] = useState('')

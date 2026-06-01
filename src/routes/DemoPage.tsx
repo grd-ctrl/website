@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router'
 import { ArrowLeft, Send, CheckCircle, ChevronDown } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
 import { useFeaturebase } from 'featurebase-js/react'
+import { postToSheet } from '../lib/config'
 
 const TEAL = '#14b8a6'
 const TEAL_DIM = 'rgba(20,184,166,0.18)'
@@ -54,17 +55,6 @@ export function DemoPage() {
   }, [])
 
   const valid = name.trim() && email.trim() && company.trim() && role
-
-  const SHEETS_URL = ''
-
-  const postToSheet = (sheet: string, row: Record<string, string>) => {
-    if (!SHEETS_URL) return
-    fetch(SHEETS_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ sheet, row }),
-    }).catch(() => {})
-  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
