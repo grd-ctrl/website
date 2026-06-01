@@ -1,10 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { useFeaturebase } from "featurebase-js/react";
 import { useTranslation } from "react-i18next";
 
 export function ImpactSection() {
   const { t } = useTranslation();
-  const { showNewMessage } = useFeaturebase();
 
   const chips = [
     { label: "Ops latency", value: "< 2s", top: "10%", right: "-2%" },
@@ -117,11 +115,8 @@ export function ImpactSection() {
             >
               {t("impact.cta_primary")}
             </Link>
-            <button
-              type="button"
-              onClick={() =>
-                showNewMessage("Hi, I'd like to request a GroundCTRL demo. My company is: FILL_YOUR_COMPANY")
-              }
+            <Link
+              to="/demo"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -132,14 +127,14 @@ export function ImpactSection() {
                 border: "1px solid rgba(255,255,255,0.34)",
                 background: "rgba(255,255,255,0.06)",
                 color: "#ffffff",
+                textDecoration: "none",
                 fontWeight: 700,
                 fontSize: "15px",
-                cursor: "pointer",
                 backdropFilter: "blur(10px)",
               }}
             >
               {t("impact.cta_secondary")}
-            </button>
+            </Link>
           </div>
         </div>
 

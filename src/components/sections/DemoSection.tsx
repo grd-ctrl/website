@@ -1,10 +1,9 @@
-import { useFeaturebase } from 'featurebase-js/react'
+import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import { Send } from 'lucide-react'
 
 export function DemoSection() {
   const { t } = useTranslation()
-  const { showNewMessage } = useFeaturebase()
 
   return (
     <section
@@ -47,27 +46,25 @@ export function DemoSection() {
           {t('demo.subtitle')}
         </p>
 
-        <button
-          type="button"
-          onClick={() => showNewMessage("Hi, I'd like to request a GroundCTRL demo. My company is: FILL_YOUR_COMPANY")}
+        <Link
+          to="/demo"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '10px',
             background: '#78B832',
             color: '#1C3F41',
-            border: 'none',
+            textDecoration: 'none',
             padding: '18px 28px',
             borderRadius: '999px',
             fontWeight: 800,
             fontSize: '16px',
-            cursor: 'pointer',
             boxShadow: '0 24px 42px rgba(120,184,50,0.22)',
           }}
         >
           <Send size={18} />
           {t('demo.cta')}
-        </button>
+        </Link>
 
         <div
           style={{

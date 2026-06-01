@@ -1,5 +1,5 @@
-import { useFeaturebase } from "featurebase-js/react";
 import { useTranslation } from "react-i18next";
+import { Link } from "@tanstack/react-router";
 import { CheckCircle, Send } from "lucide-react";
 
 const COLORS = {
@@ -12,7 +12,6 @@ const COLORS = {
 
 export function HeroSection() {
   const { t } = useTranslation();
-  const { showNewMessage } = useFeaturebase();
 
   return (
     <section
@@ -86,18 +85,15 @@ export function HeroSection() {
               marginBottom: "28px",
             }}
           >
-            <button
-              type="button"
-              onClick={() =>
-                showNewMessage("Hi, I'd like to request a GroundCTRL demo. My company is: FILL_YOUR_COMPANY")
-              }
+            <Link
+              to="/demo"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "10px",
                 background: COLORS.green,
                 color: COLORS.tealDark,
-                border: "none",
+                textDecoration: "none",
                 fontWeight: 800,
                 fontSize: "16px",
                 padding: "16px 24px",
@@ -108,7 +104,7 @@ export function HeroSection() {
             >
               <Send size={18} />
               {t("hero.cta_primary")}
-            </button>
+            </Link>
             <a
               href="#features"
               style={{
