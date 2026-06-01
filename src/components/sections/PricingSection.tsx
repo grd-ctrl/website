@@ -13,7 +13,6 @@ const included = [
 
 export function PricingSection() {
   const { t } = useTranslation()
-  const { showNewMessage } = useFeaturebase()
 
   return (
     <section id="pricing" style={{ background: '#ffffff', padding: '96px 24px' }}>
