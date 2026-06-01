@@ -96,7 +96,7 @@ export function HeroSection() {
           >
             <span style={{ display: "block" }}>{t("hero.headline")}</span>
             <span
-              className="btn-shimmer"
+              className="headline-shimmer"
               style={{
                 display: "block",
                 WebkitBackgroundClip: "text",
@@ -204,25 +204,19 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Live card — entrance then CSS float */}
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 1.0, ease }}
-          >
-            <div className="hero-live-card float-card">
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <span className="pulse-green" style={{ width: "10px", height: "10px", borderRadius: "999px", background: "#78B832" }} />
-                <span style={{ color: "#78B832", fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.14em" }}>LIVE</span>
-              </div>
-              <div style={{ color: "#ffffff", fontSize: "20px", fontWeight: 800, marginTop: "10px", letterSpacing: "-0.03em" }}>
-                Control Room Alpha
-              </div>
-              <div style={{ color: "rgba(255,255,255,0.66)", fontSize: "13px", marginTop: "6px" }}>
-                Unified wall control, alerts and live operator workflows.
-              </div>
+          {/* Live card — CSS float only */}
+          <div className="hero-live-card float-card">
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <span className="pulse-green" style={{ width: "10px", height: "10px", borderRadius: "999px", background: "#78B832" }} />
+              <span style={{ color: "#78B832", fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.14em" }}>LIVE</span>
             </div>
-          </motion.div>
+            <div style={{ color: "#ffffff", fontSize: "20px", fontWeight: 800, marginTop: "10px", letterSpacing: "-0.03em" }}>
+              Control Room Alpha
+            </div>
+            <div style={{ color: "rgba(255,255,255,0.66)", fontSize: "13px", marginTop: "6px" }}>
+              Unified wall control, alerts and live operator workflows.
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -191,6 +191,11 @@ h3 {
   100% { background-position: 200% center; }
 }
 
+@keyframes shimmer-soft {
+  0%, 35%  { background-position: -200% center; }
+  65%, 100% { background-position: 200% center; }
+}
+
 @keyframes glow-green {
   0%, 100% { box-shadow: 0 0 0 0 rgba(120, 184, 50, 0); }
   50%      { box-shadow: 0 0 40px 10px rgba(120, 184, 50, 0.35); }
@@ -222,6 +227,12 @@ h3 {
   background: linear-gradient(90deg, #78B832 0%, #b0e860 35%, #78B832 65%, #5a9122 100%);
   background-size: 250% auto;
   animation: shimmer 2.8s linear infinite;
+}
+
+.headline-shimmer {
+  background: linear-gradient(90deg, #78B832 0%, #78B832 30%, #a8d95a 50%, #78B832 70%, #78B832 100%);
+  background-size: 300% auto;
+  animation: shimmer-soft 7s ease-in-out infinite;
 }
 
 .btn-glow {

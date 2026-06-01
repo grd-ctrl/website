@@ -52,7 +52,7 @@ interface AnimateInProps {
   amount?: number
 }
 
-export function AnimateIn({ children, variants = fadeUp, delay = 0, className, style, amount = 0.15 }: AnimateInProps) {
+export function AnimateIn({ children, variants = fadeUp, delay = 0, className, style, amount = 0.3 }: AnimateInProps) {
   return (
     <motion.div
       initial="hidden"
