@@ -3,7 +3,6 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import { ArrowLeft, Check, ChevronRight, Copy, Monitor, Shield, Users, Zap } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
-import { useFeaturebase } from 'featurebase-js/react'
 import { postForm, CHECKOUT_FORM_URL } from '../lib/config'
 
 type Currency = 'EUR' | 'USD'
@@ -185,7 +184,6 @@ function CopyRow({ label, value, highlight = false }: { label: string; value: st
 
 export function CheckoutPage() {
   const { t } = useTranslation()
-  const { update, showNewMessage } = useFeaturebase()
   const fields = t('checkout.fields', { returnObjects: true }) as CheckoutFields
 
   const [step, setStep] = useState<CheckoutStep>(1)
@@ -243,8 +241,7 @@ export function CheckoutPage() {
       return
     }
 
-    update({ email: email.trim(), name: fullName.trim(), company: { name: companyName.trim() } })
-    postToSheet('checkout', {
+    postForm(CHECKOUT_FORM_URL, {
       Timestamp: new Date().toISOString(),
       Type: 'Checkout Lead',
       'Full Name': fullName.trim(),
@@ -262,8 +259,7 @@ export function CheckoutPage() {
 
   const handlePaymentConfirm = () => {
     const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
-    showNewMessage(`Payment confirmed — ${fullName.trim()} (${companyName.trim()}) · ${currency} ${amountText}`)
-    postToSheet('checkout', {
+    postForm(CHECKOUT_FORM_URL, {
       Timestamp: new Date().toISOString(),
       Type: 'Payment Confirmed',
       'Full Name': fullName.trim(),
