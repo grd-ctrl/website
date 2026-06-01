@@ -120,7 +120,7 @@ export function ImpactSection() {
             <button
               type="button"
               onClick={() =>
-                showNewMessage("Hi, I want to request a GroundCTRL demo.")
+                showNewMessage("Hi, I'd like to request a GroundCTRL demo. My company is: FILL_YOUR_COMPANY")
               }
               style={{
                 display: "inline-flex",

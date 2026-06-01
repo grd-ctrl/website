@@ -1,4 +1,3 @@
-import { useFeaturebase } from 'featurebase-js/react'
 import { useTranslation } from 'react-i18next'
 import { Link } from '@tanstack/react-router'
 import { Check, Send } from 'lucide-react'
@@ -104,7 +103,7 @@ export function PricingSection() {
 
             <button
               type="button"
-              onClick={() => showNewMessage("Hi, I'm interested in GroundCTRL pricing.")}
+              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               style={{
                 display: 'inline-flex',
                 width: '100%',
