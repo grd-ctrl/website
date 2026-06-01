@@ -29,6 +29,8 @@ jobs:
       - run: npm run build
         env:
           VITE_FEATUREBASE_API_KEY: ${{ secrets.VITE_FEATUREBASE_API_KEY }}
+          VITE_DEMO_FORM_URL: ${{ vars.VITE_DEMO_FORM_URL }}
+          VITE_CHECKOUT_FORM_URL: ${{ vars.VITE_CHECKOUT_FORM_URL }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

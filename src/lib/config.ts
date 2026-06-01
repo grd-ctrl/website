@@ -1,10 +1,11 @@
-export const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwdF5xY1FB6f6Ula-SADui6WntoyeMtdutpn-bmIxXQz7kpKp8rKdjGvLJozQvvrCx19Q/exec'
+export const DEMO_FORM_URL = import.meta.env.VITE_DEMO_FORM_URL as string
+export const CHECKOUT_FORM_URL = import.meta.env.VITE_CHECKOUT_FORM_URL as string
 
-export const postToSheet = (sheet: string, row: Record<string, string>) => {
-  if (!SHEETS_URL) return
-  fetch(SHEETS_URL, {
+export const postForm = (url: string, data: Record<string, string>) => {
+  if (!url) return
+  fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ sheet, row }),
-  }).catch(() => { })
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(data),
+  }).catch(() => {})
 }

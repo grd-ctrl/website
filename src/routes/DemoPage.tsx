@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from '@tanstack/react-router'
 import { ArrowLeft, Send, CheckCircle, ChevronDown } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
-import { useFeaturebase } from 'featurebase-js/react'
-import { postToSheet } from '../lib/config'
+import { postForm, DEMO_FORM_URL } from '../lib/config'
 
 const TEAL = '#14b8a6'
 const TEAL_DIM = 'rgba(20,184,166,0.18)'
@@ -30,7 +29,6 @@ const STATS = [
 ]
 
 export function DemoPage() {
-  const { update } = useFeaturebase()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [company, setCompany] = useState('')
@@ -60,8 +58,7 @@ export function DemoPage() {
     e.preventDefault()
     setTouched(true)
     if (!valid) return
-    update({ email: email.trim(), name: name.trim(), company: { name: company.trim() } })
-    postToSheet('demo', {
+    postForm(DEMO_FORM_URL, {
       Timestamp: new Date().toISOString(),
       'Full Name': name.trim(),
       Email: email.trim(),

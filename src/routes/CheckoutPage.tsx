@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowLeft, Check, ChevronRight, Copy, Monitor, Shield, Users, Zap } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
 import { useFeaturebase } from 'featurebase-js/react'
-import { postToSheet } from '../lib/config'
+import { postForm, CHECKOUT_FORM_URL } from '../lib/config'
 
 type Currency = 'EUR' | 'USD'
 type BillingCycle = 'monthly' | 'annual'
@@ -221,9 +221,7 @@ export function CheckoutPage() {
 
   const handleLicenseContinue = () => {
     if (customPricing) {
-      postToSheet('checkout', {
-      Timestamp: new Date().toISOString(),
-      Type: 'Custom Pricing Request',
+      postForm(CHECKOUT_FORM_URL, {
       'Full Name': 'Unknown',
       Email: 'unknown',
       Company: 'Unknown',
