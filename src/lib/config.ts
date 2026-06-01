@@ -7,5 +7,7 @@ export const postForm = (url: string, data: Record<string, string>) => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify(data),
-  }).catch(() => {})
+  })
+    .then(r => { if (!r.ok) console.error('Form submit failed', r.status, r.statusText) })
+    .catch(err => console.error('Form submit error', err))
 }
