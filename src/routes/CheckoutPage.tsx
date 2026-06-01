@@ -241,19 +241,6 @@ export function CheckoutPage() {
       return
     }
 
-    postForm(CHECKOUT_FORM_URL, {
-      Timestamp: new Date().toISOString(),
-      Type: 'Checkout Lead',
-      'Full Name': fullName.trim(),
-      Email: email.trim(),
-      Company: companyName.trim(),
-      Country: country,
-      Licenses: String(licenseChoice),
-      Billing: String(billing),
-      Currency: currency,
-      Total: totalAmount === null ? 'custom quote' : String(totalAmount),
-    })
-
     setStep(3)
   }
 
@@ -261,7 +248,6 @@ export function CheckoutPage() {
     const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
     postForm(CHECKOUT_FORM_URL, {
       Timestamp: new Date().toISOString(),
-      Type: 'Payment Confirmed',
       'Full Name': fullName.trim(),
       Email: email.trim(),
       Company: companyName.trim(),
