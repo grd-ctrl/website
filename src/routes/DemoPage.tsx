@@ -174,7 +174,7 @@ export function DemoPage() {
         style={{
           display: 'flex',
           minHeight: '100vh',
-          paddingTop: '64px',
+          marginTop: '-64px',
         }}
       >
         {/* ── LEFT: image panel ── */}
