@@ -55,7 +55,7 @@ export function DemoPage() {
 
   const valid = name.trim() && email.trim() && company.trim() && role
 
-  const SHEETS_URL = import.meta.env.VITE_SHEETS_ENDPOINT
+  const SHEETS_URL = ''
 
   const postToSheet = (sheet: string, row: Record<string, string>) => {
     if (!SHEETS_URL) return

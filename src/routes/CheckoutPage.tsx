@@ -187,7 +187,7 @@ export function CheckoutPage() {
   const { update, showNewMessage } = useFeaturebase()
   const fields = t('checkout.fields', { returnObjects: true }) as CheckoutFields
 
-  const SHEETS_URL = import.meta.env.VITE_SHEETS_ENDPOINT
+  const SHEETS_URL = ''
   const postToSheet = (sheet: string, row: Record<string, string>) => {
     if (!SHEETS_URL) return
     fetch(SHEETS_URL, {
