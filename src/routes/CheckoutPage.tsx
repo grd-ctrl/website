@@ -12,14 +12,12 @@ type LicenseChoice = 1 | 2 | 3 | 5 | 10 | 15 | 20 | '25+'
 
 type CheckoutFieldKey =
   | 'bank'
-  | 'bank_address'
   | 'bank_country'
   | 'swift'
   | 'iban'
   | 'branch'
   | 'account_type'
   | 'beneficiary'
-  | 'beneficiary_address'
   | 'intermediary_swift'
   | 'intermediary_bank'
   | 'intermediary_country'
@@ -75,14 +73,12 @@ const PRICING = {
 
 const SHARED = {
   bank: 'Banco Topazio S/A',
-  bank_address: 'Rua 18 de Novembro, 273 - Porto Alegre - RS, 90240-040',
   bank_country: 'Brazil',
   swift: 'TOPZBRRSXXX',
   iban: 'BR7679404000004227169063C1',
   branch: '0001',
   account_type: 'Checkings',
   beneficiary: 'VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA, GROUND CTRL',
-  beneficiary_address: 'H Conj Ceara Ii, 1260 - Conjunto Ceara Ii, Fortaleza - CE, 60533-662',
 } satisfies Record<Exclude<CheckoutFieldKey, 'intermediary_swift' | 'intermediary_bank' | 'intermediary_country' | 'intermediary_account'>, string>
 
 const INTERMEDIARY = {
@@ -671,7 +667,6 @@ export function CheckoutPage() {
                         <CopyRow label={fields.branch} value={SHARED.branch} />
                         <CopyRow label={fields.account_type} value={SHARED.account_type} />
                         <CopyRow label={fields.bank_country} value={SHARED.bank_country} />
-                        <CopyRow label={fields.beneficiary_address} value={SHARED.beneficiary_address} />
                       </div>
                     </div>
 
