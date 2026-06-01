@@ -248,7 +248,6 @@ export function CheckoutPage() {
       `New checkout lead: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${billing} billing | ${currency} ${totalAmount}`
     )
 
-    window.open('https://www.featurebase.app/', '_blank', 'noopener,noreferrer')
     setStep(3)
   }
 
@@ -257,7 +256,6 @@ export function CheckoutPage() {
     showNewMessage(
       `Payment confirmed: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${currency} ${amountText}`
     )
-    window.open('https://www.featurebase.app/', '_blank', 'noopener,noreferrer')
   }
 
   const stepItems = [
