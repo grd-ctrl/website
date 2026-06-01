@@ -29,7 +29,7 @@ const STATS = [
 ]
 
 export function DemoPage() {
-  const { update, showNewMessage } = useFeaturebase()
+  const { update } = useFeaturebase()
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -62,9 +62,6 @@ export function DemoPage() {
     setTouched(true)
     if (!valid) return
     update({ email: email.trim(), name: name.trim(), company: { name: company.trim() } })
-    showNewMessage(
-      `Demo request — ${name.trim()} (${role}) at ${company.trim()} | ${email.trim()}${message.trim() ? ` | Note: ${message.trim()}` : ''}`
-    )
     setSubmitted(true)
   }
 

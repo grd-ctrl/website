@@ -2,6 +2,7 @@ import { Outlet, Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
+import { useFeedbackWidget } from 'featurebase-js/react'
 
 const TD = '#1C3F41'
 const TM = '#6B8A8C'
@@ -11,6 +12,8 @@ const BD = '#D4DCEC'
 export function RootLayout() {
   const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useFeedbackWidget({ placement: 'right' })
 
   return (
     <div style={{ minHeight: '100vh', background: '#fff', color: '#244C4E' }}>
