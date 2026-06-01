@@ -156,7 +156,7 @@
     "label": "Final CTA",
     "title": "Ready to take command?",
     "subtitle": "GroundCTRL gives your team a single command surface for video walls, feeds and response scenarios — live in minutes, ready when the room goes critical.",
-    "cta": "Talk to us on WhatsApp"
+    "cta": "Talk to us in chat"
   },
   "pricing": {
     "label": "Pricing",
@@ -247,7 +247,7 @@
       },
       "email": {
         "title": "Email support",
-        "desc": "support@groundctrl.io · we reply within 4h",
+        "desc": "juliocflima@gmail.com · we reply within 4h",
         "cta": "Send email"
       }
     }

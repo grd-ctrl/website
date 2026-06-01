@@ -156,7 +156,7 @@
     "label": "Final CTA",
     "title": "¿Listo para tomar el control?",
     "subtitle": "GroundCTRL le da a su equipo una superficie única de mando para videowalls, feeds y escenarios de respuesta — en vivo en minutos, lista cuando la sala entra en modo crítico.",
-    "cta": "Hable con nosotros por WhatsApp"
+    "cta": "Hable con nosotros en el chat"
   },
   "pricing": {
     "label": "Precios",
@@ -247,7 +247,7 @@
       },
       "email": {
         "title": "Soporte por email",
-        "desc": "support@groundctrl.io · respuesta en 4h",
+        "desc": "juliocflima@gmail.com · respuesta en 4h",
         "cta": "Enviar correo"
       }
     }
