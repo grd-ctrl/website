@@ -1,5 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { Camera, Monitor, Settings2, Shield, Volume2, Zap } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { AnimateIn, fadeUp } from '../AnimateIn'
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const
 
 const integrations = [
   { name: 'Barco CTRL', Icon: Shield, native: true },
@@ -46,39 +50,46 @@ export function IntegrationsSection() {
       />
 
       <div className="section-shell" style={{ position: 'relative' }}>
-        <div
-          style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '12px',
-            fontWeight: 700,
-            letterSpacing: '0.16em',
-            textTransform: 'uppercase',
-            color: '#78B832',
-            marginBottom: '18px',
-          }}
-        >
-          // {t('integrations.label')}
-        </div>
-        <h2
-          style={{
-            maxWidth: '720px',
-            margin: '0 0 16px',
-            fontSize: 'clamp(38px, 5vw, 56px)',
-            lineHeight: 1.02,
-            letterSpacing: '-0.03em',
-            color: '#ffffff',
-          }}
-        >
-          {t('integrations.title')}
-        </h2>
-        <p style={{ margin: '0 0 48px', maxWidth: '580px', color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: 1.7 }}>
-          {t('integrations.subtitle')}
-        </p>
+        <AnimateIn variants={fadeUp}>
+          <div
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '12px',
+              fontWeight: 700,
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: '#78B832',
+              marginBottom: '18px',
+            }}
+          >
+            // {t('integrations.label')}
+          </div>
+          <h2
+            style={{
+              maxWidth: '720px',
+              margin: '0 0 16px',
+              fontSize: 'clamp(38px, 5vw, 56px)',
+              lineHeight: 1.02,
+              letterSpacing: '-0.03em',
+              color: '#ffffff',
+            }}
+          >
+            {t('integrations.title')}
+          </h2>
+          <p style={{ margin: '0 0 48px', maxWidth: '580px', color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: 1.7 }}>
+            {t('integrations.subtitle')}
+          </p>
+        </AnimateIn>
 
         <div className="integrations-grid">
-          {integrations.map((integration) => (
-            <div
+          {integrations.map((integration, index) => (
+            <motion.div
               key={integration.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: index * 0.08, ease }}
+              whileHover={{ y: -4, borderColor: 'rgba(120,184,50,0.5)', background: 'rgba(255,255,255,0.11)' }}
               style={{
                 background: 'rgba(255,255,255,0.06)',
                 border: '1px solid rgba(255,255,255,0.12)',
@@ -86,15 +97,6 @@ export function IntegrationsSection() {
                 padding: '20px 20px 18px',
                 backdropFilter: 'blur(12px)',
                 WebkitBackdropFilter: 'blur(12px)',
-                transition: 'background 0.2s, border-color 0.2s',
-              }}
-              onMouseEnter={(e) => {
-                ;(e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.11)'
-                ;(e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(120,184,50,0.4)'
-              }}
-              onMouseLeave={(e) => {
-                ;(e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.06)'
-                ;(e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(255,255,255,0.12)'
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
@@ -130,7 +132,7 @@ export function IntegrationsSection() {
                 ) : null}
               </div>
               <div style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 700, fontSize: '15px' }}>{integration.name}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

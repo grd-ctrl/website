@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
 import { useFeedbackWidget } from 'featurebase-js/react'
+import { MotionConfig } from 'framer-motion'
 
 const TD = '#1C3F41'
 const TM = '#6B8A8C'
@@ -35,6 +36,7 @@ export function RootLayout() {
   }
 
   return (
+    <MotionConfig reducedMotion="user">
     <div style={{ minHeight: '100vh', background: '#fff', color: '#244C4E' }}>
       <header style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
@@ -103,5 +105,6 @@ export function RootLayout() {
         <Outlet />
       </main>
     </div>
+    </MotionConfig>
   )
 }

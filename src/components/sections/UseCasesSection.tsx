@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Activity, Building2, Plane, Shield, Wifi, Zap } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { AnimateIn, fadeUp } from '../AnimateIn'
 
 const colors = {
   white: '#ffffff',
@@ -28,7 +30,7 @@ export function UseCasesSection() {
   return (
     <section id="usecases" className="blueprint-grid" style={{ padding: '96px 24px' }}>
       <div className="section-shell">
-        <div style={{ maxWidth: '720px', marginBottom: '36px' }}>
+        <AnimateIn variants={fadeUp} style={{ maxWidth: '720px', marginBottom: '36px' }}>
           <div
             style={{
               fontFamily: 'var(--font-mono)',
@@ -54,7 +56,7 @@ export function UseCasesSection() {
             {t('usecases.title')}
           </h2>
           <p style={{ margin: 0, color: colors.tealMuted, fontSize: '17px', lineHeight: 1.7 }}>{t('usecases.subtitle')}</p>
-        </div>
+        </AnimateIn>
 
         <div className="usecases-bento">
           {items.map((item, index) => {
@@ -62,8 +64,13 @@ export function UseCasesSection() {
             const dark = itemMeta.dark === true
             const featured = itemMeta.featured === true
             return (
-              <article
+              <motion.article
                 key={item.title}
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, delay: index * 0.09, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, boxShadow: dark ? '0 36px 72px rgba(28,63,65,0.32)' : '0 20px 48px rgba(28,63,65,0.12)' }}
                 style={{
                   gridArea: itemMeta.area,
                   borderRadius: '20px',
@@ -133,7 +140,7 @@ export function UseCasesSection() {
                     </div>
                   </div>
                 ) : null}
-              </article>
+              </motion.article>
             )
           })}
         </div>

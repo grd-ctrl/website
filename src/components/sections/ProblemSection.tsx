@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Check, CircleX } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { staggerContainer, staggerChild } from '../AnimateIn'
 
 const colors = {
   tealDark: '#1C3F41',
@@ -10,6 +12,8 @@ const colors = {
   border: '#D4DCEC',
 }
 
+const ease = [0.25, 0.46, 0.45, 0.94] as const
+
 export function ProblemSection() {
   const { t } = useTranslation()
   const problems = t('problem.items', { returnObjects: true }) as string[]
@@ -19,7 +23,12 @@ export function ProblemSection() {
     <section className="blueprint-grid" style={{ padding: '80px 24px' }}>
       <div className="section-shell">
         <div className="problem-panels">
-          <div
+          {/* Before panel — slides from left */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease }}
             style={{
               background: colors.tealDark,
               color: '#ffffff',
@@ -53,9 +62,15 @@ export function ProblemSection() {
               {t('problem.before_title')}
             </h2>
 
-            <div style={{ display: 'grid', gap: '18px' }}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+              style={{ display: 'grid', gap: '18px' }}
+            >
               {problems.map((item) => (
-                <div key={item} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                <motion.div key={item} variants={staggerChild} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
                   <span
                     style={{
                       width: '28px',
@@ -71,12 +86,17 @@ export function ProblemSection() {
                     <CircleX size={16} />
                   </span>
                   <span style={{ color: 'rgba(255,255,255,0.82)', fontSize: '16px', lineHeight: 1.6 }}>{item}</span>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div
+          {/* After panel — slides from right */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease, delay: 0.15 }}
             style={{
               background: '#ffffff',
               color: colors.teal,
@@ -112,9 +132,15 @@ export function ProblemSection() {
               {t('problem.after_title')}
             </h2>
 
-            <div style={{ display: 'grid', gap: '18px' }}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+              style={{ display: 'grid', gap: '18px' }}
+            >
               {solutions.map((item) => (
-                <div key={item} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                <motion.div key={item} variants={staggerChild} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
                   <span
                     style={{
                       width: '28px',
@@ -130,10 +156,10 @@ export function ProblemSection() {
                     <Check size={16} />
                   </span>
                   <span style={{ color: colors.teal, fontSize: '16px', lineHeight: 1.6 }}>{item}</span>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,5 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const
 
 export function ImpactSection() {
   const { t } = useTranslation();
@@ -53,7 +56,13 @@ export function ImpactSection() {
         className="section-shell impact-layout"
         style={{ minHeight: "min(820px, 70vh)", alignItems: "center" }}
       >
-        <div style={{ position: "relative", zIndex: 2, maxWidth: "800px" }}>
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease }}
+          style={{ position: "relative", zIndex: 2, maxWidth: "800px" }}
+        >
           <div
             className="mono-label"
             style={{ color: "rgba(255,255,255,0.74)", marginBottom: "18px" }}
@@ -97,48 +106,56 @@ export function ImpactSection() {
               marginTop: "34px",
             }}
           >
-            <Link
-              to="/checkout"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minWidth: "180px",
-                padding: "15px 26px",
-                borderRadius: "999px",
-                background: "#ffffff",
-                color: "#0a0a0a",
-                textDecoration: "none",
-                fontWeight: 800,
-                boxShadow: "0 16px 44px rgba(0,0,0,0.22)",
-              }}
-            >
-              {t("impact.cta_primary")}
-            </Link>
-            <Link
-              to="/demo"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minWidth: "180px",
-                padding: "15px 26px",
-                borderRadius: "999px",
-                border: "1px solid rgba(255,255,255,0.34)",
-                background: "rgba(255,255,255,0.06)",
-                color: "#ffffff",
-                textDecoration: "none",
-                fontWeight: 700,
-                fontSize: "15px",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              {t("impact.cta_secondary")}
-            </Link>
+            <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.2 }}>
+              <Link
+                to="/checkout"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minWidth: "180px",
+                  padding: "15px 26px",
+                  borderRadius: "999px",
+                  background: "#ffffff",
+                  color: "#0a0a0a",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                  boxShadow: "0 16px 44px rgba(0,0,0,0.22)",
+                }}
+              >
+                {t("impact.cta_primary")}
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.2 }}>
+              <Link
+                to="/demo"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minWidth: "180px",
+                  padding: "15px 26px",
+                  borderRadius: "999px",
+                  border: "1px solid rgba(255,255,255,0.34)",
+                  background: "rgba(255,255,255,0.06)",
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  fontWeight: 700,
+                  fontSize: "15px",
+                  backdropFilter: "blur(10px)",
+                }}
+              >
+                {t("impact.cta_secondary")}
+              </Link>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.15, ease }}
           className="impact-tablet-stage"
           style={{ position: "relative", zIndex: 2 }}
         >
@@ -152,9 +169,13 @@ export function ImpactSection() {
               filter: "blur(32px)",
             }}
           />
-          {chips.map((chip) => (
-            <div
+          {chips.map((chip, index) => (
+            <motion.div
               key={chip.label}
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.15, ease: [0.34, 1.56, 0.64, 1] }}
               className="impact-chip"
               style={{
                 position: "absolute",
@@ -184,7 +205,7 @@ export function ImpactSection() {
               >
                 {chip.value}
               </div>
-            </div>
+            </motion.div>
           ))}
 
           <div
@@ -429,7 +450,7 @@ export function ImpactSection() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
