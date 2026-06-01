@@ -69,18 +69,17 @@ export function RootLayout() {
             >{t('nav.checkout')}</Link>
           </nav>
 
-          <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Link to="/demo"
-              style={{ background: GR, color: TD, padding: '8px 20px', borderRadius: '999px', fontWeight: 700, fontSize: '14px', textDecoration: 'none', transition: 'background .15s' }}
+              style={{ background: GR, color: TD, padding: '8px 16px', borderRadius: '999px', fontWeight: 700, fontSize: '13px', textDecoration: 'none' }}
               onMouseEnter={e => (e.currentTarget.style.background = '#5E9A2C')}
               onMouseLeave={e => (e.currentTarget.style.background = GR)}
             >{t('nav.contact')}</Link>
+            <button className="md:hidden"
+              style={{ background: 'none', border: 'none', color: TD, cursor: 'pointer', padding: '8px' }}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
           </div>
-
-          <button className="md:hidden"
-            style={{ background: 'none', border: 'none', color: TD, cursor: 'pointer', padding: '8px' }}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
 
         {menuOpen && (
@@ -93,10 +92,6 @@ export function RootLayout() {
               >{t(`nav.${key}`)}</a>
             ))}
             <Link to="/checkout" style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t('nav.checkout')}</Link>
-            <Link to="/demo"
-              style={{ background: GR, color: TD, padding: '12px 24px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', textAlign: 'center' }}
-              onClick={() => setMenuOpen(false)}
-            >{t('nav.contact')}</Link>
           </div>
         )}
       </header>
