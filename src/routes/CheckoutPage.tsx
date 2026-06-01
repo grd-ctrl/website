@@ -38,14 +38,24 @@ const WHATSAPP_BASE = 'https://wa.me/5585998614541?text='
 
 const COUNTRIES = [
   'United States',
-  'Brazil',
-  'Germany',
-  'Italy',
-  'Netherlands',
-  'Portugal',
-  'Spain',
-  'United Arab Emirates',
   'United Kingdom',
+  'Germany',
+  'France',
+  'Netherlands',
+  'Switzerland',
+  'Sweden',
+  'Norway',
+  'Denmark',
+  'Belgium',
+  'Austria',
+  'Finland',
+  'Luxembourg',
+  'Ireland',
+  'Spain',
+  'Italy',
+  'Portugal',
+  'United Arab Emirates',
+  'Brazil',
   'Other',
 ]
 
@@ -236,6 +246,14 @@ export function CheckoutPage() {
     [licenseChoice]
   )
 
+  const handleLicenseContinue = () => {
+    if (customPricing) {
+      window.open(salesWhatsappLink, '_blank', 'noopener,noreferrer')
+      return
+    }
+    setStep(2)
+  }
+
   const handleAccountSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setAccountTouched(true)
@@ -250,24 +268,17 @@ export function CheckoutPage() {
       company: { name: companyName.trim() },
     })
 
-    setStep(2)
-  }
-
-  const goToPayment = () => {
-    if (customPricing) {
-      window.open(salesWhatsappLink, '_blank', 'noopener,noreferrer')
-      return
-    }
-
     showNewMessage(
       `New checkout lead: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${billing} billing | ${currency} ${totalAmount}`
     )
+
+    window.open('https://www.featurebase.app/', '_blank', 'noopener,noreferrer')
     setStep(3)
   }
 
   const stepItems = [
-    { number: 1 as const, label: t('checkout.step_account'), enabled: true },
-    { number: 2 as const, label: t('checkout.step_licenses'), enabled: Boolean(accountValid) },
+    { number: 1 as const, label: t('checkout.step_licenses'), enabled: true },
+    { number: 2 as const, label: t('checkout.step_account'), enabled: true },
     { number: 3 as const, label: t('checkout.step_payment'), enabled: Boolean(accountValid) && !customPricing },
   ]
 
@@ -306,119 +317,7 @@ export function CheckoutPage() {
   return (
     <>
       <section className="checkout-shell" style={{ background: '#ffffff' }}>
-        {step !== 3 ? (
-        <aside className="checkout-aside">
-          <div className="checkout-aside-inner">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '28px' }}>
-              <img src="/website/logo.png" alt="GroundCTRL" style={{ height: '32px', width: 'auto' }} />
-              <div>
-                <div style={{ fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: MUTED, fontWeight: 700 }}>
-                  GroundCTRL
-                </div>
-                <div style={{ fontSize: '22px', fontWeight: 900, letterSpacing: '-0.03em', color: DARK }}>
-                  GroundCTRL Enterprise
-                </div>
-              </div>
-            </div>
-
-            <div
-              style={{
-                borderRadius: '24px',
-                background: '#ffffff',
-                border: `1px solid ${BORDER}`,
-                padding: '26px',
-                boxShadow: '0 20px 40px rgba(15, 23, 42, 0.06)',
-              }}
-            >
-              <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: MUTED, fontWeight: 700, marginBottom: '14px' }}>
-                Order summary
-              </div>
-              <div style={{ fontSize: '26px', lineHeight: 1.05, fontWeight: 900, color: TEXT, letterSpacing: '-0.04em' }}>
-                GroundCTRL Enterprise
-              </div>
-              <div style={{ marginTop: '10px', color: MUTED, fontSize: '15px', lineHeight: 1.6 }}>{selectedPlanLabel}</div>
-
-              <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: `1px solid ${BORDER}`, display: 'grid', gap: '12px' }}>
-                {customPricing ? (
-                  <div
-                    style={{
-                      borderRadius: '18px',
-                      padding: '16px 18px',
-                      background: 'rgba(20,184,166,0.08)',
-                      border: '1px solid rgba(20,184,166,0.22)',
-                      color: DARK,
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {t('checkout.custom_pricing')}
-                  </div>
-                ) : (
-                  <>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: MUTED, fontSize: '14px' }}>
-                      <span>{formatMoney(unitPrice ?? 0, currency)} × {numericLicenseCount}</span>
-                      <span>{formatMoney(monthlySubtotal ?? 0, currency)}{t('checkout.per_month')}</span>
-                    </div>
-                    {billing === 'annual' && annualSubtotal !== null && annualDiscount !== null && totalAmount !== null ? (
-                      <>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: MUTED, fontSize: '14px' }}>
-                          <span>12 months</span>
-                          <span>{formatMoney(annualSubtotal, currency)}</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: GREEN, fontSize: '14px', fontWeight: 700 }}>
-                          <span>{t('checkout.discount')}</span>
-                          <span>-{formatMoney(annualDiscount, currency)}</span>
-                        </div>
-                      </>
-                    ) : null}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', paddingTop: '14px', borderTop: `1px solid ${BORDER}`, color: TEXT, fontSize: '18px', fontWeight: 800 }}>
-                      <span>{t('checkout.total')}</span>
-                      <span>{formatMoney(totalAmount ?? 0, currency)}{billingSuffix}</span>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              <div style={{ marginTop: '24px', padding: '14px 16px', borderRadius: '16px', background: PANEL, color: DARK, display: 'flex', gap: '12px', alignItems: 'center' }}>
-                <ShieldCheck size={18} />
-                <span style={{ fontSize: '14px', fontWeight: 700 }}>Secure wire transfer · 256-bit encryption</span>
-              </div>
-            </div>
-
-            <div style={{ marginTop: '24px', borderRadius: '22px', border: `1px solid ${BORDER}`, background: '#ffffff', overflow: 'hidden' }}>
-              <div style={{ padding: '18px 20px', borderBottom: `1px solid ${BORDER}`, fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, color: MUTED }}>
-                Monthly pricing tiers
-              </div>
-              <div style={{ display: 'grid' }}>
-                {[
-                  ['1–4', '€490', '$540'],
-                  ['5–9', '€440', '$490'],
-                  ['10–24', '€390', '$430'],
-                  ['25+', t('checkout.contact_sales'), t('checkout.contact_sales')],
-                ].map(([range, eur, usd], index) => (
-                  <div
-                    key={range}
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: '90px 1fr 1fr',
-                      gap: '12px',
-                      alignItems: 'center',
-                      padding: '15px 20px',
-                      borderTop: index === 0 ? 'none' : `1px solid ${BORDER}`,
-                      fontSize: '14px',
-                    }}
-                  >
-                    <strong style={{ color: TEXT }}>{range}</strong>
-                    <span style={{ color: currency === 'EUR' ? DARK : MUTED, fontWeight: currency === 'EUR' ? 800 : 600 }}>{eur}/unit</span>
-                    <span style={{ color: currency === 'USD' ? DARK : MUTED, fontWeight: currency === 'USD' ? 800 : 600 }}>{usd}/unit</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </aside>
-        ) : null}
-
-        <div className="checkout-main">
+        <div className="checkout-main" style={{ maxWidth: '720px', margin: '0 auto' }}>
           <div className="checkout-form-card">
             <Link
               to="/"

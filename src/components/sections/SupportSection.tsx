@@ -42,7 +42,7 @@ export function SupportSection() {
         {/* LEFT: Photo */}
         <div style={{ position: 'relative', overflow: 'hidden', minHeight: '480px' }}>
           <img
-            src="/website/thisisengineering.jpg"
+            src="/website/img-support-human.jpg"
             alt="GroundCTRL Support Team"
             style={{
               width: '100%',
