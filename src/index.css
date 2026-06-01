@@ -399,7 +399,7 @@ h3 {
 
 .hero-photo-shell {
   position: relative;
-  max-width: 560px;
+  max-width: 640px;
   margin: 0 auto;
   border-radius: 18px;
   overflow: hidden;
@@ -409,8 +409,9 @@ h3 {
 .hero-photo-image {
   display: block;
   width: 100%;
-  height: min(68vh, 500px);
+  height: min(82vh, 680px);
   object-fit: cover;
+  object-position: center top;
   border-radius: 12px;
   transform: perspective(800px) rotateY(-5deg) rotateZ(-0.5deg);
   transform-origin: center left;
@@ -473,7 +474,7 @@ h3 {
 @media (max-width: 720px) {
   .hero-photo-image {
     transform: none;
-    height: 420px;
+    height: 520px;
   }
 
   .hero-floating-bar,

@@ -623,79 +623,93 @@ export function CheckoutPage() {
 
               {step === 3 ? (
                 <div className="checkout-step-panel">
-                  <div style={{ marginBottom: '26px' }}>
-                    <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
-                      {t('checkout.step_payment')}
+                  {/* Header + amount — compact horizontal row */}
+                  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                    <div>
+                      <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '8px' }}>
+                        {t('checkout.step_payment')}
+                      </div>
+                      <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(28px, 3.5vw, 38px)', lineHeight: 1, letterSpacing: '-0.04em' }}>
+                        {t('checkout.payment_title')}
+                      </h1>
+                      <p style={{ margin: '8px 0 0', color: MUTED, lineHeight: 1.6, fontSize: '14px', maxWidth: '420px' }}>
+                        Transfer the exact amount below, then notify us to activate your licenses.
+                      </p>
                     </div>
-                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(36px, 4vw, 46px)', lineHeight: 0.98, letterSpacing: '-0.05em' }}>
-                      {t('checkout.payment_title')}
-                    </h1>
-                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '580px' }}>
-                      Transfer the exact amount below. Once complete, notify us through our support portal so we can activate your licenses.
-                    </p>
+                    <div
+                      style={{
+                        padding: '16px 20px',
+                        borderRadius: '18px',
+                        background: 'linear-gradient(135deg, rgba(20,184,166,0.12), rgba(28,63,65,0.08))',
+                        border: '1px solid rgba(20,184,166,0.24)',
+                        textAlign: 'right',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.14em', color: MUTED, fontWeight: 700 }}>
+                        {t('checkout.transfer_amount')}
+                      </div>
+                      <div style={{ fontSize: 'clamp(26px, 3vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: DARK, marginTop: '6px' }}>
+                        {transferAmount}
+                      </div>
+                      <div style={{ marginTop: '4px', color: MUTED, fontSize: '13px' }}>{selectedPlanLabel}</div>
+                    </div>
+                  </div>
+
+                  {/* Bank details — 2-column grid */}
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '16px' }}>
+                    {/* Beneficiary bank */}
+                    <div>
+                      <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.14em', color: MUTED, fontWeight: 700, marginBottom: '10px' }}>
+                        Beneficiary bank
+                      </div>
+                      <div style={{ display: 'grid', gap: '8px' }}>
+                        <CopyRow label={fields.beneficiary} value={SHARED.beneficiary} highlight />
+                        <CopyRow label={fields.bank} value={SHARED.bank} />
+                        <CopyRow label={fields.swift} value={SHARED.swift} />
+                        <CopyRow label={fields.iban} value={SHARED.iban} />
+                        <CopyRow label={fields.branch} value={SHARED.branch} />
+                        <CopyRow label={fields.account_type} value={SHARED.account_type} />
+                        <CopyRow label={fields.bank_country} value={SHARED.bank_country} />
+                        <CopyRow label={fields.beneficiary_address} value={SHARED.beneficiary_address} />
+                      </div>
+                    </div>
+
+                    {/* Intermediary bank */}
+                    <div>
+                      <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.14em', color: MUTED, fontWeight: 700, marginBottom: '10px' }}>
+                        Intermediary bank ({currency})
+                      </div>
+                      <div style={{ display: 'grid', gap: '8px' }}>
+                        <CopyRow label={fields.intermediary_bank} value={INTERMEDIARY[currency].intermediary_bank} />
+                        <CopyRow label={fields.intermediary_swift} value={INTERMEDIARY[currency].intermediary_swift} />
+                        <CopyRow label={fields.intermediary_country} value={INTERMEDIARY[currency].intermediary_country} />
+                        <CopyRow label={fields.intermediary_account} value={INTERMEDIARY[currency].intermediary_account} />
+                      </div>
+                    </div>
                   </div>
 
                   <div
                     style={{
-                      padding: '22px 24px',
-                      borderRadius: '22px',
-                      background: 'linear-gradient(135deg, rgba(20,184,166,0.12), rgba(28,63,65,0.08))',
-                      border: '1px solid rgba(20,184,166,0.24)',
-                      marginBottom: '24px',
-                    }}
-                  >
-                    <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.14em', color: MUTED, fontWeight: 700 }}>
-                      {t('checkout.transfer_amount')}
-                    </div>
-                    <div style={{ fontSize: 'clamp(34px, 4vw, 46px)', fontWeight: 900, letterSpacing: '-0.04em', color: DARK, marginTop: '10px' }}>
-                      {transferAmount}
-                    </div>
-                    <div style={{ marginTop: '10px', color: MUTED, fontSize: '14px' }}>{selectedPlanLabel}</div>
-                  </div>
-
-                  <div style={{ display: 'grid', gap: '14px' }}>
-                    <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.14em', color: MUTED, fontWeight: 700 }}>
-                      Beneficiary bank
-                    </div>
-                    <CopyRow label={fields.bank} value={SHARED.bank} />
-                    <CopyRow label={fields.bank_address} value={SHARED.bank_address} />
-                    <CopyRow label={fields.bank_country} value={SHARED.bank_country} />
-                    <CopyRow label={fields.swift} value={SHARED.swift} />
-                    <CopyRow label={fields.iban} value={SHARED.iban} />
-                    <CopyRow label={fields.branch} value={SHARED.branch} />
-                    <CopyRow label={fields.account_type} value={SHARED.account_type} />
-                    <CopyRow label={fields.beneficiary} value={SHARED.beneficiary} highlight />
-                    <CopyRow label={fields.beneficiary_address} value={SHARED.beneficiary_address} />
-
-                    <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.14em', color: MUTED, fontWeight: 700, marginTop: '10px' }}>
-                      Intermediary bank ({currency})
-                    </div>
-                    <CopyRow label={fields.intermediary_swift} value={INTERMEDIARY[currency].intermediary_swift} />
-                    <CopyRow label={fields.intermediary_bank} value={INTERMEDIARY[currency].intermediary_bank} />
-                    <CopyRow label={fields.intermediary_country} value={INTERMEDIARY[currency].intermediary_country} />
-                    <CopyRow label={fields.intermediary_account} value={INTERMEDIARY[currency].intermediary_account} />
-                  </div>
-
-                  <div
-                    style={{
-                      marginTop: '24px',
-                      padding: '16px 18px',
-                      borderRadius: '18px',
+                      padding: '12px 16px',
+                      borderRadius: '14px',
                       border: '1px solid rgba(245, 158, 11, 0.35)',
                       background: 'rgba(245, 158, 11, 0.09)',
                       color: '#92400e',
                       fontWeight: 700,
+                      fontSize: '14px',
                       lineHeight: 1.6,
+                      marginBottom: '16px',
                     }}
                   >
                     {t('checkout.beneficiary_warning')} <span style={{ color: TEXT }}>{SHARED.beneficiary}</span>
                   </div>
 
-                  <p style={{ margin: '18px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '15px' }}>
+                  <p style={{ margin: '0 0 20px', color: MUTED, lineHeight: 1.7, fontSize: '14px' }}>
                     {t('checkout.after_transfer')}
                   </p>
 
-                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                     <button
                       type="button"
                       onClick={() => setStep(2)}
