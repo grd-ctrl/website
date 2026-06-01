@@ -33,31 +33,7 @@ export function ProductSection() {
           {t('product.sub')}
         </p>
 
-        <div
-          style={{
-            marginTop: '36px',
-            borderRadius: '28px',
-            padding: '18px',
-            background: '#ffffff',
-            border: '1px solid #D4DCEC',
-            boxShadow: '0 40px 90px rgba(28,63,65,0.12)',
-          }}
-        >
-          <img
-            src="/website/img-sap-dashboard.webp"
-            alt="GroundCTRL product dashboard"
-            style={{
-              width: '100%',
-              maxWidth: '900px',
-              display: 'block',
-              margin: '0 auto',
-              borderRadius: '16px',
-              boxShadow: '0 30px 70px rgba(15, 23, 42, 0.2)',
-            }}
-          />
-        </div>
-
-        <div className="product-chip-row" style={{ marginTop: '22px' }}>
+        <div className="product-chip-row" style={{ marginTop: '36px' }}>
           {chips.map((chip) => (
             <span
               key={chip}
