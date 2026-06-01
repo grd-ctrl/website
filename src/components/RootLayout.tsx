@@ -30,8 +30,10 @@ export function RootLayout() {
 
           <nav className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
             {(['features', 'usecases', 'demo', 'pricing'] as const).map((key) => (
-              <a key={key} href={`#${key}`}
-                style={{ fontSize: '14px', color: TM, textDecoration: 'none', fontWeight: 500, transition: 'color .15s' }}
+              <a key={key}
+                href="javascript:void(0)"
+                onClick={() => document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' })}
+                style={{ fontSize: '14px', color: TM, textDecoration: 'none', fontWeight: 500, cursor: 'pointer', transition: 'color .15s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = TD)}
                 onMouseLeave={e => (e.currentTarget.style.color = TM)}
               >{t(`nav.${key}`)}</a>
@@ -60,7 +62,11 @@ export function RootLayout() {
         {menuOpen && (
           <div style={{ borderTop: `1px solid ${BD}`, padding: '16px 24px 24px', display: 'flex', flexDirection: 'column', gap: '16px', background: '#fff' }}>
             {(['features', 'usecases', 'demo', 'pricing'] as const).map((key) => (
-              <a key={key} href={`#${key}`} style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t(`nav.${key}`)}</a>
+              <a key={key}
+                href="javascript:void(0)"
+                style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500, cursor: 'pointer' }}
+                onClick={() => { document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false) }}
+              >{t(`nav.${key}`)}</a>
             ))}
             <Link to="/checkout" style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t('nav.checkout')}</Link>
             <Link to="/demo"
