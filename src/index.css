@@ -569,3 +569,7 @@ h3 {
     max-width: none;
   }
 }
+
+#fb-messenger-root{
+  scale: 2;
+}
