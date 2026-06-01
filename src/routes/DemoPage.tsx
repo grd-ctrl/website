@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from '@tanstack/react-router'
-import { useFeaturebase } from 'featurebase-js/react'
 import { ArrowLeft, Send, CheckCircle, ChevronDown } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
+import { sendMessage } from '../lib/featurebase'
 
 const TEAL = '#14b8a6'
 const TEAL_DIM = 'rgba(20,184,166,0.18)'
@@ -29,8 +29,6 @@ const STATS = [
 ]
 
 export function DemoPage() {
-  const { update } = useFeaturebase()
-
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [company, setCompany] = useState('')
@@ -43,7 +41,6 @@ export function DemoPage() {
 
   useEffect(() => {
     setMounted(true)
-    // scan-line animation
     let raf: number
     let y = 0
     const animate = () => {
@@ -61,7 +58,12 @@ export function DemoPage() {
     e.preventDefault()
     setTouched(true)
     if (!valid) return
-    update({ email: email.trim(), name: name.trim(), company: { name: company.trim() } })
+    sendMessage({
+      email: email.trim(),
+      name: name.trim(),
+      company: company.trim(),
+      message: `**Demo Request**\n\n- **Name:** ${name.trim()}\n- **Role:** ${role}\n- **Company:** ${company.trim()}\n- **Email:** ${email.trim()}${message.trim() ? `\n- **Note:** ${message.trim()}` : ''}`,
+    })
     setSubmitted(true)
   }
 

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
-import { useFeaturebase } from 'featurebase-js/react'
 import { ArrowLeft, Check, ChevronRight, Copy, Monitor, Shield, Users, Zap } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
+import { sendMessage } from '../lib/featurebase'
 
 type Currency = 'EUR' | 'USD'
 type BillingCycle = 'monthly' | 'annual'
@@ -184,7 +184,6 @@ function CopyRow({ label, value, highlight = false }: { label: string; value: st
 
 export function CheckoutPage() {
   const { t } = useTranslation()
-  const { update, showNewMessage } = useFeaturebase()
   const fields = t('checkout.fields', { returnObjects: true }) as CheckoutFields
 
   const [step, setStep] = useState<CheckoutStep>(1)
@@ -220,7 +219,12 @@ export function CheckoutPage() {
 
   const handleLicenseContinue = () => {
     if (customPricing) {
-      showNewMessage(`Custom pricing request: ${licenseChoice} licenses — please contact me.`)
+      sendMessage({
+        email: 'unknown@groundctrl.io',
+        name: 'Website Visitor',
+        company: 'Unknown',
+        message: `**Custom Pricing Request**\n\n- **Licenses:** 25+\n- **Source:** Checkout page`,
+      })
       return
     }
     setStep(2)
@@ -234,24 +238,24 @@ export function CheckoutPage() {
       return
     }
 
-    update({
+    sendMessage({
       email: email.trim(),
       name: fullName.trim(),
-      company: { name: companyName.trim() },
+      company: companyName.trim(),
+      message: `**Checkout Lead**\n\n- **Name:** ${fullName.trim()}\n- **Email:** ${email.trim()}\n- **Company:** ${companyName.trim()}\n- **Country:** ${country}\n- **Licenses:** ${licenseChoice}\n- **Billing:** ${billing}\n- **Currency:** ${currency}\n- **Total:** ${totalAmount ?? 'custom quote'}`,
     })
-
-    showNewMessage(
-      `New checkout lead: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${billing} billing | ${currency} ${totalAmount}`
-    )
 
     setStep(3)
   }
 
   const handlePaymentConfirm = () => {
     const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
-    showNewMessage(
-      `Payment confirmed: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${currency} ${amountText}`
-    )
+    sendMessage({
+      email: email.trim(),
+      name: fullName.trim(),
+      company: companyName.trim(),
+      message: `**Payment Confirmed**\n\n- **Name:** ${fullName.trim()}\n- **Email:** ${email.trim()}\n- **Company:** ${companyName.trim()}\n- **Licenses:** ${licenseChoice}\n- **Amount:** ${currency} ${amountText}`,
+    })
     setStep(4)
   }
 
