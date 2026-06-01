@@ -44,12 +44,11 @@ export function RootLayout() {
           </nav>
 
           <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <a href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
-              target="_blank" rel="noopener noreferrer"
+            <Link to="/demo"
               style={{ background: GR, color: TD, padding: '8px 20px', borderRadius: '999px', fontWeight: 700, fontSize: '14px', textDecoration: 'none', transition: 'background .15s' }}
               onMouseEnter={e => (e.currentTarget.style.background = '#5E9A2C')}
               onMouseLeave={e => (e.currentTarget.style.background = GR)}
-            >{t('nav.contact')}</a>
+            >{t('nav.contact')}</Link>
           </div>
 
           <button className="md:hidden"
@@ -64,10 +63,10 @@ export function RootLayout() {
               <a key={key} href={`#${key}`} style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t(`nav.${key}`)}</a>
             ))}
             <Link to="/checkout" style={{ fontSize: '15px', color: TD, textDecoration: 'none', fontWeight: 500 }} onClick={() => setMenuOpen(false)}>{t('nav.checkout')}</Link>
-            <a href="https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL"
-              target="_blank" rel="noopener noreferrer"
+            <Link to="/demo"
               style={{ background: GR, color: TD, padding: '12px 24px', borderRadius: '999px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', textAlign: 'center' }}
-            >{t('nav.contact')}</a>
+              onClick={() => setMenuOpen(false)}
+            >{t('nav.contact')}</Link>
           </div>
         )}
       </header>

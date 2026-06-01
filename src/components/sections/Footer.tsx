@@ -68,9 +68,9 @@ export function Footer() {
                 <Link to="/checkout" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>
                   {t('footer.links.checkout')}
                 </Link>
-                <a href="https://wa.me/+5585998614541" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>
+                <Link to="/demo" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'none' }}>
                   {t('footer.links.contact')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
