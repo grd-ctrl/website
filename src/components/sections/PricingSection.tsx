@@ -1,8 +1,7 @@
+import { useFeaturebase } from 'featurebase-js/react'
 import { useTranslation } from 'react-i18next'
 import { Link } from '@tanstack/react-router'
-import { Check, MessageCircle } from 'lucide-react'
-
-const WA_LINK = 'https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL+pricing'
+import { Check, Send } from 'lucide-react'
 
 const included = [
   'Unlimited action tiles per room',
@@ -15,6 +14,7 @@ const included = [
 
 export function PricingSection() {
   const { t } = useTranslation()
+  const { showNewMessage } = useFeaturebase()
 
   return (
     <section id="pricing" style={{ background: '#ffffff', padding: '96px 24px' }}>
@@ -102,10 +102,9 @@ export function PricingSection() {
               ))}
             </div>
 
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => showNewMessage("Hi, I'm interested in GroundCTRL pricing.")}
               style={{
                 display: 'inline-flex',
                 width: '100%',
@@ -114,16 +113,18 @@ export function PricingSection() {
                 gap: '10px',
                 background: '#78B832',
                 color: '#1C3F41',
-                textDecoration: 'none',
+                border: 'none',
                 padding: '16px 24px',
                 borderRadius: '999px',
                 fontWeight: 800,
+                fontSize: '16px',
+                cursor: 'pointer',
                 marginBottom: '16px',
               }}
             >
-              <MessageCircle size={18} />
+              <Send size={18} />
               {t('pricing.cta')}
-            </a>
+            </button>
 
             <div
               style={{

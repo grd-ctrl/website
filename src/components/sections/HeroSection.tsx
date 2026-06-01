@@ -1,7 +1,6 @@
+import { useFeaturebase } from 'featurebase-js/react'
 import { useTranslation } from 'react-i18next'
-import { CheckCircle, MessageCircle } from 'lucide-react'
-
-const WA_LINK = 'https://wa.me/+5585998614541?text=Hi%2C+I%27m+interested+in+GroundCTRL'
+import { CheckCircle, Send } from 'lucide-react'
 
 const COLORS = {
   tealDark: '#1C3F41',
@@ -13,6 +12,7 @@ const COLORS = {
 
 export function HeroSection() {
   const { t } = useTranslation()
+  const { showNewMessage } = useFeaturebase()
 
   return (
     <section
@@ -69,26 +69,27 @@ export function HeroSection() {
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '28px' }}>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => showNewMessage("Hi, I'd like to request a GroundCTRL demo.")}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '10px',
                 background: COLORS.green,
                 color: COLORS.tealDark,
-                textDecoration: 'none',
+                border: 'none',
                 fontWeight: 800,
+                fontSize: '16px',
                 padding: '16px 24px',
                 borderRadius: '999px',
+                cursor: 'pointer',
                 boxShadow: '0 18px 40px rgba(120, 184, 50, 0.28)',
               }}
             >
-              <MessageCircle size={18} />
+              <Send size={18} />
               {t('hero.cta_primary')}
-            </a>
+            </button>
             <a
               href="#features"
               style={{

@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import { useFeaturebase } from 'featurebase-js/react'
-import { ArrowLeft, Check, ChevronRight, Copy, MessageCircle, ShieldCheck } from 'lucide-react'
+import { ArrowLeft, Check, ChevronRight, Copy, Monitor, Shield, Users, Zap } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
 
 type Currency = 'EUR' | 'USD'
@@ -34,7 +34,6 @@ const PANEL = '#F4F7FA'
 const TEAL = '#14b8a6'
 const DARK = '#1C3F41'
 const GREEN = '#78B832'
-const WHATSAPP_BASE = 'https://wa.me/5585998614541?text='
 
 const COUNTRIES = [
   'United States',
@@ -105,13 +104,6 @@ function getUnitPrice(quantity: number, currency: Currency) {
   return PRICING[currency].find((tier) => quantity >= tier.min && quantity <= tier.max)?.amount ?? null
 }
 
-function formatMoney(amount: number, currency: Currency) {
-  return new Intl.NumberFormat(currency === 'EUR' ? 'nl-NL' : 'en-US', {
-    style: 'currency',
-    currency,
-    maximumFractionDigits: 0,
-  }).format(amount)
-}
 
 function formatTransferAmount(amount: number, currency: Currency) {
   return `${currency} ${new Intl.NumberFormat('en-US', {
@@ -224,31 +216,15 @@ export function CheckoutPage() {
 
   const accountValid = email.trim() && fullName.trim() && companyName.trim() && country.trim()
 
-  const billingSuffix = billing === 'annual' ? t('checkout.per_year') : t('checkout.per_month')
   const selectedPlanLabel = customPricing
     ? '25+ licenses · custom quote'
     : `${numericLicenseCount} ${numericLicenseCount === 1 ? 'license' : 'licenses'} · ${t(`checkout.${billing}`)}`
 
   const transferAmount = totalAmount === null ? t('checkout.contact_sales') : formatTransferAmount(totalAmount, currency)
 
-  const paymentWhatsappLink = useMemo(() => {
-    const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
-    return `${WHATSAPP_BASE}${encodeURIComponent(
-      `I completed my GroundCTRL payment for ${licenseChoice} licenses ${currency} ${amountText}`
-    )}`
-  }, [currency, licenseChoice, totalAmount])
-
-  const salesWhatsappLink = useMemo(
-    () =>
-      `${WHATSAPP_BASE}${encodeURIComponent(
-        `Hi, I need a GroundCTRL custom quote for ${licenseChoice} licenses.`
-      )}`,
-    [licenseChoice]
-  )
-
   const handleLicenseContinue = () => {
     if (customPricing) {
-      window.open(salesWhatsappLink, '_blank', 'noopener,noreferrer')
+      showNewMessage(`Custom pricing request: ${licenseChoice} licenses — please contact me.`)
       return
     }
     setStep(2)
@@ -274,6 +250,14 @@ export function CheckoutPage() {
 
     window.open('https://www.featurebase.app/', '_blank', 'noopener,noreferrer')
     setStep(3)
+  }
+
+  const handlePaymentConfirm = () => {
+    const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
+    showNewMessage(
+      `Payment confirmed: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${currency} ${amountText}`
+    )
+    window.open('https://www.featurebase.app/', '_blank', 'noopener,noreferrer')
   }
 
   const stepItems = [
@@ -317,7 +301,7 @@ export function CheckoutPage() {
   return (
     <>
       <section className="checkout-shell" style={{ background: '#ffffff' }}>
-        <div className="checkout-main" style={{ maxWidth: '720px', margin: '0 auto' }}>
+        <div className="checkout-main">
           <div className="checkout-form-card">
             <Link
               to="/"
@@ -400,94 +384,40 @@ export function CheckoutPage() {
               }}
             >
               {step === 1 ? (
-                <form className="checkout-step-panel" onSubmit={handleAccountSubmit}>
-                  <div style={{ marginBottom: '26px' }}>
-                    <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
-                      {t('checkout.step_account')}
-                    </div>
-                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(36px, 4vw, 46px)', lineHeight: 0.98, letterSpacing: '-0.05em' }}>
-                      {t('checkout.account_title')}
-                    </h1>
-                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '560px' }}>
-                      Set up your buyer profile. We will use these details to prepare your enterprise order and follow up after payment.
-                    </p>
-                  </div>
-
-                  <div style={{ display: 'grid', gap: '18px' }}>
-                    {renderInput({ label: t('checkout.email'), value: email, onChange: setEmail, type: 'email' })}
-                    <div className="checkout-two-col">
-                      {renderInput({ label: t('checkout.full_name'), value: fullName, onChange: setFullName })}
-                      {renderInput({ label: t('checkout.company'), value: companyName, onChange: setCompanyName })}
-                    </div>
-                    <label style={{ display: 'grid', gap: '8px' }}>
-                      <span style={{ fontSize: '14px', fontWeight: 700, color: TEXT }}>{t('checkout.country')}</span>
-                      <select
-                        value={country}
-                        onChange={(event) => setCountry(event.target.value)}
-                        style={{
-                          width: '100%',
-                          borderRadius: '8px',
-                          border: `1px solid ${BORDER}`,
-                          padding: '15px 12px',
-                          fontSize: '15px',
-                          lineHeight: 1.4,
-                          color: TEXT,
-                          background: '#ffffff',
-                          outlineColor: TEAL,
-                        }}
-                      >
-                        {COUNTRIES.map((item) => (
-                          <option key={item} value={item}>
-                            {item}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  </div>
-
-                  {accountTouched && !accountValid ? (
-                    <div style={{ marginTop: '16px', color: '#b91c1c', fontSize: '14px', fontWeight: 700 }}>
-                      Please fill in every field before continuing.
-                    </div>
-                  ) : null}
-
-                  <button
-                    type="submit"
-                    style={{
-                      marginTop: '26px',
-                      width: '100%',
-                      border: 'none',
-                      borderRadius: '999px',
-                      background: TEAL,
-                      color: '#ffffff',
-                      padding: '16px 24px',
-                      fontSize: '16px',
-                      fontWeight: 800,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {t('checkout.continue')}
-                  </button>
-                </form>
-              ) : null}
-
-              {step === 2 ? (
                 <div className="checkout-step-panel">
-                  <div style={{ marginBottom: '26px' }}>
+                  <div style={{ marginBottom: '28px' }}>
                     <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
                       {t('checkout.step_licenses')}
                     </div>
-                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(36px, 4vw, 46px)', lineHeight: 0.98, letterSpacing: '-0.05em' }}>
-                      {t('checkout.licenses_title')}
+                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(32px, 4vw, 44px)', lineHeight: 1.0, letterSpacing: '-0.05em' }}>
+                      How many operator tablets do you need?
                     </h1>
-                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '580px' }}>
-                      Choose the number of operator tablets you need, then select how you want to bill the deployment.
+                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '560px' }}>
+                      Each license covers one tablet. You can always add more licenses later.
                     </p>
+                  </div>
+
+                  {/* Context cards */}
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginBottom: '28px' }}>
+                    {[
+                      { icon: <Monitor size={16} />, label: '1–2 tablets', desc: 'Proof of concept or single-room pilot' },
+                      { icon: <Users size={16} />, label: '3–5 tablets', desc: 'Small operations team or control room' },
+                      { icon: <Shield size={16} />, label: '10–20 tablets', desc: 'Multi-room SOC / NOC deployment' },
+                      { icon: <Zap size={16} />, label: '25+ tablets', desc: 'Enterprise campus — custom quote' },
+                    ].map(({ icon, label, desc }) => (
+                      <div key={label} style={{ padding: '16px', borderRadius: '16px', border: `1px solid ${BORDER}`, background: PANEL, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: DARK, fontWeight: 800, fontSize: '14px' }}>
+                          <span style={{ color: TEAL }}>{icon}</span>
+                          {label}
+                        </div>
+                        <div style={{ fontSize: '13px', color: MUTED, lineHeight: 1.5 }}>{desc}</div>
+                      </div>
+                    ))}
                   </div>
 
                   <div style={{ display: 'grid', gap: '24px' }}>
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 700, color: TEXT, marginBottom: '12px' }}>{t('checkout.license_count')}</div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: TEXT, marginBottom: '14px' }}>{t('checkout.license_count')}</div>
                       <div className="checkout-license-grid">
                         {LICENSE_OPTIONS.map((item) => {
                           const active = item === licenseChoice
@@ -504,6 +434,7 @@ export function CheckoutPage() {
                                 color: active ? DARK : TEXT,
                                 fontWeight: 800,
                                 cursor: 'pointer',
+                                fontSize: '15px',
                               }}
                             >
                               {item}
@@ -572,67 +503,87 @@ export function CheckoutPage() {
                         </div>
                       </div>
                     </div>
-
-                    <div style={{ borderRadius: '22px', border: `1px solid ${BORDER}`, overflow: 'hidden' }}>
-                      <div style={{ padding: '18px 20px', background: PANEL, color: TEXT, fontWeight: 800 }}>
-                        {customPricing ? t('checkout.custom_pricing') : `${numericLicenseCount} licenses · ${t(`checkout.${billing}`)} billing`}
-                      </div>
-                      {customPricing ? (
-                        <div style={{ padding: '20px' }}>
-                          <p style={{ margin: 0, color: MUTED, lineHeight: 1.7 }}>{t('checkout.custom_pricing')}</p>
-                          <a
-                            href={salesWhatsappLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                              marginTop: '18px',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: '10px',
-                              padding: '13px 18px',
-                              borderRadius: '999px',
-                              background: '#25D366',
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontWeight: 800,
-                            }}
-                          >
-                            <MessageCircle size={16} />
-                            {t('checkout.contact_sales')}
-                          </a>
-                        </div>
-                      ) : (
-                        <div style={{ padding: '20px', display: 'grid', gap: '14px' }}>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: MUTED, fontSize: '14px' }}>
-                            <span>{t('checkout.unit_price')}</span>
-                            <strong style={{ color: TEXT }}>{formatMoney(unitPrice ?? 0, currency)}</strong>
-                          </div>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: MUTED, fontSize: '14px' }}>
-                            <span>× {numericLicenseCount}</span>
-                            <strong style={{ color: TEXT }}>{formatMoney(monthlySubtotal ?? 0, currency)}{t('checkout.per_month')}</strong>
-                          </div>
-                          {billing === 'annual' && annualSubtotal !== null && annualDiscount !== null ? (
-                            <>
-                              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: MUTED, fontSize: '14px' }}>
-                                <span>{t('checkout.subtotal')}</span>
-                                <strong style={{ color: TEXT }}>{formatMoney(annualSubtotal, currency)}</strong>
-                              </div>
-                              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', color: GREEN, fontSize: '14px', fontWeight: 800 }}>
-                                <span>{t('checkout.discount')}</span>
-                                <span>-{formatMoney(annualDiscount, currency)}</span>
-                              </div>
-                            </>
-                          ) : null}
-                          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', paddingTop: '14px', borderTop: `1px solid ${BORDER}`, fontSize: '18px', fontWeight: 800, color: TEXT }}>
-                            <span>{t('checkout.total')}</span>
-                            <span>{formatMoney(totalAmount ?? 0, currency)}{billingSuffix}</span>
-                          </div>
-                        </div>
-                      )}
-                    </div>
                   </div>
 
-                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
+                  <button
+                    type="button"
+                    onClick={handleLicenseContinue}
+                    style={{
+                      marginTop: '28px',
+                      width: '100%',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '10px',
+                      border: 'none',
+                      borderRadius: '999px',
+                      background: customPricing ? DARK : TEAL,
+                      color: '#ffffff',
+                      padding: '16px 24px',
+                      fontSize: '16px',
+                      fontWeight: 800,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {customPricing ? t('checkout.contact_sales') : t('checkout.continue')}
+                    <ChevronRight size={16} />
+                  </button>
+                </div>
+              ) : null}
+
+              {step === 2 ? (
+                <form className="checkout-step-panel" onSubmit={handleAccountSubmit}>
+                  <div style={{ marginBottom: '26px' }}>
+                    <div style={{ fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: TEAL, fontWeight: 800, marginBottom: '12px' }}>
+                      {t('checkout.step_account')}
+                    </div>
+                    <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(36px, 4vw, 46px)', lineHeight: 0.98, letterSpacing: '-0.05em' }}>
+                      {t('checkout.account_title')}
+                    </h1>
+                    <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '560px' }}>
+                      We'll use these details to prepare your enterprise order and follow up after payment.
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'grid', gap: '18px' }}>
+                    {renderInput({ label: t('checkout.email'), value: email, onChange: setEmail, type: 'email' })}
+                    <div className="checkout-two-col">
+                      {renderInput({ label: t('checkout.full_name'), value: fullName, onChange: setFullName })}
+                      {renderInput({ label: t('checkout.company'), value: companyName, onChange: setCompanyName })}
+                    </div>
+                    <label style={{ display: 'grid', gap: '8px' }}>
+                      <span style={{ fontSize: '14px', fontWeight: 700, color: TEXT }}>{t('checkout.country')}</span>
+                      <select
+                        value={country}
+                        onChange={(event) => setCountry(event.target.value)}
+                        style={{
+                          width: '100%',
+                          borderRadius: '8px',
+                          border: `1px solid ${BORDER}`,
+                          padding: '15px 12px',
+                          fontSize: '15px',
+                          lineHeight: 1.4,
+                          color: TEXT,
+                          background: '#ffffff',
+                          outlineColor: TEAL,
+                        }}
+                      >
+                        {COUNTRIES.map((item) => (
+                          <option key={item} value={item}>
+                            {item}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
+
+                  {accountTouched && !accountValid ? (
+                    <div style={{ marginTop: '16px', color: '#b91c1c', fontSize: '14px', fontWeight: 700 }}>
+                      Please fill in every field before continuing.
+                    </div>
+                  ) : null}
+
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '26px' }}>
                     <button
                       type="button"
                       onClick={() => setStep(1)}
@@ -653,28 +604,23 @@ export function CheckoutPage() {
                       {t('checkout.back')}
                     </button>
                     <button
-                      type="button"
-                      onClick={goToPayment}
+                      type="submit"
                       style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '10px',
                         flex: '1 1 260px',
                         border: 'none',
                         borderRadius: '999px',
-                        background: customPricing ? DARK : TEAL,
+                        background: TEAL,
                         color: '#ffffff',
                         padding: '16px 24px',
+                        fontSize: '16px',
                         fontWeight: 800,
                         cursor: 'pointer',
                       }}
                     >
-                      {customPricing ? t('checkout.contact_sales') : t('checkout.continue')}
-                      <ChevronRight size={16} />
+                      {t('checkout.continue')}
                     </button>
                   </div>
-                </div>
+                </form>
               ) : null}
 
               {step === 3 ? (
@@ -687,7 +633,7 @@ export function CheckoutPage() {
                       {t('checkout.payment_title')}
                     </h1>
                     <p style={{ margin: '12px 0 0', color: MUTED, lineHeight: 1.7, fontSize: '16px', maxWidth: '580px' }}>
-                      Transfer the exact amount below. Once the transfer is complete, send us the proof on WhatsApp so we can activate your licenses.
+                      Transfer the exact amount below. Once complete, notify us through our support portal so we can activate your licenses.
                     </p>
                   </div>
 
@@ -771,27 +717,27 @@ export function CheckoutPage() {
                       <ArrowLeft size={16} />
                       {t('checkout.back')}
                     </button>
-                    <a
-                      href={paymentWhatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      type="button"
+                      onClick={handlePaymentConfirm}
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         gap: '10px',
                         flex: '1 1 280px',
+                        border: 'none',
                         borderRadius: '999px',
-                        background: '#25D366',
+                        background: TEAL,
                         color: '#ffffff',
-                        textDecoration: 'none',
                         padding: '16px 24px',
                         fontWeight: 800,
+                        cursor: 'pointer',
+                        fontSize: '16px',
                       }}
                     >
-                      <MessageCircle size={18} />
                       {t('checkout.completed_transfer')}
-                    </a>
+                    </button>
                   </div>
                 </div>
               ) : null}
