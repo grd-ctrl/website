@@ -23,11 +23,13 @@ export function RootLayout() {
   }, [])
 
   const scrollToSection = (key: string) => {
-    window.history.replaceState(null, '', `?s=${key}${window.location.hash}`)
     const el = document.getElementById(key)
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
+      // On home page — just scroll, update URL without triggering router
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 0)
+      window.history.replaceState(null, '', `?s=${key}${window.location.hash}`)
     } else {
+      // On another page — navigate home with section param
       window.location.href = `?s=${key}#/`
     }
   }

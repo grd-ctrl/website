@@ -1,73 +1,73 @@
-import { useState, useEffect } from 'react'
-import { Link } from '@tanstack/react-router'
-import { ArrowLeft, Send, CheckCircle, ChevronDown } from 'lucide-react'
-import { Footer } from '../components/sections/Footer'
-import { postForm, DEMO_FORM_URL } from '../lib/config'
+import { useState, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
+import { ArrowLeft, Send, CheckCircle, ChevronDown } from "lucide-react";
+import { Footer } from "../components/sections/Footer";
+import { postForm, DEMO_FORM_URL } from "../lib/config";
 
-const TEAL = '#14b8a6'
-const TEAL_DIM = 'rgba(20,184,166,0.18)'
-const PANEL = '#0c1a1c'
-const BORDER = 'rgba(20,184,166,0.18)'
-const MUTED = 'rgba(255,255,255,0.45)'
-const TEXT = 'rgba(255,255,255,0.92)'
+const TEAL = "#14b8a6";
+const TEAL_DIM = "rgba(20,184,166,0.18)";
+const PANEL = "#0c1a1c";
+const BORDER = "rgba(20,184,166,0.18)";
+const MUTED = "rgba(255,255,255,0.45)";
+const TEXT = "rgba(255,255,255,0.92)";
 
 const ROLES = [
-  'Security Operations Manager',
-  'Control Room Operator',
-  'NOC Engineer',
-  'IT Manager',
-  'AV / Integration Specialist',
-  'C-Level / Executive',
-  'Procurement',
-  'Other',
-]
+  "Security Operations Manager",
+  "Control Room Operator",
+  "NOC Engineer",
+  "IT Manager",
+  "AV / Integration Specialist",
+  "C-Level / Executive",
+  "Procurement",
+  "Other",
+];
 
 const STATS = [
-  { value: '< 2s', label: 'Action latency' },
-  { value: '40+', label: 'Integrations' },
-  { value: '99.9%', label: 'Uptime SLA' },
-]
+  { value: "< 2s", label: "Action latency" },
+  { value: "40+", label: "Integrations" },
+  { value: "99.9%", label: "Uptime SLA" },
+];
 
 export function DemoPage() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [company, setCompany] = useState('')
-  const [role, setRole] = useState('')
-  const [message, setMessage] = useState('')
-  const [touched, setTouched] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const [scanY, setScanY] = useState(0)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [role, setRole] = useState("");
+  const [message, setMessage] = useState("");
+  const [touched, setTouched] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [scanY, setScanY] = useState(0);
 
   useEffect(() => {
-    setMounted(true)
-    let raf: number
-    let y = 0
+    setMounted(true);
+    let raf: number;
+    let y = 0;
     const animate = () => {
-      y = (y + 0.3) % 100
-      setScanY(y)
-      raf = requestAnimationFrame(animate)
-    }
-    raf = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(raf)
-  }, [])
+      y = (y + 0.3) % 100;
+      setScanY(y);
+      raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
-  const valid = name.trim() && email.trim() && company.trim() && role
+  const valid = name.trim() && email.trim() && company.trim() && role;
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setTouched(true)
-    if (!valid) return
+    e.preventDefault();
+    setTouched(true);
+    if (!valid) return;
     postForm(DEMO_FORM_URL, {
       Timestamp: new Date().toISOString(),
-      'Full Name': name.trim(),
+      "Full Name": name.trim(),
       Email: email.trim(),
       Company: company.trim(),
       Role: role,
       Message: message.trim(),
-    })
-    setSubmitted(true)
-  }
+    });
+    setSubmitted(true);
+  };
 
   return (
     <>
@@ -171,105 +171,235 @@ export function DemoPage() {
       <div
         className="demo-split"
         style={{
-          display: 'flex',
-          minHeight: '100vh',
-          marginTop: '-64px',
+          display: "flex",
+          minHeight: "100vh",
+          marginTop: "-64px",
         }}
       >
         {/* ── LEFT: image panel ── */}
         <div
           className="demo-image-panel"
           style={{
-            flex: '0 0 46%',
-            position: 'relative',
-            overflow: 'hidden',
+            flex: "0 0 46%",
+            position: "relative",
+            overflow: "hidden",
             backgroundImage: "url('/website/img-demo-panel.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           {/* dark overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(4,10,11,0.82) 0%, rgba(4,10,11,0.55) 60%, rgba(4,10,11,0.78) 100%)' }} />
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(160deg, rgba(4,10,11,0.82) 0%, rgba(4,10,11,0.55) 60%, rgba(4,10,11,0.78) 100%)",
+            }}
+          />
 
           {/* grid texture */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            backgroundImage: 'linear-gradient(rgba(20,184,166,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,184,166,0.07) 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }} />
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage:
+                "linear-gradient(rgba(20,184,166,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,184,166,0.07) 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
+            }}
+          />
 
           {/* scan-line */}
-          <div style={{
-            position: 'absolute',
-            left: 0, right: 0,
-            top: `${scanY}%`,
-            height: '2px',
-            background: 'linear-gradient(90deg, transparent, rgba(20,184,166,0.5), transparent)',
-            pointerEvents: 'none',
-            transition: 'none',
-          }} />
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: `${scanY}%`,
+              height: "2px",
+              background:
+                "linear-gradient(90deg, transparent, rgba(20,184,166,0.5), transparent)",
+              pointerEvents: "none",
+              transition: "none",
+            }}
+          />
 
           {/* corner bracket top-left */}
-          <div style={{ position: 'absolute', top: 24, left: 24, width: 32, height: 32, borderTop: `2px solid ${TEAL}`, borderLeft: `2px solid ${TEAL}` }} />
-          <div style={{ position: 'absolute', bottom: 24, right: 24, width: 32, height: 32, borderBottom: `2px solid ${TEAL}`, borderRight: `2px solid ${TEAL}` }} />
+          <div
+            style={{
+              position: "absolute",
+              top: 24,
+              left: 24,
+              width: 32,
+              height: 32,
+              borderTop: `2px solid ${TEAL}`,
+              borderLeft: `2px solid ${TEAL}`,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 24,
+              right: 24,
+              width: 32,
+              height: 32,
+              borderBottom: `2px solid ${TEAL}`,
+              borderRight: `2px solid ${TEAL}`,
+            }}
+          />
 
           {/* content */}
-          <div style={{ position: 'relative', zIndex: 2, padding: '48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', boxSizing: 'border-box' }}>
-            <Link to="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontWeight: 700, fontSize: '13px', fontFamily: 'var(--font-mono)' }}>
+          <div
+            style={{
+              position: "relative",
+              zIndex: 2,
+              padding: "48px 40px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              height: "100%",
+              boxSizing: "border-box",
+            }}
+          >
+            <Link
+              to="/"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                color: "rgba(255,255,255,0.6)",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "13px",
+                fontFamily: "var(--font-mono)",
+              }}
+            >
               <ArrowLeft size={14} />
               GROUNDCTRL
             </Link>
 
-            <div style={{ animation: mounted ? 'fadeUp .7s ease both' : 'none' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.2em', color: TEAL, marginBottom: '20px', textTransform: 'uppercase' }}>
+            <div
+              style={{ animation: mounted ? "fadeUp .7s ease both" : "none" }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "11px",
+                  letterSpacing: "0.2em",
+                  color: TEAL,
+                  marginBottom: "20px",
+                  textTransform: "uppercase",
+                }}
+              >
                 // LIVE DEMO REQUEST
               </div>
-              <h1 style={{
-                margin: '0 0 20px',
-                color: '#ffffff',
-                fontSize: 'clamp(34px, 3.5vw, 52px)',
-                fontWeight: 900,
-                lineHeight: 1,
-                letterSpacing: '-0.04em',
-              }}>
-                Command your<br />
+              <h1
+                style={{
+                  margin: "0 0 20px",
+                  color: "#ffffff",
+                  fontSize: "clamp(34px, 3.5vw, 52px)",
+                  fontWeight: 900,
+                  lineHeight: 1,
+                  letterSpacing: "-0.04em",
+                }}
+              >
+                Command your
+                <br />
                 <span style={{ color: TEAL }}>control room.</span>
               </h1>
-              <p style={{ margin: 0, color: 'rgba(255,255,255,0.58)', fontSize: '15px', lineHeight: 1.7, maxWidth: '340px' }}>
-                One tablet. Every layout, camera, and scenario — executed in a single tap.
+              <p
+                style={{
+                  margin: 0,
+                  color: "rgba(255,255,255,0.58)",
+                  fontSize: "15px",
+                  lineHeight: 1.7,
+                  maxWidth: "340px",
+                }}
+              >
+                One tablet. Every layout, camera, and scenario — executed in a
+                single tap.
               </p>
 
               {/* stats row */}
-              <div style={{ display: 'flex', gap: '24px', marginTop: '36px', flexWrap: 'wrap' }}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "24px",
+                  marginTop: "36px",
+                  flexWrap: "wrap",
+                }}
+              >
                 {STATS.map((s, i) => (
                   <div
                     key={s.label}
                     style={{
-                      animation: mounted ? `fadeUp .7s ease ${0.15 + i * 0.1}s both` : 'none',
+                      animation: mounted
+                        ? `fadeUp .7s ease ${0.15 + i * 0.1}s both`
+                        : "none",
                     }}
                   >
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '22px', fontWeight: 900, color: TEAL, lineHeight: 1 }}>{s.value}</div>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.45)', marginTop: '4px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{s.label}</div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "22px",
+                        fontWeight: 900,
+                        color: TEAL,
+                        lineHeight: 1,
+                      }}
+                    >
+                      {s.value}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "11px",
+                        color: "rgba(255,255,255,0.45)",
+                        marginTop: "4px",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {s.label}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* live indicator */}
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '10px',
-              padding: '10px 16px',
-              borderRadius: '999px',
-              background: 'rgba(20,184,166,0.10)',
-              border: '1px solid rgba(20,184,166,0.22)',
-              backdropFilter: 'blur(10px)',
-              width: 'fit-content',
-              animation: mounted ? 'fadeIn 1s ease .5s both' : 'none',
-            }}>
-              <span style={{ width: 8, height: 8, borderRadius: '999px', background: TEAL, display: 'block', animation: 'pulse-ring 2s infinite' }} />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: TEAL, letterSpacing: '0.14em' }}>RESPONSE TIME &lt; 24H</span>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "10px",
+                padding: "10px 16px",
+                borderRadius: "999px",
+                background: "rgba(20,184,166,0.10)",
+                border: "1px solid rgba(20,184,166,0.22)",
+                backdropFilter: "blur(10px)",
+                width: "fit-content",
+                animation: mounted ? "fadeIn 1s ease .5s both" : "none",
+              }}
+            >
+              <span
+                style={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: "999px",
+                  background: TEAL,
+                  display: "block",
+                  animation: "pulse-ring 2s infinite",
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "11px",
+                  color: TEAL,
+                  letterSpacing: "0.14em",
+                }}
+              >
+                RESPONSE TIME &lt; 24H
+              </span>
             </div>
           </div>
         </div>
@@ -280,93 +410,269 @@ export function DemoPage() {
           style={{
             flex: 1,
             background: PANEL,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            padding: 'clamp(40px, 5vw, 72px) clamp(28px, 5vw, 72px)',
-            position: 'relative',
-            overflow: 'hidden',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "clamp(40px, 5vw, 72px) clamp(28px, 5vw, 72px)",
+            position: "relative",
+            overflow: "hidden",
           }}
         >
           {/* background glow */}
-          <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '500px', height: '500px', borderRadius: '999px', background: 'radial-gradient(circle, rgba(20,184,166,0.07) 0%, transparent 65%)', pointerEvents: 'none' }} />
+          <div
+            style={{
+              position: "absolute",
+              top: "-20%",
+              right: "-10%",
+              width: "500px",
+              height: "500px",
+              borderRadius: "999px",
+              background:
+                "radial-gradient(circle, rgba(20,184,166,0.07) 0%, transparent 65%)",
+              pointerEvents: "none",
+            }}
+          />
 
-          <div style={{ maxWidth: '440px', width: '100%', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div
+            style={{
+              maxWidth: "440px",
+              width: "100%",
+              margin: "0 auto",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
             {!submitted ? (
               <>
-                <div style={{ marginBottom: '32px', animation: mounted ? 'fadeUp .6s ease .1s both' : 'none' }}>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.18em', color: TEAL, marginBottom: '12px', textTransform: 'uppercase' }}>
+                <div
+                  style={{
+                    marginBottom: "32px",
+                    marginTop: "32px",
+                    animation: mounted ? "fadeUp .6s ease .1s both" : "none",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "11px",
+                      letterSpacing: "0.18em",
+                      color: TEAL,
+                      marginBottom: "12px",
+                      textTransform: "uppercase",
+                    }}
+                  >
                     Schedule a session
                   </div>
-                  <h2 style={{ margin: 0, fontSize: 'clamp(24px, 2.8vw, 32px)', fontWeight: 900, color: TEXT, letterSpacing: '-0.04em', lineHeight: 1.05 }}>
+                  <h2
+                    style={{
+                      margin: 0,
+                      fontSize: "clamp(24px, 2.8vw, 32px)",
+                      fontWeight: 900,
+                      color: TEXT,
+                      letterSpacing: "-0.04em",
+                      lineHeight: 1.05,
+                    }}
+                  >
                     See it live.
                   </h2>
-                  <p style={{ margin: '10px 0 0', color: MUTED, fontSize: '14px', lineHeight: 1.7 }}>
-                    We'll show you GroundCTRL running on your type of setup — no sales pressure, just the product.
+                  <p
+                    style={{
+                      margin: "10px 0 0",
+                      color: MUTED,
+                      fontSize: "14px",
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    We'll show you GroundCTRL running on your type of setup — no
+                    sales pressure, just the product.
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '14px' }}>
+                <form
+                  onSubmit={handleSubmit}
+                  style={{ display: "grid", gap: "14px" }}
+                >
                   {/* name + email */}
                   {[
-                    { label: 'Full name', val: name, set: setName, type: 'text', delay: '.2s' },
-                    { label: 'Work email', val: email, set: setEmail, type: 'email', delay: '.25s' },
-                    { label: 'Company', val: company, set: setCompany, type: 'text', delay: '.3s' },
+                    {
+                      label: "Full name",
+                      val: name,
+                      set: setName,
+                      type: "text",
+                      delay: ".2s",
+                    },
+                    {
+                      label: "Work email",
+                      val: email,
+                      set: setEmail,
+                      type: "email",
+                      delay: ".25s",
+                    },
+                    {
+                      label: "Company",
+                      val: company,
+                      set: setCompany,
+                      type: "text",
+                      delay: ".3s",
+                    },
                   ].map(({ label, val, set, type, delay }) => {
-                    const err = touched && !val.trim()
+                    const err = touched && !val.trim();
                     return (
-                      <div key={label} style={{ animation: mounted ? `fadeUp .6s ease ${delay} both` : 'none' }}>
-                        <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: MUTED, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '6px', fontFamily: 'var(--font-mono)' }}>
+                      <div
+                        key={label}
+                        style={{
+                          animation: mounted
+                            ? `fadeUp .6s ease ${delay} both`
+                            : "none",
+                        }}
+                      >
+                        <label
+                          style={{
+                            display: "block",
+                            fontSize: "11px",
+                            fontWeight: 700,
+                            color: MUTED,
+                            letterSpacing: "0.12em",
+                            textTransform: "uppercase",
+                            marginBottom: "6px",
+                            fontFamily: "var(--font-mono)",
+                          }}
+                        >
                           {label}
                         </label>
                         <input
                           type={type}
                           value={val}
-                          onChange={e => set(e.target.value)}
+                          onChange={(e) => set(e.target.value)}
                           className="demo-field-input"
-                          style={{ borderColor: err ? '#ef4444' : undefined }}
+                          style={{ borderColor: err ? "#ef4444" : undefined }}
                         />
-                        {err && <span style={{ fontSize: '11px', color: '#ef4444', marginTop: '4px', display: 'block' }}>Required</span>}
+                        {err && (
+                          <span
+                            style={{
+                              fontSize: "11px",
+                              color: "#ef4444",
+                              marginTop: "4px",
+                              display: "block",
+                            }}
+                          >
+                            Required
+                          </span>
+                        )}
                       </div>
-                    )
+                    );
                   })}
 
                   {/* role select */}
-                  <div style={{ animation: mounted ? 'fadeUp .6s ease .35s both' : 'none', position: 'relative' }}>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: MUTED, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '6px', fontFamily: 'var(--font-mono)' }}>
+                  <div
+                    style={{
+                      animation: mounted ? "fadeUp .6s ease .35s both" : "none",
+                      position: "relative",
+                    }}
+                  >
+                    <label
+                      style={{
+                        display: "block",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: MUTED,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        marginBottom: "6px",
+                        fontFamily: "var(--font-mono)",
+                      }}
+                    >
                       Your role
                     </label>
-                    <div style={{ position: 'relative' }}>
+                    <div style={{ position: "relative" }}>
                       <select
                         value={role}
-                        onChange={e => setRole(e.target.value)}
+                        onChange={(e) => setRole(e.target.value)}
                         className="demo-field-select"
-                        style={{ borderColor: touched && !role ? '#ef4444' : undefined, color: role ? TEXT : MUTED }}
+                        style={{
+                          borderColor: touched && !role ? "#ef4444" : undefined,
+                          color: role ? TEXT : MUTED,
+                        }}
                       >
-                        <option value="" disabled>Select role…</option>
-                        {ROLES.map(r => <option key={r} value={r}>{r}</option>)}
+                        <option value="" disabled>
+                          Select role…
+                        </option>
+                        {ROLES.map((r) => (
+                          <option key={r} value={r}>
+                            {r}
+                          </option>
+                        ))}
                       </select>
-                      <ChevronDown size={16} style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', color: MUTED, pointerEvents: 'none' }} />
+                      <ChevronDown
+                        size={16}
+                        style={{
+                          position: "absolute",
+                          right: 14,
+                          top: "50%",
+                          transform: "translateY(-50%)",
+                          color: MUTED,
+                          pointerEvents: "none",
+                        }}
+                      />
                     </div>
-                    {touched && !role && <span style={{ fontSize: '11px', color: '#ef4444', marginTop: '4px', display: 'block' }}>Required</span>}
+                    {touched && !role && (
+                      <span
+                        style={{
+                          fontSize: "11px",
+                          color: "#ef4444",
+                          marginTop: "4px",
+                          display: "block",
+                        }}
+                      >
+                        Required
+                      </span>
+                    )}
                   </div>
 
                   {/* message */}
-                  <div style={{ animation: mounted ? 'fadeUp .6s ease .4s both' : 'none' }}>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: MUTED, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '6px', fontFamily: 'var(--font-mono)' }}>
-                      What are you solving? <span style={{ color: 'rgba(255,255,255,0.2)', fontWeight: 400 }}>(optional)</span>
+                  <div
+                    style={{
+                      animation: mounted ? "fadeUp .6s ease .4s both" : "none",
+                    }}
+                  >
+                    <label
+                      style={{
+                        display: "block",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: MUTED,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        marginBottom: "6px",
+                        fontFamily: "var(--font-mono)",
+                      }}
+                    >
+                      What are you solving?{" "}
+                      <span
+                        style={{
+                          color: "rgba(255,255,255,0.2)",
+                          fontWeight: 400,
+                        }}
+                      >
+                        (optional)
+                      </span>
                     </label>
                     <textarea
                       value={message}
-                      onChange={e => setMessage(e.target.value)}
+                      onChange={(e) => setMessage(e.target.value)}
                       rows={2}
                       placeholder="e.g. 6 Barco walls across 2 control rooms, operators need simpler workflows…"
                       className="demo-field-input"
-                      style={{ resize: 'vertical' }}
+                      style={{ resize: "vertical" }}
                     />
                   </div>
 
-                  <div style={{ animation: mounted ? 'fadeUp .6s ease .45s both' : 'none', marginTop: '4px' }}>
+                  <div
+                    style={{
+                      animation: mounted ? "fadeUp .6s ease .45s both" : "none",
+                      marginTop: "4px",
+                    }}
+                  >
                     <button type="submit" className="demo-submit-btn">
                       <Send size={16} />
                       Request Demo
@@ -375,39 +681,119 @@ export function DemoPage() {
                 </form>
               </>
             ) : (
-              <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', animation: 'fadeUp .6s ease both' }}>
-                <div style={{
-                  width: 72, height: 72, borderRadius: '999px',
-                  background: TEAL_DIM, border: `1px solid ${TEAL}`,
-                  display: 'grid', placeItems: 'center',
-                  animation: 'pulse-ring 2s ease 1',
-                }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "20px",
+                  animation: "fadeUp .6s ease both",
+                }}
+              >
+                <div
+                  style={{
+                    width: 72,
+                    height: 72,
+                    borderRadius: "999px",
+                    background: TEAL_DIM,
+                    border: `1px solid ${TEAL}`,
+                    display: "grid",
+                    placeItems: "center",
+                    animation: "pulse-ring 2s ease 1",
+                  }}
+                >
                   <CheckCircle size={32} color={TEAL} strokeWidth={2} />
                 </div>
                 <div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: TEAL, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '10px' }}>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "11px",
+                      color: TEAL,
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      marginBottom: "10px",
+                    }}
+                  >
                     Request received
                   </div>
-                  <h2 style={{ margin: 0, fontSize: 'clamp(22px, 2.5vw, 30px)', fontWeight: 900, color: TEXT, letterSpacing: '-0.04em' }}>
-                    Great to meet you, {name.trim().split(' ')[0]}.
+                  <h2
+                    style={{
+                      margin: 0,
+                      fontSize: "clamp(22px, 2.5vw, 30px)",
+                      fontWeight: 900,
+                      color: TEXT,
+                      letterSpacing: "-0.04em",
+                    }}
+                  >
+                    Great to meet you, {name.trim().split(" ")[0]}.
                   </h2>
-                  <p style={{ margin: '12px 0 0', color: MUTED, fontSize: '14px', lineHeight: 1.7, maxWidth: '340px' }}>
-                    We'll reach out to <span style={{ color: TEXT, fontWeight: 600 }}>{email.trim()}</span> within 1 business day to schedule your session.
+                  <p
+                    style={{
+                      margin: "12px 0 0",
+                      color: MUTED,
+                      fontSize: "14px",
+                      lineHeight: 1.7,
+                      maxWidth: "340px",
+                    }}
+                  >
+                    We'll reach out to{" "}
+                    <span style={{ color: TEXT, fontWeight: 600 }}>
+                      {email.trim()}
+                    </span>{" "}
+                    within 1 business day to schedule your session.
                   </p>
                 </div>
 
-                <div style={{ padding: '16px 20px', borderRadius: '16px', background: 'rgba(20,184,166,0.06)', border: `1px solid ${BORDER}`, width: '100%', textAlign: 'left' }}>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: MUTED, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '8px' }}>Confirmed</div>
-                  <div style={{ color: TEXT, fontWeight: 700, fontSize: '14px' }}>{name.trim()}</div>
-                  <div style={{ color: MUTED, fontSize: '13px', marginTop: '2px' }}>{role} · {company.trim()}</div>
+                <div
+                  style={{
+                    padding: "16px 20px",
+                    borderRadius: "16px",
+                    background: "rgba(20,184,166,0.06)",
+                    border: `1px solid ${BORDER}`,
+                    width: "100%",
+                    textAlign: "left",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "10px",
+                      color: MUTED,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Confirmed
+                  </div>
+                  <div
+                    style={{ color: TEXT, fontWeight: 700, fontSize: "14px" }}
+                  >
+                    {name.trim()}
+                  </div>
+                  <div
+                    style={{ color: MUTED, fontSize: "13px", marginTop: "2px" }}
+                  >
+                    {role} · {company.trim()}
+                  </div>
                 </div>
 
-                <Link to="/"
+                <Link
+                  to="/"
                   style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '8px',
-                    padding: '12px 22px', borderRadius: '999px',
-                    border: `1px solid ${BORDER}`, background: 'transparent',
-                    color: MUTED, fontWeight: 700, textDecoration: 'none', fontSize: '14px',
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "12px 22px",
+                    borderRadius: "999px",
+                    border: `1px solid ${BORDER}`,
+                    background: "transparent",
+                    color: MUTED,
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    fontSize: "14px",
                   }}
                 >
                   <ArrowLeft size={14} />
@@ -421,6 +807,5 @@ export function DemoPage() {
 
       <Footer />
     </>
-  )
+  );
 }
-
