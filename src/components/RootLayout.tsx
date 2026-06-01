@@ -13,7 +13,7 @@ export function RootLayout() {
   const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useFeedbackWidget({})
+  useFeedbackWidget({ theme: 'light' })
 
   return (
     <div style={{ minHeight: '100vh', background: '#fff', color: '#244C4E' }}>
