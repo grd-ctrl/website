@@ -184,7 +184,7 @@ export function DemoPage() {
             flex: '0 0 46%',
             position: 'relative',
             overflow: 'hidden',
-            backgroundImage: "url('/website/img-control-room-wall.jpg')",
+            backgroundImage: "url('/website/img-nasa-control.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
