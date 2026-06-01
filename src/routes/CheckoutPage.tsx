@@ -7,7 +7,7 @@ import { Footer } from '../components/sections/Footer'
 
 type Currency = 'EUR' | 'USD'
 type BillingCycle = 'monthly' | 'annual'
-type CheckoutStep = 1 | 2 | 3
+type CheckoutStep = 1 | 2 | 3 | 4
 type LicenseChoice = 1 | 2 | 3 | 5 | 10 | 15 | 20 | '25+'
 
 type CheckoutFieldKey =
@@ -252,6 +252,7 @@ export function CheckoutPage() {
     showNewMessage(
       `Payment confirmed: ${email.trim()} | ${fullName.trim()} | ${companyName.trim()} | ${licenseChoice} licenses | ${currency} ${amountText}`
     )
+    setStep(4)
   }
 
   const stepItems = [
@@ -313,7 +314,7 @@ export function CheckoutPage() {
               GroundCTRL
             </Link>
 
-            <div className="checkout-step-indicator" style={{ marginBottom: '32px' }}>
+            {step < 4 && <div className="checkout-step-indicator" style={{ marginBottom: '32px' }}>
               {stepItems.map((item) => {
                 const active = step === item.number
                 const complete = step > item.number
@@ -366,7 +367,7 @@ export function CheckoutPage() {
                   </button>
                 )
               })}
-            </div>
+            </div>}
 
             <div
               style={{
@@ -746,6 +747,42 @@ export function CheckoutPage() {
                       {t('checkout.completed_transfer')}
                     </button>
                   </div>
+                </div>
+              ) : null}
+
+              {step === 4 ? (
+                <div
+                  className="checkout-step-panel"
+                  style={{ textAlign: 'center', padding: '48px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}
+                >
+                  <div style={{ fontSize: '64px', lineHeight: 1 }}>🎉</div>
+                  <div style={{ fontSize: '12px', letterSpacing: '0.16em', textTransform: 'uppercase', color: TEAL, fontWeight: 800 }}>
+                    Welcome aboard
+                  </div>
+                  <h1 style={{ margin: 0, color: TEXT, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, letterSpacing: '-0.04em' }}>
+                    It's a pleasure to have you,<br />
+                    <span style={{ color: TEAL }}>{fullName.trim().split(' ')[0]}</span>.
+                  </h1>
+                  <p style={{ margin: 0, color: MUTED, fontSize: '17px', lineHeight: 1.7, maxWidth: '480px' }}>
+                    Your transfer is being processed. Our team will activate your licenses and reach out within <strong style={{ color: TEXT }}>1 business day</strong>.
+                  </p>
+                  <div
+                    style={{
+                      padding: '20px 28px',
+                      borderRadius: '20px',
+                      background: 'linear-gradient(135deg, rgba(20,184,166,0.10), rgba(28,63,65,0.06))',
+                      border: '1px solid rgba(20,184,166,0.22)',
+                      maxWidth: '420px',
+                      width: '100%',
+                    }}
+                  >
+                    <div style={{ fontSize: '13px', color: MUTED, marginBottom: '6px' }}>Your order</div>
+                    <div style={{ fontWeight: 800, color: TEXT, fontSize: '16px' }}>{selectedPlanLabel}</div>
+                    <div style={{ fontWeight: 700, color: TEAL, fontSize: '22px', marginTop: '8px' }}>{transferAmount}</div>
+                  </div>
+                  <p style={{ margin: 0, color: MUTED, fontSize: '14px' }}>
+                    Questions? Our support team is standing by — just use the chat widget.
+                  </p>
                 </div>
               ) : null}
             </div>
