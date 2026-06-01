@@ -230,24 +230,24 @@
     "copyright": "© 2026 VIRAL DESENVOLVIMENTO & TECNOLOGIA LTDA. Alle Rechte vorbehalten."
   },
   "support": {
-    "label": "SUPPORT",
+    "label": "ECHTE MENSCHEN, ECHTE HILFE",
     "headline": "Wir lassen Sie nicht",
     "headline_accent": "im Stich.",
-    "sub": "Kritische Vorgänge können nicht warten. GroundCTRL bietet schnellen, effektiven Support über mehrere Kanäle — wann immer Sie ihn brauchen.",
+    "sub": "Ein echter Mensch nimmt ab — kein Bot. Ob ein kritischer Moment um 3 Uhr morgens oder eine schnelle Konfigurationsfrage — unser Team ist für Sie da.",
     "channels": {
-      "chat": {
-        "title": "Live-Chat",
-        "desc": "Sprechen Sie in Echtzeit direkt mit unserem Team. Erhalten Sie sofortige Antworten bei dringenden Fragen.",
-        "cta": "Chat öffnen"
-      },
       "whatsapp": {
-        "title": "WhatsApp",
-        "desc": "Bevorzugen Sie Nachrichten? Erreichen Sie uns auf WhatsApp für schnelle Antworten.",
+        "title": "Anruf oder WhatsApp",
+        "desc": "+55 85 9 9861-4541 · schnellste Antwort",
         "cta": "Nachricht senden"
       },
+      "chat": {
+        "title": "Live-Chat",
+        "desc": "Chatten Sie direkt mit unserem Team.",
+        "cta": "Chat öffnen"
+      },
       "email": {
-        "title": "E-Mail",
-        "desc": "Senden Sie uns eine detaillierte Nachricht und wir antworten mit einer vollständigen Antwort.",
+        "title": "E-Mail-Support",
+        "desc": "support@groundctrl.io · Antwort in 4 Std.",
         "cta": "E-Mail senden"
       }
     }
