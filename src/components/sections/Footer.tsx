@@ -1,6 +1,5 @@
-import { useTranslation } from 'react-i18next'
 import { Link } from '@tanstack/react-router'
-import { WalkieTalkieIcon } from '../WalkieTalkieIcon'
+import { useTranslation } from 'react-i18next'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -11,20 +10,7 @@ export function Footer() {
         <div className="footer-grid">
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
-              <div
-                style={{
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '14px',
-                  background: '#244C4E',
-                  display: 'grid',
-                  placeItems: 'center',
-                  color: '#78B832',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                }}
-              >
-                <WalkieTalkieIcon size={15} color="#78B832" />
-              </div>
+              <img src="/website/logo.png" alt="GroundCTRL" style={{ height: '28px', width: 'auto' }} />
               <div style={{ color: '#ffffff', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.03em' }}>
                 Ground<span style={{ color: '#78B832' }}>CTRL</span>
               </div>

@@ -1,6 +1,7 @@
 import { HeroSection } from '../components/sections/HeroSection'
 import { StatsSection } from '../components/sections/StatsSection'
 import { PillarsSection } from '../components/sections/PillarsSection'
+import { ProductSection } from '../components/sections/ProductSection'
 import { ProblemSection } from '../components/sections/ProblemSection'
 import { FeaturesSection } from '../components/sections/FeaturesSection'
 import { IntegrationsSection } from '../components/sections/IntegrationsSection'
@@ -18,6 +19,7 @@ export function HomePage() {
       <HeroSection />
       <StatsSection />
       <PillarsSection />
+      <ProductSection />
       <ProblemSection />
       <FeaturesSection />
       <IntegrationsSection />

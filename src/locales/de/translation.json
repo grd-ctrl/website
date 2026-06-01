@@ -259,5 +259,15 @@
     "sub": "Ihre Operatoren verdienen ein Tool, das so schnell arbeitet, wie sie denken. GroundCTRL bringt den gesamten Kontrollraum in ihre Handfläche.",
     "cta_primary": "Loslegen",
     "cta_secondary": "Demo anfordern"
+  },
+  "product": {
+    "label": "PRODUKT IN AKTION",
+    "title": "Ein Tipp. Volle Kontrolle.",
+    "sub": "Von Layout-Wechseln bis zu Notfallszenarien — jede Aktion, die Ihr Team braucht, organisiert in einer klaren Tablet-Oberfläche.",
+    "chips": [
+      "Sofortiger Layoutwechsel",
+      "Notfallszenarien",
+      "Multi-Room-Steuerung"
+    ]
   }
 }

@@ -259,5 +259,15 @@
     "sub": "Your operators deserve a tool that works as fast as they think. GroundCTRL puts the entire control room in the palm of their hand.",
     "cta_primary": "Get started",
     "cta_secondary": "Request a demo"
+  },
+  "product": {
+    "label": "PRODUCT IN ACTION",
+    "title": "One tap. Total control.",
+    "sub": "From layout switches to emergency scenarios — every action your team needs, organized in a clean tablet interface.",
+    "chips": [
+      "Instant Layout Switch",
+      "Emergency Scenarios",
+      "Multi-Room Control"
+    ]
   }
 }

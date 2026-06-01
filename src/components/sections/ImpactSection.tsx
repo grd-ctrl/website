@@ -19,7 +19,7 @@ export function ImpactSection() {
         overflow: 'hidden',
         minHeight: '70vh',
         padding: 'clamp(80px, 10vw, 112px) 24px',
-        backgroundImage: "url('/website/thisisengineering.jpg')",
+        backgroundImage: "url('/website/img-control-room-wall.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -28,7 +28,7 @@ export function ImpactSection() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'rgba(10, 20, 20, 0.65)',
+          background: 'rgba(5, 15, 15, 0.70)',
         }}
       />
       <div

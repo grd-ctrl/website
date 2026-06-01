@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import { useFeaturebase } from 'featurebase-js/react'
 import { ArrowLeft, Check, ChevronRight, Copy, MessageCircle, ShieldCheck } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
-import { WalkieTalkieIcon } from '../components/WalkieTalkieIcon'
 
 type Currency = 'EUR' | 'USD'
 type BillingCycle = 'monthly' | 'annual'
@@ -309,19 +308,7 @@ export function CheckoutPage() {
         <aside className="checkout-aside">
           <div className="checkout-aside-inner">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '28px' }}>
-              <div
-                style={{
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '14px',
-                  background: DARK,
-                  color: GREEN,
-                  display: 'grid',
-                  placeItems: 'center',
-                }}
-              >
-                <WalkieTalkieIcon size={20} color={GREEN} />
-              </div>
+              <img src="/website/logo.png" alt="GroundCTRL" style={{ height: '32px', width: 'auto' }} />
               <div>
                 <div style={{ fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: MUTED, fontWeight: 700 }}>
                   GroundCTRL

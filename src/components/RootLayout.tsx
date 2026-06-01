@@ -2,7 +2,6 @@ import { Outlet, Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
-import { WalkieTalkieIcon } from './WalkieTalkieIcon'
 
 const TD = '#1C3F41'
 const TM = '#6B8A8C'
@@ -22,11 +21,8 @@ export function RootLayout() {
         borderBottom: `1px solid ${BD}`,
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
-            <div style={{ width: '30px', height: '30px', borderRadius: '7px', background: TD, display: 'flex', alignItems: 'center', justifyContent: 'center', color: GR, flexShrink: 0 }}>
-              <WalkieTalkieIcon size={15} color="#78B832" />
-            </div>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+            <img src="/website/logo.png" alt="GroundCTRL" style={{ height: '32px', width: 'auto', flexShrink: 0 }} />
             <span style={{ fontWeight: 800, fontSize: '17px', letterSpacing: '-0.02em', color: TD }}>
               Ground<span style={{ color: GR }}>CTRL</span>
             </span>

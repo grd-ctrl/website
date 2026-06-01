@@ -259,5 +259,15 @@
     "sub": "Je operators verdienen een tool die zo snel werkt als zij denken. GroundCTRL zet de volledige control room in de palm van hun hand.",
     "cta_primary": "Ga aan de slag",
     "cta_secondary": "Vraag een demo aan"
+  },
+  "product": {
+    "label": "PRODUCT IN ACTIE",
+    "title": "Één tik. Totale controle.",
+    "sub": "Van lay-outwissels tot noodscenario’s — elke actie die je team nodig heeft, georganiseerd in een heldere tabletinterface.",
+    "chips": [
+      "Directe lay-outwissel",
+      "Noodscenario’s",
+      "Multi-room bediening"
+    ]
   }
 }

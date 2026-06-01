@@ -259,5 +259,15 @@
     "sub": "Tus operadores merecen una herramienta que funcione tan rápido como piensan. GroundCTRL pone toda la sala de control en la palma de su mano.",
     "cta_primary": "Comenzar",
     "cta_secondary": "Solicitar una demo"
+  },
+  "product": {
+    "label": "PRODUCTO EN ACCIÓN",
+    "title": "Un toque. Control total.",
+    "sub": "Desde cambios de layout hasta escenarios de emergencia: cada acción que su equipo necesita, organizada en una interfaz de tablet limpia.",
+    "chips": [
+      "Cambio instantáneo de layout",
+      "Escenarios de emergencia",
+      "Control multi-sala"
+    ]
   }
 }

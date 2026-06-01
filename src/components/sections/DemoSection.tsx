@@ -7,7 +7,27 @@ export function DemoSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="demo" className="blueprint-grid-dark" style={{ padding: '110px 24px', position: 'relative', overflow: 'hidden' }}>
+    <section
+      id="demo"
+      style={{
+        padding: '110px 24px',
+        position: 'relative',
+        overflow: 'hidden',
+        backgroundImage: "url('/website/img-dashboard.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div style={{ position: 'absolute', inset: 0, background: 'rgba(10, 30, 30, 0.85)' }} />
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+          backgroundSize: '72px 72px',
+        }}
+      />
       <span className="blueprint-cross" style={{ left: '5%', top: '50%', color: 'rgba(255,255,255,0.12)' }} />
       <span className="blueprint-cross" style={{ right: '5%', top: '50%', color: 'rgba(255,255,255,0.12)' }} />
 
@@ -23,7 +43,7 @@ export function DemoSection() {
         >
           {t('demo.title')}
         </h2>
-        <p style={{ margin: '0 auto 30px', maxWidth: '660px', color: 'rgba(255,255,255,0.6)', fontSize: '18px', lineHeight: 1.7 }}>
+        <p style={{ margin: '0 auto 30px', maxWidth: '660px', color: 'rgba(255,255,255,0.68)', fontSize: '18px', lineHeight: 1.7 }}>
           {t('demo.subtitle')}
         </p>
 
