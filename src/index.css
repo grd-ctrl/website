@@ -582,3 +582,22 @@ h3 {
   .nav-desktop { display: none !important; }
   .nav-mobile  { display: flex; }
 }
+
+/* Logo text */
+.logo-text {
+  display: flex;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+}
+.logo-ground { color: #1C3F41; }
+.logo-ctrl   { color: #78B832; }
+
+@media (max-width: 767px) {
+  .logo-text {
+    flex-direction: column;
+    line-height: 1.1;
+    font-size: 16px;
+    gap: 0;
+  }
+}

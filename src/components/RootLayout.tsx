@@ -72,22 +72,17 @@ export function RootLayout() {
                 alignItems: "center",
                 gap: "10px",
                 textDecoration: "none",
+                flexShrink: 0,
               }}
             >
               <img
                 src="/website/logo.png"
                 alt="GroundCTRL"
-                style={{ height: "54px", width: "auto", flexShrink: 0 }}
+                style={{ height: "48px", width: "auto", flexShrink: 0 }}
               />
-              <span
-                style={{
-                  fontWeight: 800,
-                  fontSize: "17px",
-                  letterSpacing: "-0.02em",
-                  color: TD,
-                }}
-              >
-                Ground<span style={{ color: GR }}>CTRL</span>
+              <span className="logo-text">
+                <span className="logo-ground">Ground</span>
+                <span className="logo-ctrl">CTRL</span>
               </span>
             </Link>
 
@@ -153,17 +148,19 @@ export function RootLayout() {
             </div>
 
             {/* Mobile: Request Demo + hamburger */}
-            <div className="nav-mobile" style={{ alignItems: "center", gap: "10px" }}>
+            <div className="nav-mobile" style={{ alignItems: "center", gap: "12px" }}>
               <Link
                 to="/demo"
                 style={{
                   background: GR,
                   color: TD,
-                  padding: "8px 16px",
+                  padding: "9px 18px",
                   borderRadius: "999px",
                   fontWeight: 700,
-                  fontSize: "13px",
+                  fontSize: "14px",
                   textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  lineHeight: 1.2,
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = "#5E9A2C")}
                 onMouseLeave={(e) => (e.currentTarget.style.background = GR)}
@@ -174,13 +171,16 @@ export function RootLayout() {
                 style={{
                   background: "none",
                   border: "none",
+                  outline: "none",
                   color: TD,
                   cursor: "pointer",
-                  padding: "8px",
+                  padding: "4px",
+                  display: "flex",
+                  alignItems: "center",
                 }}
                 onClick={() => setMenuOpen(!menuOpen)}
               >
-                {menuOpen ? <X size={22} /> : <Menu size={22} />}
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
