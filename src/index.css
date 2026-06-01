@@ -573,3 +573,12 @@ h3 {
 /* #fb-messenger-root{
   scale: 2;
 } */
+
+/* Navbar responsive */
+.nav-desktop { display: flex; }
+.nav-mobile  { display: none; }
+
+@media (max-width: 767px) {
+  .nav-desktop { display: none !important; }
+  .nav-mobile  { display: flex; }
+}
