@@ -220,16 +220,23 @@ export function CheckoutPage() {
   const handleLicenseContinue = () => {
     if (customPricing) {
       postForm(CHECKOUT_FORM_URL, {
-      'Full Name': 'Unknown',
-      Email: 'unknown',
-      Company: 'Unknown',
-      Licenses: '25+',
-      Billing: '',
-      Currency: '',
-      Total: 'custom quote',
-    })
-    return
+        Timestamp: new Date().toISOString(),
+        Step: '1 - License',
+        Licenses: '25+',
+        Billing: String(billing),
+        Currency: currency,
+        Total: 'custom quote',
+      })
+      return
     }
+    postForm(CHECKOUT_FORM_URL, {
+      Timestamp: new Date().toISOString(),
+      Step: '1 - License',
+      Licenses: String(licenseChoice),
+      Billing: String(billing),
+      Currency: currency,
+      Total: totalAmount === null ? 'custom quote' : String(totalAmount),
+    })
     setStep(2)
   }
 
@@ -241,6 +248,19 @@ export function CheckoutPage() {
       return
     }
 
+    postForm(CHECKOUT_FORM_URL, {
+      Timestamp: new Date().toISOString(),
+      Step: '2 - Account',
+      'Full Name': fullName.trim(),
+      Email: email.trim(),
+      Company: companyName.trim(),
+      Country: country,
+      Licenses: String(licenseChoice),
+      Billing: String(billing),
+      Currency: currency,
+      Total: totalAmount === null ? 'custom quote' : String(totalAmount),
+    })
+
     setStep(3)
   }
 
@@ -248,6 +268,7 @@ export function CheckoutPage() {
     const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
     postForm(CHECKOUT_FORM_URL, {
       Timestamp: new Date().toISOString(),
+      Step: '3 - Payment Confirmed',
       'Full Name': fullName.trim(),
       Email: email.trim(),
       Company: companyName.trim(),
