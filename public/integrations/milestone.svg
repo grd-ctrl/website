@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+<html lang="en" class="msds-enable-font-family">
+<head id="PageHead">
+    <!-- Metas -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9,IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="gtm-en-page-url" content="http://www.milestonesys.com/notfound/" />
+    <meta name="gtm-page-id" content="e2ad3ec7-200f-4cca-a705-6e6d04aae6c1" />
+    <meta name="gtm-page-type" content="BasicPage" />
+    <meta name="gtm-page-name" content="NotFound" />
+
+
+    <!-- Cookiebot - START -->
+    <script id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="71f1dae0-4e8b-4339-85e2-b285baec57ce"
+            data-culture="en"
+            data-blockingmode="auto"
+            data-framework="GTM"
+            type="text/javascript"
+            data-consentmode-defaults="denied"
+            async></script>
+    <!-- Cookiebot - END -->
+
+
+    <meta name="facebook-domain-verification" content="uzeicn042frhpdeo6hlynnvogcg0od" />
+
+    <title>NotFound</title>
+    <link rel="canonical" href="http://www.milestonesys.com/notfound/" />
+    <link rel="alternate" hreflang="en" href="http://www.milestonesys.com/notfound/" />
+            <meta property="og:url" content="https://www.milestonesys.com/notfound/" />
+
+
+        <meta property="og:title" content="NotFound" />
+
+
+
+
+
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600,700,800' rel='stylesheet' type='text/css' />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+
+    
+    
+
+        <!-- Google Consent Mode -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("consent", "default", {
+                ad_personalization: "denied",
+                ad_storage: "denied",
+                ad_user_data: "denied",
+                analytics_storage: "denied",
+                functionality_storage: "granted",
+                personalization_storage: "denied",
+                security_storage: "granted",
+                wait_for_update: 2000,
+            });
+            gtag("set", "ads_data_redaction", true);
+        </script>
+        <!-- End Google Consent Mode -->
+        <!-- GTM initialization - START -->
+        <script type="text/javascript">
+                var json = {"getInTouch":"Get in Touch","getInTouchSubmit":"Get in Touch Submit","relatedSolution":"Related Solution - [SOLUTIONNAME]","findSolution":"Find Solutions","print":"Print","tabOverview":"Tab Overview","tabHowItWorks":"Tab How It Works","tabHowToInstall":"Tab How to Install","searchTag":"Search Tag [TAGKEY]","bookADemoToday":"Book a Demo Today","bookADemoTodaySubmit":"Book a Demo Today Submit","downloadDocumentation":"Download - Documentation - [FILETITLE]","readCustomerStory":"Read Customer Story - [FILEURL]","viewCustomerStory":"View Customer Story - [VIDEOURL]","viewAllWithin":"View All Within","recommendThisSolution":"Recommend this Solution","recommendThisSolutionSubmit":"Recommend this Solution Submit","addYourOwnSpecificFeedback":"Add Feedback","addYourOwnSpecificFeedbackSubmit":"Add Feedback Submit","missingInformationSubmit":"Missing information - [MISSINGKEYS]","visitOurWebsite":"Visit our website","followOnLinkedIn":"Follow on LinkedIn","recommendation":"Recommendation - [SOLUTIONNAME]","learnMore":"Learn More - [SOLUTIONNAME]","sendAJoinRequest":"Send a join request","navOverview":"Navigation Overview","navSupport":"Navigation Support","navAdd":"Navigation Add","downloadGuide":"Download - Guide - [FILETITLE]","downloadInstaller":"Download - Installer - [FILETITLE]","ShareFacebook":"ShareFacebook","ShareTwitter":"ShareTwitter","ShareLinkedIn":"ShareLinkedIn","SearchMainTag":"Search Main Tag - [Tag abbreviation]","downloadFreeTrial":"Download - Free trial - [TrialTitle]","seeStatistics":"See statistics","deleteReview":"Delete review","publishReview":"Publish review","toolipfaq":"FAQ - [EnglishFAQName]","tooltipinformation":"Tooltip - Info - [EnglishTooltipName]","tooltipimage":"Tooltip - Image - [EnglishTooltipName]","tooltipvideo":"Tooltip - Video - [EnglishTooltipName]","featurePage":"Feature Page - [URLEnglishPageName]","TagYourContent":"Tag your content - Get in touch","downloadGuideForm":"Download Form - Guide - [FILETITLE]","downloadInstallerForm":"Download Form - Installer - [FILETITLE]","downloadDocumentationForm":"Download Form - Documentation - [FILETITLE]","facetGetInTouch":"Get In Touch Facet - [SOLUTIONID]","facetGetInTouchSubmit":"Get In Touch Facet Submit - [SOLUTIONID]","learnMorePromotedSolution":"Learn More - Promoted Solution - [SOLUTIONID]","subscriptionSelection":"Subscription selection – [SUBSCRIPTIONID] – [SOLUTIONID]","subscriptionDowngrade":"Subscription downgrade – [SUBSCRIPTIONID] – [SOLUTIONID]","subscriptionUpgrade":"Subscription upgrade – [SUBSCRIPTIONID] – [SOLUTIONID]","subscriptionCancellation":"Subscription cancellation – [SUBSCRIPTIONID] – [SOLUTIONID]","solutionModelReadMore":"Solution model read more - [Unique challenge key from taxonomy]","tabCertifications":"Tab Certifications","tabAwards":"Tab Awards","tabDownloads":"Tab Downloads","tabOurProductExperience":"Our Product Experience Tab","goToProductPage":"Go To Product page - [SOLUTIONID]","tabMilestoneSoftware":"Milestone Software Tab","tabReviews":"Reviews Tab","solutionModelChallenges":"Solution model challenge - [Unique challenge key from taxonomy]","howWeSupportYou":"How we support you - [Unique support key from taxonomy]","exploreChallenge":"Explore challenge - [Unique challenge key from taxonomy]","tabEditPages":"Edit Pages Tab - [SolutionName]","tabUserReviews":"User Reviews Tab - [SolutionName]","tabPageFeedback":"Page Feedback Tab - [SolutionName]","tabAnalytics":"Analytics Tab - [SolutionName]","downloadFormSubmit":"Download Form Submit","tabCompany":"Tab Company","ShareEmail":"ShareEmail","learnMorePromotedExpertise":"Learn More - Promoted Expertise - [SOLUTIONID]","popularAreaOfPractice":"Popular Area of Practice - [AreaOfPraticeName]","popularTechnologies":"Popular Technologies - [TechnologyName]","learnMoreDoubleCard":"Learn More - Double Card - [SOLUTIONID]"};
+                window['__msgtm'] = json;
+        </script>
+        <!--Send User Id when the user logs in the first time only-->
+        <script type="text/javascript">
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://sgtm.milestonesys.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-WBN9RS');
+        </script>
+        <!-- GTM initialization - END -->
+
+    
+<link href="/Static/dist/vendors~adminPanelPage~rootBasic.0f7097e8e223685c1133.css" rel="stylesheet"><link href="/Static/dist/legacyRoot~rootBasic.f482c887c6b8b95025b1.css" rel="stylesheet"><link href="/Static/dist/rootBasic.5bafa429cf16a2c862ae.css" rel="stylesheet"><script defer src="/Static/dist/runtime.5a3a37cdf540c2361fcb.js" data-cookieconsent="ignore"></script><script defer src="/Static/dist/vendors~adminPanelPage~legacyRoot~rootBasic.191f7940469b0e498308.js" data-cookieconsent="ignore"></script><script defer src="/Static/dist/vendors~legacyRoot~rootBasic.71d5b6c670ab2a1279f0.js" data-cookieconsent="ignore"></script><script defer src="/Static/dist/vendors~adminPanelPage~rootBasic.22b4dd7a24305b828093.js" data-cookieconsent="ignore"></script><script defer src="/Static/dist/legacyRoot~rootBasic.1a9b16e50c263fd220ad.js" data-cookieconsent="ignore"></script><script defer src="/Static/dist/rootBasic.177617c722eac0545b25.js" data-cookieconsent="ignore"></script></head>
+<body class="responsive ">
+    <noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBN9RS"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            <!-- Google Tag Manager (noscript) -->
+        <div class="no-script noprint">
+            The functionality you wish to access depends on JavaScript, which is not enabled in your browser. Please enable Javascript and try again.
+        </div>
+    </noscript>
+    
+    
+
+    <div id="HeaderSection" class="header-section-sticky">
+<div class="row g-0"><div class="header-section-block col-12 col-xs-12 col-12">
+
+
+<div class="header-section-block__container header-section-block__container--desktop top-margin-for-old-pages">
+    <a href="/" class="header-section-block__milestone-logo"></a>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <nav id="MainMenu" class="header-section-block__navigation">
+            <div class="header-section-block__navigation-menus">
+                <div class="d-inline-block d-xl-none hidden-lg header-section-block__navigation-menus-button-close-container">
+                    <div class="header-section-block__navigation-menus-button-close ms-icon">
+                        <svg>
+                            <use xlink:href="/Static/dist/msds-spritemap.svg#cross"></use>
+                        </svg>
+                    </div>
+                </div>
+                        <div class="header-section-block__navigation-menu-container">
+                            <div data-nav="Products" class="header-section-block__navigation-menu header-section-block__navigation-menu--level1">
+                                <div class="header-section-block__navigation-menu-label">Products</div>
+                                <div class="header-section-block__navigation-menu-label-icon">
+                                    <div class="ms-icon">
+                                        <svg>
+                                            <use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="SOFTWARE"><div class="header-section-block__navigation-menu-label">SOFTWARE</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Overview"><a class="header-section-block__navigation-menu-label" href="/products/software/overview/">Overview<span class="header-section-block__navigation-menu-description">How to secure people, assets &amp; data</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect"><a class="header-section-block__navigation-menu-label" href="/products/software/xprotect/">XProtect<span class="header-section-block__navigation-menu-description">Award-winning video management software</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect variant comparison"><a class="header-section-block__navigation-menu-label" href="/products/software/xprotect-comparison/">XProtect variant comparison<span class="header-section-block__navigation-menu-description">Compare the key differentiating features</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Arcules"><a class="header-section-block__navigation-menu-label" href="/products/software/arcules/">Arcules<span class="header-section-block__navigation-menu-description">Video surveillance as a service</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="BriefCam"><a class="header-section-block__navigation-menu-label" href="/products/software/briefcam/">BriefCam<span class="header-section-block__navigation-menu-description">Video analytics software</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="VLM"><a class="header-section-block__navigation-menu-label" href="/products/software/vision-language-model/">VLM<span class="header-section-block__navigation-menu-description">Vision Language Model</span>
+</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="EXPAND YOUR SOLUTION"><div class="header-section-block__navigation-menu-label">EXPAND YOUR SOLUTION</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect extensions"><a class="header-section-block__navigation-menu-label" href="/products/expand-your-solution/milestone-extensions/">XProtect extensions<span class="header-section-block__navigation-menu-description">Add more functionalities to XProtect</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Cloud deployments"><a class="header-section-block__navigation-menu-label" href="/products/expand-your-solution/cloud-deployments/">Cloud deployments<span class="header-section-block__navigation-menu-description">View our pure and hybrid cloud options</span>
+</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="HARDWARE"><div class="header-section-block__navigation-menu-label">HARDWARE</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Husky hardware"><a class="header-section-block__navigation-menu-label" href="/products/hardware/husky-hardware/">Husky hardware<span class="header-section-block__navigation-menu-description">Hardware optimized for our software</span>
+</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="SERVICES"><div class="header-section-block__navigation-menu-label">SERVICES</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Care"><a class="header-section-block__navigation-menu-label" href="/products/services/milestone-care/">Care<span class="header-section-block__navigation-menu-description">Get the right level of support</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Professional services"><a class="header-section-block__navigation-menu-label" href="/products/services/professional-services/">Professional services<span class="header-section-block__navigation-menu-description">System deployment &amp; optimization service</span>
+</a>
+</div>
+</div>
+</div>                        </div>
+                        <div class="header-section-block__navigation-menu-container">
+                            <div data-nav="Solutions" class="header-section-block__navigation-menu header-section-block__navigation-menu--level1">
+                                <div class="header-section-block__navigation-menu-label">Solutions</div>
+                                <div class="header-section-block__navigation-menu-label-icon">
+                                    <div class="ms-icon">
+                                        <svg>
+                                            <use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="INDUSTRIES"><div class="header-section-block__navigation-menu-label">INDUSTRIES</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Casinos"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/casinos/">Casinos</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Critical infrastructure"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/critical-infrastructure/">Critical infrastructure</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Government"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/government/">Government</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Higher education"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/higher-education/">Higher education</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Hospitals"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/hospitals/">Hospitals</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Hotels"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/hotels/">Hotels</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Manufacturing"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/manufacturing/">Manufacturing</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Public safety"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/public-safety/">Public safety</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Retail"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/retail/">Retail</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Schools"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/schools/">Schools</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Public transportation"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/public-transportation/">Public transportation</a>
+</div>
+</div>
+</div>                        </div>
+                        <div class="header-section-block__navigation-menu-container">
+                            <div data-nav="Partners" class="header-section-block__navigation-menu header-section-block__navigation-menu--level1">
+                                <div class="header-section-block__navigation-menu-label">Partners</div>
+                                <div class="header-section-block__navigation-menu-label-icon">
+                                    <div class="ms-icon">
+                                        <svg>
+                                            <use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="WHERE TO BUY"><div class="header-section-block__navigation-menu-label">WHERE TO BUY</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Find a reseller or distributor"><a class="header-section-block__navigation-menu-label" href="/partners/where-to-buy/reseller-and-distributor/">Find a reseller or distributor</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="TECHNOLOGY PARTNERS"><div class="header-section-block__navigation-menu-label">TECHNOLOGY PARTNERS</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Technology Partner Finder"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/technology-partner/">Technology Partner Finder<span class="header-section-block__navigation-menu-description">Temporarily unavailable</span>
+</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Arcules Integrations"><a class="header-section-block__navigation-menu-label" href="/partners/technology-partners/arcules-integrations/">Arcules Integrations</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="BECOME A PARTNER"><div class="header-section-block__navigation-menu-label">BECOME A PARTNER</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Reseller Partner"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/reseller/">Reseller Partner</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Distributor Partner Program"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/distributor/">Distributor Partner Program</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Technology Partner Program"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/technology-partner/">Technology Partner Program</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="OEM Partner"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/oem-partner/">OEM Partner</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="A&amp;E Consultant"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/architects-and-engineers/">A&amp;E Consultant</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="ALREADY A PARTNER?"><div class="header-section-block__navigation-menu-label">ALREADY A PARTNER?</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Milestone Partner Portal"><a class="header-section-block__navigation-menu-label" href="https://partner.milestonesys.com/bff/login">Milestone Partner Portal</a>
+</div>
+</div>
+</div>                        </div>
+                        <div class="header-section-block__navigation-menu-container">
+                            <div data-nav="Resources" class="header-section-block__navigation-menu header-section-block__navigation-menu--level1">
+                                <div class="header-section-block__navigation-menu-label">Resources</div>
+                                <div class="header-section-block__navigation-menu-label-icon">
+                                    <div class="ms-icon">
+                                        <svg>
+                                            <use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="CONTENT"><div class="header-section-block__navigation-menu-label">CONTENT</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Articles"><a class="header-section-block__navigation-menu-label" href="/resources/content/articles/">Articles</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Customer stories"><a class="header-section-block__navigation-menu-label" href="/resources/content/customer-stories/">Customer stories</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Infographics"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="Navigation " data-enable-google-event-tracking="True" data-label="Infographics" href="https://infographics.milestonesys.com/">Infographics</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="LEARN"><div class="header-section-block__navigation-menu-label">LEARN</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="eLearning"><a class="header-section-block__navigation-menu-label" href="https://learn.milestonesys.com/index.htm" target="_self">eLearning</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="EVENTS"><div class="header-section-block__navigation-menu-label">EVENTS</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Upcoming events"><a class="header-section-block__navigation-menu-label" href="/resources/events/events/">Upcoming events</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Webinars"><a class="header-section-block__navigation-menu-label" href="/resources/events/webinars/">Webinars</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Training classes"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="NewNavigation" data-enable-google-event-tracking="True" data-label="UpcomingEvents_Trainings_and_Certifications" href="https://learn.milestonesys.com/scheduledclasses" target="_blank">Training classes</a>
+</div>
+</div>
+</div>                        </div>
+                        <div class="header-section-block__navigation-menu-container">
+                            <div data-nav="Support" class="header-section-block__navigation-menu header-section-block__navigation-menu--level1">
+                                <div class="header-section-block__navigation-menu-label">Support</div>
+                                <div class="header-section-block__navigation-menu-label-icon">
+                                    <div class="ms-icon">
+                                        <svg>
+                                            <use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="HELP &amp; DOCUMENTATION"><div class="header-section-block__navigation-menu-label">HELP &amp; DOCUMENTATION</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Support resources"><a class="header-section-block__navigation-menu-label" href="/support/help-and-documentation/support/">Support resources</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Knowledge base"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="NewNavigation" data-enable-google-event-tracking="True" data-label="KnowledgeBase" href="https://supportcommunity.milestonesys.com/s/knowledgebase" target="_blank">Knowledge base</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Documentation"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="NewNavigation" data-enable-google-event-tracking="True" data-label="Nav_SelfServiceandSupport_ DocumentationPortal" href="https://doc.milestonesys.com/?utm_source=MSweb&amp;utm_medium=Megamenu&amp;utm_campaign=Permanent" target="_self">Documentation</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="System requirements"><a class="header-section-block__navigation-menu-label" href="/support/help-and-documentation/system-requirements/">System requirements</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="SOFTWARE"><div class="header-section-block__navigation-menu-label">SOFTWARE</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect Device Pack"><a class="header-section-block__navigation-menu-label" href="/support/software/device-packs/">XProtect Device Pack</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Download XProtect"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="Nav_" data-enable-google-event-tracking="True" data-label="Download Software" href="/my-milestone/download-software/">Download XProtect</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Supported devices"><a class="header-section-block__navigation-menu-label" href="/support/software/supported-devices/">Supported devices</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Product lifecycle"><a class="header-section-block__navigation-menu-label" href="/support/software/product-lifecycle/">Product lifecycle</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="BriefCam Supported VMS"><a class="header-section-block__navigation-menu-label" href="/support/software/briefcam-supported-vms/">BriefCam Supported VMS</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="FOR DEVELOPERS"><div class="header-section-block__navigation-menu-label">FOR DEVELOPERS</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Developer Portal"><a class="header-section-block__navigation-menu-label" href="/support/for-developers/developer-portal/">Developer Portal</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="APIs"><a class="header-section-block__navigation-menu-label" href="/support/for-developers/apis/">APIs</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="SDKs"><a class="header-section-block__navigation-menu-label" href="/support/for-developers/sdk/">SDKs</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="CONTACT SUPPORT"><div class="header-section-block__navigation-menu-label">CONTACT SUPPORT</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Submit a case"><a class="header-section-block__navigation-menu-label" href="https://supportcommunity.milestonesys.com/s/new-case" target="_self">Submit a case</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Sales support"><a class="header-section-block__navigation-menu-label" href="/support/contact-support/sales-support/">Sales support</a>
+</div>
+</div>
+</div>                        </div>
+                        <div class="header-section-block__navigation-menu-container">
+                            <div data-nav="Company" class="header-section-block__navigation-menu header-section-block__navigation-menu--level1">
+                                <div class="header-section-block__navigation-menu-label">Company</div>
+                                <div class="header-section-block__navigation-menu-label-icon">
+                                    <div class="ms-icon">
+                                        <svg>
+                                            <use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="ABOUT MILESTONE"><div class="header-section-block__navigation-menu-label">ABOUT MILESTONE</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="About us"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/about-us/">About us</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Responsible Technology"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="Company_navigation" data-enable-google-event-tracking="True" data-label="Responsible_Technology" href="/company/about-milestone/about-us/responsible-technology/" target="_self">Responsible Technology</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="History"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/history/">History</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Leadership"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/management-board/">Leadership</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Global Offices"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/global-offices/">Global Offices</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Annual report"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/annual-report/">Annual report</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="TRUST &amp; SECURITY"><div class="header-section-block__navigation-menu-label">TRUST &amp; SECURITY</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Cybersecurity"><a class="header-section-block__navigation-menu-label" href="/company/trust-and-security/cybersecurity/">Cybersecurity</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Compliance"><a class="header-section-block__navigation-menu-label" href="/company/trust-and-security/compliance/">Compliance</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="NEWS"><div class="header-section-block__navigation-menu-label">NEWS</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Press releases"><a class="header-section-block__navigation-menu-label" href="/company/news/press-releases/">Press releases</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Newsroom"><a class="header-section-block__navigation-menu-label" href="/company/news/newsroom/">Newsroom</a>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="CAREER"><div class="header-section-block__navigation-menu-label">CAREER</div>
+<div class="header-section-block__navigation-menu-label-icon"><div class="ms-icon"><svg><use xlink:href="/Static/dist/msds-spritemap.svg#arrow"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Working in Milestone"><a class="header-section-block__navigation-menu-label" href="/company/career/working-in-milestone/">Working in Milestone</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Open positions"><a class="header-section-block__navigation-menu-label" href="https://fa-ewto-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions?mode=location">Open positions</a>
+</div>
+</div>
+</div>                        </div>
+                <div class="header-section-block__burger-links">
+                        <div class="header-section-block__burger-links-header-button">
+                            
+
+    <a         class="button-tile-block msds-btn msds-btn--tertiary msds-btn--sm googlelinktracking"
+                href = "/support/contact-us/contact-us/"
+        data-enable-google-event-tracking = "true"
+        data-category = "Front page"
+        data-label = "Contact us"
+    tabindex = "0"
+>
+        Get in touch
+    </a>
+
+                        </div>
+
+                    <div class="d-block d-md-none hidden-sm header-section-block__login-button">
+
+
+    <a         class="button-tile-block msds-btn msds-btn--secondary msds-btn--sm"
+    tabindex = "0"
+>
+        Log in
+    </a>
+                    </div>
+                </div>
+            </div>
+                <div class="header-section-block__navigation-mega-menu-container">
+                            <div class="header-section-block__navigation-mega-menu">
+                                <div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="SOFTWARE"><div class="header-section-block__navigation-menu-label">SOFTWARE</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Overview"><a class="header-section-block__navigation-menu-label" href="/products/software/overview/">Overview</a>
+</div>
+<div class="header-section-block__navigation-menu-description">How to secure people, assets &amp; data</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect"><a class="header-section-block__navigation-menu-label" href="/products/software/xprotect/">XProtect</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Award-winning video management software</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect variant comparison"><a class="header-section-block__navigation-menu-label" href="/products/software/xprotect-comparison/">XProtect variant comparison</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Compare the key differentiating features</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Arcules"><a class="header-section-block__navigation-menu-label" href="/products/software/arcules/">Arcules</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Video surveillance as a service</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="BriefCam"><a class="header-section-block__navigation-menu-label" href="/products/software/briefcam/">BriefCam</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Video analytics software</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="VLM"><a class="header-section-block__navigation-menu-label" href="/products/software/vision-language-model/">VLM</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Vision Language Model</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="EXPAND YOUR SOLUTION"><div class="header-section-block__navigation-menu-label">EXPAND YOUR SOLUTION</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect extensions"><a class="header-section-block__navigation-menu-label" href="/products/expand-your-solution/milestone-extensions/">XProtect extensions</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Add more functionalities to XProtect</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Cloud deployments"><a class="header-section-block__navigation-menu-label" href="/products/expand-your-solution/cloud-deployments/">Cloud deployments</a>
+</div>
+<div class="header-section-block__navigation-menu-description">View our pure and hybrid cloud options</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="HARDWARE"><div class="header-section-block__navigation-menu-label">HARDWARE</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Husky hardware"><a class="header-section-block__navigation-menu-label" href="/products/hardware/husky-hardware/">Husky hardware</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Hardware optimized for our software</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="SERVICES"><div class="header-section-block__navigation-menu-label">SERVICES</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Care"><a class="header-section-block__navigation-menu-label" href="/products/services/milestone-care/">Care</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Get the right level of support</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Professional services"><a class="header-section-block__navigation-menu-label" href="/products/services/professional-services/">Professional services</a>
+</div>
+<div class="header-section-block__navigation-menu-description">System deployment &amp; optimization service</div>
+</div>
+</div>
+</div>
+                            </div>
+                            <div class="header-section-block__navigation-mega-menu">
+                                <div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="INDUSTRIES"><div class="header-section-block__navigation-menu-label">INDUSTRIES</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Casinos"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/casinos/">Casinos</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Critical infrastructure"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/critical-infrastructure/">Critical infrastructure</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Government"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/government/">Government</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Higher education"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/higher-education/">Higher education</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Hospitals"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/hospitals/">Hospitals</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Hotels"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/hotels/">Hotels</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Manufacturing"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/manufacturing/">Manufacturing</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Public safety"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/public-safety/">Public safety</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Retail"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/retail/">Retail</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Schools"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/schools/">Schools</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Public transportation"><a class="header-section-block__navigation-menu-label" href="/solutions/industries/public-transportation/">Public transportation</a>
+</div>
+</div>
+</div>
+</div>
+                            </div>
+                            <div class="header-section-block__navigation-mega-menu">
+                                <div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="WHERE TO BUY"><div class="header-section-block__navigation-menu-label">WHERE TO BUY</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Find a reseller or distributor"><a class="header-section-block__navigation-menu-label" href="/partners/where-to-buy/reseller-and-distributor/">Find a reseller or distributor</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="TECHNOLOGY PARTNERS"><div class="header-section-block__navigation-menu-label">TECHNOLOGY PARTNERS</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Technology Partner Finder"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/technology-partner/">Technology Partner Finder</a>
+</div>
+<div class="header-section-block__navigation-menu-description">Temporarily unavailable</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Arcules Integrations"><a class="header-section-block__navigation-menu-label" href="/partners/technology-partners/arcules-integrations/">Arcules Integrations</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="BECOME A PARTNER"><div class="header-section-block__navigation-menu-label">BECOME A PARTNER</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Reseller Partner"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/reseller/">Reseller Partner</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Distributor Partner Program"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/distributor/">Distributor Partner Program</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Technology Partner Program"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/technology-partner/">Technology Partner Program</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="OEM Partner"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/oem-partner/">OEM Partner</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="A&amp;E Consultant"><a class="header-section-block__navigation-menu-label" href="/partners/become-a-partner/architects-and-engineers/">A&amp;E Consultant</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="ALREADY A PARTNER?"><div class="header-section-block__navigation-menu-label">ALREADY A PARTNER?</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Milestone Partner Portal"><a class="header-section-block__navigation-menu-label" href="https://partner.milestonesys.com/bff/login">Milestone Partner Portal</a>
+</div>
+</div>
+</div>
+</div>
+                            </div>
+                            <div class="header-section-block__navigation-mega-menu">
+                                <div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="CONTENT"><div class="header-section-block__navigation-menu-label">CONTENT</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Articles"><a class="header-section-block__navigation-menu-label" href="/resources/content/articles/">Articles</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Customer stories"><a class="header-section-block__navigation-menu-label" href="/resources/content/customer-stories/">Customer stories</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Infographics"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="Navigation " data-enable-google-event-tracking="True" data-label="Infographics" href="https://infographics.milestonesys.com/">Infographics</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="LEARN"><div class="header-section-block__navigation-menu-label">LEARN</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="eLearning"><a class="header-section-block__navigation-menu-label" href="https://learn.milestonesys.com/index.htm" target="_self">eLearning</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="EVENTS"><div class="header-section-block__navigation-menu-label">EVENTS</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Upcoming events"><a class="header-section-block__navigation-menu-label" href="/resources/events/events/">Upcoming events</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Webinars"><a class="header-section-block__navigation-menu-label" href="/resources/events/webinars/">Webinars</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Training classes"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="NewNavigation" data-enable-google-event-tracking="True" data-label="UpcomingEvents_Trainings_and_Certifications" href="https://learn.milestonesys.com/scheduledclasses" target="_blank">Training classes</a>
+</div>
+</div>
+</div>
+</div>
+                            </div>
+                            <div class="header-section-block__navigation-mega-menu">
+                                <div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="HELP &amp; DOCUMENTATION"><div class="header-section-block__navigation-menu-label">HELP &amp; DOCUMENTATION</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Support resources"><a class="header-section-block__navigation-menu-label" href="/support/help-and-documentation/support/">Support resources</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Knowledge base"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="NewNavigation" data-enable-google-event-tracking="True" data-label="KnowledgeBase" href="https://supportcommunity.milestonesys.com/s/knowledgebase" target="_blank">Knowledge base</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Documentation"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="NewNavigation" data-enable-google-event-tracking="True" data-label="Nav_SelfServiceandSupport_ DocumentationPortal" href="https://doc.milestonesys.com/?utm_source=MSweb&amp;utm_medium=Megamenu&amp;utm_campaign=Permanent" target="_self">Documentation</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="System requirements"><a class="header-section-block__navigation-menu-label" href="/support/help-and-documentation/system-requirements/">System requirements</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="SOFTWARE"><div class="header-section-block__navigation-menu-label">SOFTWARE</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="XProtect Device Pack"><a class="header-section-block__navigation-menu-label" href="/support/software/device-packs/">XProtect Device Pack</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Download XProtect"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="Nav_" data-enable-google-event-tracking="True" data-label="Download Software" href="/my-milestone/download-software/">Download XProtect</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Supported devices"><a class="header-section-block__navigation-menu-label" href="/support/software/supported-devices/">Supported devices</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Product lifecycle"><a class="header-section-block__navigation-menu-label" href="/support/software/product-lifecycle/">Product lifecycle</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="BriefCam Supported VMS"><a class="header-section-block__navigation-menu-label" href="/support/software/briefcam-supported-vms/">BriefCam Supported VMS</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="FOR DEVELOPERS"><div class="header-section-block__navigation-menu-label">FOR DEVELOPERS</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Developer Portal"><a class="header-section-block__navigation-menu-label" href="/support/for-developers/developer-portal/">Developer Portal</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="APIs"><a class="header-section-block__navigation-menu-label" href="/support/for-developers/apis/">APIs</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="SDKs"><a class="header-section-block__navigation-menu-label" href="/support/for-developers/sdk/">SDKs</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="CONTACT SUPPORT"><div class="header-section-block__navigation-menu-label">CONTACT SUPPORT</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Submit a case"><a class="header-section-block__navigation-menu-label" href="https://supportcommunity.milestonesys.com/s/new-case" target="_self">Submit a case</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Sales support"><a class="header-section-block__navigation-menu-label" href="/support/contact-support/sales-support/">Sales support</a>
+</div>
+</div>
+</div>
+</div>
+                            </div>
+                            <div class="header-section-block__navigation-mega-menu">
+                                <div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="ABOUT MILESTONE"><div class="header-section-block__navigation-menu-label">ABOUT MILESTONE</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="About us"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/about-us/">About us</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Responsible Technology"><a class="googlelinktracking header-section-block__navigation-menu-label" data-category="Company_navigation" data-enable-google-event-tracking="True" data-label="Responsible_Technology" href="/company/about-milestone/about-us/responsible-technology/" target="_self">Responsible Technology</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="History"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/history/">History</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Leadership"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/management-board/">Leadership</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Global Offices"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/global-offices/">Global Offices</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Annual report"><a class="header-section-block__navigation-menu-label" href="/company/about-milestone/annual-report/">Annual report</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="TRUST &amp; SECURITY"><div class="header-section-block__navigation-menu-label">TRUST &amp; SECURITY</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Cybersecurity"><a class="header-section-block__navigation-menu-label" href="/company/trust-and-security/cybersecurity/">Cybersecurity</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Compliance"><a class="header-section-block__navigation-menu-label" href="/company/trust-and-security/compliance/">Compliance</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="NEWS"><div class="header-section-block__navigation-menu-label">NEWS</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Press releases"><a class="header-section-block__navigation-menu-label" href="/company/news/press-releases/">Press releases</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Newsroom"><a class="header-section-block__navigation-menu-label" href="/company/news/newsroom/">Newsroom</a>
+</div>
+</div>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level2" data-nav="CAREER"><div class="header-section-block__navigation-menu-label">CAREER</div>
+<div class="header-section-block__navigation-menu-container"><div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Working in Milestone"><a class="header-section-block__navigation-menu-label" href="/company/career/working-in-milestone/">Working in Milestone</a>
+</div>
+<div class="header-section-block__navigation-menu header-section-block__navigation-menu--level3" data-nav="Open positions"><a class="header-section-block__navigation-menu-label" href="https://fa-ewto-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions?mode=location">Open positions</a>
+</div>
+</div>
+</div>
+</div>
+                            </div>
+                    <div class="shadow"></div>
+                </div>
+    </nav>
+    <div class="header-section-block__links">
+
+            <div class="header-section-block__links-header-button">
+                
+
+    <a         class="button-tile-block msds-btn msds-btn--tertiary msds-btn--sm googlelinktracking"
+                href = "/support/contact-us/contact-us/"
+        data-enable-google-event-tracking = "true"
+        data-category = "Front page"
+        data-label = "Contact us"
+    tabindex = "0"
+>
+        Get in touch
+    </a>
+
+            </div>
+
+        <div class="header-section-block__login-button">
+
+
+    <a         class="button-tile-block msds-btn msds-btn--secondary msds-btn--sm"
+    tabindex = "0"
+>
+        Log in
+    </a>
+        </div>
+
+        
+
+
+<div class="header-section-block__links-account-menu-link">
+    <div class="header-popover msds-popover--bottom">        
+        <div class="header-popover__item">
+            <div class="header-popover__content">
+                <div class="header-popover__description">
+                    <div class="header-popover__button-close-container">
+                        <div class="header-popover__button-close ms-icon">
+                            <svg>
+                                <use xlink:href="/Static/dist/msds-spritemap.svg#cross"></use>
+                            </svg>
+                        </div>
+                    </div>
+                        <a class="header-section-block__links-menu-link-item"
+                           href="https://partner.milestonesys.com/bff/login">
+                            Partner Portal
+                        </a>
+                        <a class="header-section-block__links-menu-link-item"
+                           href="https://customer.milestonesys.com">
+                            Customer Portal
+                        </a>
+                        <a class="header-section-block__links-menu-link-item"
+                           href="/products/software/arcules/arcules-login/">
+                            Arcules login
+                        </a>
+
+                </div>
+            </div>
+            <div class="header-popover__arrow">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+    <div class="header-section-block__links-language-menu-link">
+        <div class="header-popover header-popover--bottom">
+            <div class="header-popover__button ms-icon">
+                <svg>
+                    <use xlink:href="/Static/Img/Icons/icons.svg#globe"></use>
+                </svg>
+            </div>
+            <div class="header-popover__item">                
+                <div class="header-popover__content">                    
+                    <div class="header-popover__description">
+                        <div class="header-popover__button-close-container">
+                            <div class="header-popover__button-close ms-icon">
+                                <svg>
+                                    <use xlink:href="/Static/dist/msds-spritemap.svg#cross"></use>
+                                </svg>
+                            </div>
+                        </div>
+                            <a class="header-section-block__links-menu-link-item header-section-block__links-menu-link-item--active"
+                               href="https://www.milestonesys.com/notfound/?404;https://www.milestonesys.com:443/globalassets/ui/logos/milestone-logo.svg">
+                                English
+                            </a>
+                            <a class="header-section-block__links-menu-link-item"
+                               href="https://www.milestonesys.com/fr/notfound/?404;https://www.milestonesys.com:443/globalassets/ui/logos/milestone-logo.svg">
+                                fran&#231;ais
+                            </a>
+                            <a class="header-section-block__links-menu-link-item"
+                               href="https://www.milestonesys.com/es/notfound/?404;https://www.milestonesys.com:443/globalassets/ui/logos/milestone-logo.svg">
+                                espa&#241;ol
+                            </a>
+                            <a class="header-section-block__links-menu-link-item"
+                               href="https://www.milestonesys.com/it/notfound/?404;https://www.milestonesys.com:443/globalassets/ui/logos/milestone-logo.svg">
+                                italiano
+                            </a>
+                            <a class="header-section-block__links-menu-link-item"
+                               href="https://www.milestonesys.com/de/notfound/?404;https://www.milestonesys.com:443/globalassets/ui/logos/milestone-logo.svg">
+                                Deutsch
+                            </a>
+                            <a class="header-section-block__links-menu-link-item"
+                               href="https://www.milestonesys.com/ja/notfound/?404;https://www.milestonesys.com:443/globalassets/ui/logos/milestone-logo.svg">
+                                日本語
+                            </a>
+                    </div>
+                </div>
+                <div class="header-popover__arrow"></div>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+
+<div class="search-control">
+    <div class="search-control__search-button-open ms-icon">
+        <svg>
+            <use xlink:href="/Static/dist/msds-spritemap.svg#search"></use>
+        </svg>
+    </div>
+    <div class="search-control__overlay">
+        <div class="search-control__button-close-container">
+            <div class="d-inline-block d-xl-none hidden-xl search-control__search-button-close ms-icon">
+                <svg>
+                    <use xlink:href="/Static/dist/msds-spritemap.svg#cross"></use>
+                </svg>
+            </div>
+        </div>
+        <form class="msds-forms" id="SearchFormId" method="post">
+            <input id="SearchEvent" name="SearchEvent" type="hidden" value="/en/HeaderSectionBlock/DoSearch" />
+            <div class="msds-input msds-input--small">
+                <input class="msds-input__text-input" type="text" name="txtGlobalSearch" id="txtGlobalSearch" placeholder="Search here" />
+                <input type="hidden" name="globalSearchResultsUrl" value="/search-page/">
+            </div>
+            <div class="search-control__submit ms-icon">
+                <svg>
+                    <use xlink:href="/Static/dist/msds-spritemap.svg#search"></use>
+                </svg>
+            </div>
+            <span class="search-control__separator">|</span>
+            <div class="d-none d-xl-inline-block hidden-xs visible-xl search-control__search-button-close ms-icon">
+                <svg>
+                    <use xlink:href="/Static/dist/msds-spritemap.svg#cross"></use>
+                </svg>
+            </div>
+        </form>
+    </div>    
+</div>
+        
+
+        <button class="header-section-block__links-burger-menu-link" type="button">
+            <div class="ms-icon">
+                <svg>
+                    <use xlink:href="/Static/Img/Icons/icons.svg#burger-icon"></use>
+                </svg>
+            </div>
+        </button>        
+    </div>
+</div>
+
+</div></div>    </div>
+    <div class="main-container">
+        
+        
+
+
+<div class="basic-content-area"><div class="col-12 card-section-block card-section-block--layout-bootstrap-stacked-3-cards msds-bg-gray-1 msds-block-padding-large" data-block-name="CSB - NotFound" id="CSB-NotFound" style="">
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row msds-positioning--center">
+        <div class="col-12 col-md-8">
+                <img loading="lazy" class="card-section-block__top-icon" src="/Static/svg/richIcons/investigation.svg" alt="&lt;span class=&quot;msds-text-header-1-bold&quot;&gt;&lt;span class=&quot;msds-text-dark-blue&quot;&gt;The page can&amp;rsquo;t be found&lt;/span&gt;&lt;/span&gt; Icon" />
+
+
+
+                    <h2 class="card-section-block__heading">
+                        <span class="msds-text-header-1-bold"><span class="msds-text-dark-blue">The page can&rsquo;t be found</span></span>
+                    </h2>
+                                        <div class="card-section-block__description">
+                    <p class="msds-text-body-0  msds-text-gray-10">Try using the search box or retyping the URL</p>
+
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div></div>
+
+    </div>
+
+<div class="row g-0"><div class="footer-column col-12 col-xs-12" id="FooterSection">
+
+
+
+<div class="container">
+    <div class="row footer-column__row-wrap">
+        
+            <div class="col-6 col-xs-6 col-sm-4 mb-6">
+                <ul class="footer-column__links-list footer-column__links-list--with-heading">
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/products/software/xprotect/">Products</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/products/software/xprotect/">XProtect&#174;</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/products/software/briefcam/">BriefCam</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" target="_blank" href="/products/software/arcules/">Arcules</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/products/hardware/husky-hardware/">Husky hardware</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/products/services/milestone-care/">Milestone Care™</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/products/software/vision-language-model/">VLM</a>
+                        </li>
+                </ul>
+            </div>
+                
+            <div class="col-6 col-xs-6 col-sm-4 mb-6">
+                <ul class="footer-column__links-list footer-column__links-list--with-heading">
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/partners/where-to-buy/">WHERE TO BUY</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/partners/where-to-buy/reseller-and-distributor/">Find a reseller</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/partners/where-to-buy/distributors/">Find a distributor</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" target="_blank" href="/campaigns/book-a-demo/">Book a demo</a>
+                        </li>
+                </ul>
+            </div>
+        
+            <div class="col-6 col-xs-6 col-sm-4 mb-6">
+                <ul class="footer-column__links-list footer-column__links-list--with-heading">
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/support/">Support</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/support/">Support Center</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/my-milestone/download-software/">Download Software</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/support/software/1device-packs/">Download latest Device Pack</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="https://milestonesys.fuseuniversal.com/users/sign_in">Milestone Learning</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="https://support.milestonesys.com/">Support Community</a>
+                        </li>
+                </ul>
+            </div>
+                
+            <div class="col-6 col-xs-6 col-sm-4 mb-6">
+                <ul class="footer-column__links-list footer-column__links-list--with-heading">
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/company-news/events/">Events</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/company-news/events/?nogeo=1">Upcoming events</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="https://learn.milestonesys.com/scheduledclasses">Training Classes</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/resources/events/webinars/">Webinars</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/resources/learn/recorded-webinars/">Recorded webinars</a>
+                        </li>
+                </ul>
+            </div>
+                
+            <div class="col-6 col-xs-6 col-sm-4 mb-6">
+                <ul class="footer-column__links-list footer-column__links-list--with-heading">
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/partners/">Partners</a>
+                        </li>
+                        <li class="footer-column__links-list-item">
+                            <a class="footer-column__links-list-item-link" href="/partners/">Partners</a>
+                        </li>
+                </ul>
+            </div>
+               
+                 
+    </div> <!-- ROW END -->
+
+    <div class="row">
+        <div class="col-md-12 footer-column__breaker-wrapper">
+            <div class="footer-column__breaker-wrapper-breaker"></div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-8 mb-6">
+            <div class="row">
+                    <div class="col-12 col-xs-12">
+                        <div class="footer-column__links-list footer-column__links-list--with-heading">
+                            <div class="footer-column__links-list-item">
+                                <span class="footer-column__links-list-item-link">COMPANY</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-6 col-xs-6 mb-6">
+                        <ul class="footer-column__links-list mt-0">
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/company/about-milestone/about-us/">About Us</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/support/contact-us/contact-us/">Contact Us</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/company/about-milestone/global-offices/">Offices</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/company/career/working-in-milestone/">Careers</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" target="_blank" href="/company/about-milestone/share-your-feedback/">Share your feedback</a>
+                                </li>
+                        </ul>
+                    </div>
+                                
+                    <div class="col-6 col-xs-6 mb-6">
+                        <ul class="footer-column__links-list mt-0">
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/terms-of-use/">Terms of Use</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/privacy-policy/">Privacy Policy</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/cookie-policy-milestone-systems/">Cookie Policy</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/company/about-milestone/csr/whistleblower/">Make a whistleblower report</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" href="/company/about-milestone/csr/modern-slavery-act/">Modern Slavery Act</a>
+                                </li>
+                                <li class="footer-column__links-list-item">
+                                    <a class="footer-column__links-list-item-link" target="_blank" href="https://mswebappcdn.azureedge.net/episerverprod/ee5b0606ef7b4dcdbae463fc817b831c/b9258941e61f44cd9c2fe8ce90dde659.pdf">Code of Conduct</a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>            
+        </div>                
+        <div class="col-6 col-xs-6 col-sm-4 mb-6">            
+            <div class="footer-column__milestone-logo"></div>
+            <p class="footer-column__text">
+                <br />
+<br />Copyright © 2026 Milestone Systems A/S. All rights reserved.
+            </p>
+        </div>
+    </div><!-- ROW END -->
+</div>
+
+
+</div></div>
+    
+<div class="authentication">
+    <div id="logout-modal" class="msds-modal msds-modal--banner-center text-start">
+        <a class="msds-modal__close text-decoration-none msds-btn-floating msds-btn-floating--lg msds-btn-floating--secondary">
+            <svg class="msds-icon">
+                <use href="/Static/dist/msds-spritemap.svg#cross" />
+            </svg>
+        </a>
+        <div class="msds-modal__overlay">
+            <div class="msds-modal__content container text-center">
+                <div class="msds-modal__headline msds-text-header-2 msds-text-gray-10">
+                    You will be logged out in
+                </div>
+                <div class="msds-modal__description msds-text-body-1 msds-text-gray-9">
+                    <div id="logout-counter" class="msds-text-lead-bold mb-6">
+                        5 minutes and 0 seconds
+                    </div>
+                    <div>
+                        For your security, sessions automatically end after 15 minutes of inactivity unless you choose to stay logged in.
+                    </div>
+                </div>
+                <div class="msds-modal__cta msds-btn-group msds-btn-group--center pt-6">
+                    <button id="logout-modal-button" type="button" class="msds-btn msds-btn--danger">Log Out</button>
+                    <button id="logout-modal-close-button" type="button" class="msds-btn msds-btn--secondary">Stay Logged In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const enableApplicationInsights = false
+        function loadApplicationInsights() {
+            if (!enableApplicationInsights) {
+                return;
+            }
+
+            //Load Application Insights
+            var appInsights = window.appInsights || function (config) {
+                    function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+                }({
+                    instrumentationKey: "423b0e98-6181-420e-9f29-15b56c2f8683"
+                });
+
+            window.appInsights = appInsights;
+            appInsights.trackPageView();
+        }
+
+        function pushToGTM() {
+            if (window.milestoneGlobalNameSpace &&
+                window.milestoneGlobalNameSpace.serverSideVariables &&
+                window.milestoneGlobalNameSpace.serverSideVariables.userId) {
+                window.dataLayer = window.dataLayer || [];
+                if (window.dataLayer) {
+                    window.dataLayer.push({
+                        'event': 'authentication',
+                        'userId': window.milestoneGlobalNameSpace.serverSideVariables.userId
+                    });
+                }
+                var accountTypeEvent = [];
+                accountTypeEvent.push({
+                    'event': 'traffic_type',
+                    'traffic_type': window.milestoneGlobalNameSpace.serverSideVariables.accountType
+                });
+                window.dataLayer.push(accountTypeEvent[0]);
+            }
+        }
+
+        const enablePardots = false;
+        function loadPardot() {
+            if (!enablePardots) {
+                return;
+            }
+
+            //Load Pardot
+            piAId = '54942';
+            piCId = '2432';
+
+            (function async_load() {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+                    var c = document.getElementsByTagName('script')[0];
+                    c.parentNode.insertBefore(s, c);
+            })();
+        }
+
+        function loadCookiebotDependedScripts() {
+            window.addEventListener('CookiebotOnAccept', function (e) {
+                if (Cookiebot.consent.statistics) {
+                    pushToGTM();
+                }
+            }, false);
+        }
+
+        if (window.location.href.includes('local.milestone.dk')) {           
+            pushToGTM();            
+        } else {
+            var cookiebotScript = document.querySelector("#Cookiebot")
+            cookiebotScript.onload = loadCookiebotDependedScripts
+        }
+
+        //Measures TTI
+        window.addEventListener('load', function () {
+            if (window.performance) {
+                const resources = window.performance.getEntriesByType("resource")
+                    .filter(resource => (resource.name.includes("//www.milestonesys.com")
+                        || resource.name.includes("//www.milestonesys.xyz")
+                        || resource.name.includes("//www.milestonesys.wtst")
+                        || resource.name.includes("//www.milestonesys.wdev")
+                        || resource.name.includes("//www.milestonesys.wwdev")
+                        || resource.name.includes("//local.milestone.dk")
+                        || resource.name.includes("opensans")
+                        || resource.name.includes("//mswebappcdn.azureedge.net"))
+                        && !resource.name.includes("favicon.ico"))
+                    .sort((a, b) => b.responseEnd - a.responseEnd)
+                const loadTime = resources[0].responseEnd
+
+                console.log(`TTI: ${loadTime / 1000} s, resource number: ${resources.length}`)
+
+                const ttiElement = document.createElement('div')
+                ttiElement.hidden = true
+                ttiElement.id = 'tti'
+                ttiElement.innerText = loadTime
+                document.body.appendChild(ttiElement)
+            }
+        })
+    </script>
+    <script type="text/javascript" src="https://dl.episerver.net/13.6.1/epi-util/find.js"></script>
+<script type="text/javascript">
+if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}
+</script>
+
+</body>
+</html>

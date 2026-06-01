@@ -1,34 +1,51 @@
 import { useTranslation } from 'react-i18next'
 import { Camera, Monitor, Settings2, Shield, Volume2, Zap } from 'lucide-react'
 
-const colors = {
-  white: '#ffffff',
-  alt: '#F4F7FA',
-  tealDark: '#1C3F41',
-  teal: '#244C4E',
-  tealMuted: '#6B8A8C',
-  green: '#78B832',
-  border: '#D4DCEC',
-}
-
 const integrations = [
-  { name: 'Barco CTRL', Icon: Shield, color: '#244C4E', native: true },
-  { name: 'Milestone VMS', Icon: Camera, color: '#2563EB' },
-  { name: 'Verkada', Icon: Camera, color: '#78B832' },
-  { name: 'Bosch', Icon: Camera, color: '#DC2626' },
-  { name: 'Node-RED', Icon: Zap, color: '#F97316' },
-  { name: 'Power Automate', Icon: Zap, color: '#2563EB' },
-  { name: 'Crestron', Icon: Monitor, color: '#7C3AED' },
-  { name: 'Q-SYS', Icon: Volume2, color: '#0F766E' },
-  { name: 'Extron', Icon: Settings2, color: '#6B7280' },
+  { name: 'Barco CTRL', Icon: Shield, native: true },
+  { name: 'Milestone VMS', Icon: Camera },
+  { name: 'Verkada', Icon: Camera },
+  { name: 'Bosch', Icon: Camera },
+  { name: 'Node-RED', Icon: Zap },
+  { name: 'Power Automate', Icon: Zap },
+  { name: 'Crestron', Icon: Monitor },
+  { name: 'Q-SYS', Icon: Volume2 },
+  { name: 'Extron', Icon: Settings2 },
 ]
 
 export function IntegrationsSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="integrations" className="blueprint-grid" style={{ padding: '96px 24px' }}>
-      <div className="section-shell">
+    <section
+      id="integrations"
+      style={{
+        position: 'relative',
+        padding: '120px 24px',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Background photo */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url(/website/img-control-panel.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 40%',
+          backgroundAttachment: 'fixed',
+        }}
+      />
+      {/* Dark overlay with teal tint */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(135deg, rgba(8,22,24,0.91) 0%, rgba(20,50,52,0.86) 100%)',
+        }}
+      />
+
+      <div className="section-shell" style={{ position: 'relative' }}>
         <div
           style={{
             fontFamily: 'var(--font-mono)',
@@ -36,7 +53,7 @@ export function IntegrationsSection() {
             fontWeight: 700,
             letterSpacing: '0.16em',
             textTransform: 'uppercase',
-            color: colors.green,
+            color: '#78B832',
             marginBottom: '18px',
           }}
         >
@@ -49,12 +66,12 @@ export function IntegrationsSection() {
             fontSize: 'clamp(38px, 5vw, 56px)',
             lineHeight: 1.02,
             letterSpacing: '-0.03em',
-            color: colors.tealDark,
+            color: '#ffffff',
           }}
         >
           {t('integrations.title')}
         </h2>
-        <p style={{ margin: '0 0 32px', maxWidth: '640px', color: colors.tealMuted, fontSize: '17px', lineHeight: 1.7 }}>
+        <p style={{ margin: '0 0 48px', maxWidth: '580px', color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: 1.7 }}>
           {t('integrations.subtitle')}
         </p>
 
@@ -63,11 +80,21 @@ export function IntegrationsSection() {
             <div
               key={integration.name}
               style={{
-                background: colors.white,
-                border: `1px solid ${colors.border}`,
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.12)',
                 borderRadius: '16px',
-                padding: '18px 18px 16px',
-                boxShadow: '0 12px 24px rgba(28,63,65,0.05)',
+                padding: '20px 20px 18px',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                transition: 'background 0.2s, border-color 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                ;(e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.11)'
+                ;(e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(120,184,50,0.4)'
+              }}
+              onMouseLeave={(e) => {
+                ;(e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.06)'
+                ;(e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(255,255,255,0.12)'
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
@@ -75,11 +102,11 @@ export function IntegrationsSection() {
                   style={{
                     width: '40px',
                     height: '40px',
-                    borderRadius: '14px',
-                    background: `${integration.color}18`,
+                    borderRadius: '12px',
+                    background: 'rgba(120,184,50,0.15)',
                     display: 'grid',
                     placeItems: 'center',
-                    color: integration.color,
+                    color: '#78B832',
                   }}
                 >
                   <integration.Icon size={18} />
@@ -87,29 +114,30 @@ export function IntegrationsSection() {
                 {integration.native ? (
                   <span
                     style={{
-                      background: '#EEF8E0',
-                      color: '#4E8A1E',
+                      background: 'rgba(120,184,50,0.2)',
+                      color: '#a8e05a',
                       borderRadius: '999px',
-                      padding: '6px 10px',
+                      padding: '5px 10px',
                       fontFamily: 'var(--font-mono)',
                       fontSize: '10px',
                       letterSpacing: '0.08em',
                       textTransform: 'uppercase',
+                      border: '1px solid rgba(120,184,50,0.3)',
                     }}
                   >
                     Native
                   </span>
                 ) : null}
               </div>
-              <div style={{ color: colors.tealDark, fontWeight: 700, fontSize: '15px' }}>{integration.name}</div>
+              <div style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 700, fontSize: '15px' }}>{integration.name}</div>
             </div>
           ))}
         </div>
 
         <div
           style={{
-            marginTop: '24px',
-            color: colors.tealMuted,
+            marginTop: '32px',
+            color: 'rgba(255,255,255,0.35)',
             fontFamily: 'var(--font-mono)',
             fontSize: '12px',
             letterSpacing: '0.12em',
