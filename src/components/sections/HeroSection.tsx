@@ -184,7 +184,7 @@ export function HeroSection() {
 
           <div className="hero-photo-shell">
             <img
-              src="/website/thisisengineering.jpg"
+              src="/website/img-hero.jpg"
               alt="GroundCTRL operator in a control room"
               className="hero-photo-image"
             />
