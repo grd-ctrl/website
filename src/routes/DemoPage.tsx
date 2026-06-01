@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from '@tanstack/react-router'
 import { ArrowLeft, Send, CheckCircle, ChevronDown } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
-import { sendMessage } from '../lib/featurebase'
+import { useFeaturebase } from 'featurebase-js/react'
 
 const TEAL = '#14b8a6'
 const TEAL_DIM = 'rgba(20,184,166,0.18)'
@@ -29,6 +29,7 @@ const STATS = [
 ]
 
 export function DemoPage() {
+  const { update } = useFeaturebase()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [company, setCompany] = useState('')
@@ -54,15 +55,29 @@ export function DemoPage() {
 
   const valid = name.trim() && email.trim() && company.trim() && role
 
+  const SHEETS_URL = import.meta.env.VITE_SHEETS_ENDPOINT
+
+  const postToSheet = (sheet: string, row: Record<string, string>) => {
+    if (!SHEETS_URL) return
+    fetch(SHEETS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ sheet, row }),
+    }).catch(() => {})
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setTouched(true)
     if (!valid) return
-    sendMessage({
-      email: email.trim(),
-      name: name.trim(),
-      company: company.trim(),
-      message: `**Demo Request**\n\n- **Name:** ${name.trim()}\n- **Role:** ${role}\n- **Company:** ${company.trim()}\n- **Email:** ${email.trim()}${message.trim() ? `\n- **Note:** ${message.trim()}` : ''}`,
+    update({ email: email.trim(), name: name.trim(), company: { name: company.trim() } })
+    postToSheet('demo', {
+      Timestamp: new Date().toISOString(),
+      'Full Name': name.trim(),
+      Email: email.trim(),
+      Company: company.trim(),
+      Role: role,
+      Message: message.trim(),
     })
     setSubmitted(true)
   }

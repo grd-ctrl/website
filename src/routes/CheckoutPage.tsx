@@ -3,7 +3,7 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import { ArrowLeft, Check, ChevronRight, Copy, Monitor, Shield, Users, Zap } from 'lucide-react'
 import { Footer } from '../components/sections/Footer'
-import { sendMessage } from '../lib/featurebase'
+import { useFeaturebase } from 'featurebase-js/react'
 
 type Currency = 'EUR' | 'USD'
 type BillingCycle = 'monthly' | 'annual'
@@ -184,7 +184,18 @@ function CopyRow({ label, value, highlight = false }: { label: string; value: st
 
 export function CheckoutPage() {
   const { t } = useTranslation()
+  const { update, showNewMessage } = useFeaturebase()
   const fields = t('checkout.fields', { returnObjects: true }) as CheckoutFields
+
+  const SHEETS_URL = import.meta.env.VITE_SHEETS_ENDPOINT
+  const postToSheet = (sheet: string, row: Record<string, string>) => {
+    if (!SHEETS_URL) return
+    fetch(SHEETS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ sheet, row }),
+    }).catch(() => {})
+  }
 
   const [step, setStep] = useState<CheckoutStep>(1)
   const [email, setEmail] = useState('')
@@ -219,13 +230,18 @@ export function CheckoutPage() {
 
   const handleLicenseContinue = () => {
     if (customPricing) {
-      sendMessage({
-        email: 'unknown@groundctrl.io',
-        name: 'Website Visitor',
-        company: 'Unknown',
-        message: `**Custom Pricing Request**\n\n- **Licenses:** 25+\n- **Source:** Checkout page`,
-      })
-      return
+      postToSheet('checkout', {
+      Timestamp: new Date().toISOString(),
+      Type: 'Custom Pricing Request',
+      'Full Name': 'Unknown',
+      Email: 'unknown',
+      Company: 'Unknown',
+      Licenses: '25+',
+      Billing: '',
+      Currency: '',
+      Total: 'custom quote',
+    })
+    return
     }
     setStep(2)
   }
@@ -238,11 +254,18 @@ export function CheckoutPage() {
       return
     }
 
-    sendMessage({
-      email: email.trim(),
-      name: fullName.trim(),
-      company: companyName.trim(),
-      message: `**Checkout Lead**\n\n- **Name:** ${fullName.trim()}\n- **Email:** ${email.trim()}\n- **Company:** ${companyName.trim()}\n- **Country:** ${country}\n- **Licenses:** ${licenseChoice}\n- **Billing:** ${billing}\n- **Currency:** ${currency}\n- **Total:** ${totalAmount ?? 'custom quote'}`,
+    update({ email: email.trim(), name: fullName.trim(), company: { name: companyName.trim() } })
+    postToSheet('checkout', {
+      Timestamp: new Date().toISOString(),
+      Type: 'Checkout Lead',
+      'Full Name': fullName.trim(),
+      Email: email.trim(),
+      Company: companyName.trim(),
+      Country: country,
+      Licenses: String(licenseChoice),
+      Billing: String(billing),
+      Currency: currency,
+      Total: totalAmount === null ? 'custom quote' : String(totalAmount),
     })
 
     setStep(3)
@@ -250,11 +273,18 @@ export function CheckoutPage() {
 
   const handlePaymentConfirm = () => {
     const amountText = totalAmount === null ? 'custom quote' : formatTransferAmount(totalAmount, currency)
-    sendMessage({
-      email: email.trim(),
-      name: fullName.trim(),
-      company: companyName.trim(),
-      message: `**Payment Confirmed**\n\n- **Name:** ${fullName.trim()}\n- **Email:** ${email.trim()}\n- **Company:** ${companyName.trim()}\n- **Licenses:** ${licenseChoice}\n- **Amount:** ${currency} ${amountText}`,
+    showNewMessage(`Payment confirmed — ${fullName.trim()} (${companyName.trim()}) · ${currency} ${amountText}`)
+    postToSheet('checkout', {
+      Timestamp: new Date().toISOString(),
+      Type: 'Payment Confirmed',
+      'Full Name': fullName.trim(),
+      Email: email.trim(),
+      Company: companyName.trim(),
+      Country: country,
+      Licenses: String(licenseChoice),
+      Billing: String(billing),
+      Currency: currency,
+      Total: amountText,
     })
     setStep(4)
   }
